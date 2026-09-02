@@ -1,8 +1,8 @@
 # 方法：CLI 封装（CLI Encapsulation / Operation Twin Interface）
 
 > 定义：把人工操作（控制台/手动命令）编程化为 **AI 可调用的受控 CLI**——动词式子命令 + 结构化输出 + 幂等 + 认证封装 + `--dry-run` + 人审门禁。这是本体论在 harness 自身的接口层：**名词**（参数/对象契约）+ **动词**（子命令=Action）+ **决策**（建议/执行/人审）。
-> 渊源：阿里云 CLI / AWS CLI 实证（"终端完成控制台几乎所有操作，命令组合为脚本实现自动化运维"）；Palantir Foundry Action 受控写回；`工程实践-自动化本体论.md`。
-> 关联：`scripts/_TEMPLATE.sh`（脚本骨架）/ `工程实践-自动化本体论.md`（三层映射）/ `理念-本体论.md`（三层理论）。
+> 渊源：阿里云 CLI / AWS CLI 实证（"终端完成控制台几乎所有操作，命令组合为脚本实现自动化运维"）；Palantir Foundry Action 受控写回；`工程实践-automation-ontology.md`。
+> 关联：`scripts/_TEMPLATE.sh`（脚本骨架）/ `工程实践-automation-ontology.md`（三层映射）/ `理念-ontology.md`（三层理论）。
 
 ## 背书/引用备案（背书双轨）
 
@@ -49,7 +49,7 @@
 
 - verb 用动词：get/list/logs/status/deploy/redeploy/diagnose（参考 `rancher-tool.sh`）
 - 读操作默认不写；写操作必须 `--apply` 或 `--suggest`+人审
-- 执行后回写状态/结果（决策层闭环，见 `理念-本地轮回.md` ⑥实战/⑦登记）
+- 执行后回写状态/结果（决策层闭环，见 `理念-local-loop.md` ⑥实战/⑦登记）
 
 ## 最小示例（可抄，按此骨架扩展）
 

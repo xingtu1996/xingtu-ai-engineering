@@ -54,4 +54,4 @@ description: 举一反三理念实践模板——错只犯一次，一个坑提�
 
 ## 五、关联
 
-`harness-philosophy.md` 原则 5 ｜ `specs-rules.md` §十一 ｜ `bad-case-index.md` ｜ `理念-复利进化.md`
+`harness-philosophy.md` 原则 5 ｜ `specs-rules.md` §十一 ｜ `bad-case-index.md` ｜ `理念-compound-evolution.md`

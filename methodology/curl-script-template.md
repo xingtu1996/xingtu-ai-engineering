@@ -53,4 +53,4 @@ echo PASS
 ```
 
 ## 六、关联
-`方法-接口自动化测试模板.md` ｜ `specs-rules.md` §5.4 ｜ `contracts/samples/` ｜ `local-test-stack.md`
+`方法-api-testing-template.md` ｜ `specs-rules.md` §5.4 ｜ `contracts/samples/` ｜ `local-test-stack.md`

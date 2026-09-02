@@ -51,7 +51,7 @@ description: 变异测试模板（Mutation Testing / PIT）——L4 变异门禁
 
 ## 六、关联
 
-`test/README.md`（L4 ⚪ 远期）｜ `specs-rules.md` §测试金字塔 ｜ `templates/方法-质量门禁模板.md`（L4 门禁）
+`test/README.md`（L4 ⚪ 远期）｜ `specs-rules.md` §测试金字塔 ｜ `templates/方法-quality-gate-template.md`（L4 门禁）
 
 ## 七、引用备案（背书双轨）
 

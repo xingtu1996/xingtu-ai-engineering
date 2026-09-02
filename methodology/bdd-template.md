@@ -28,7 +28,7 @@
 
 - **Gherkin 克制映射**：`specs-rules.md` §5.4——AC 涉及 P0 核心验收时用 Given/When/Then 子集映射测试，克制勿全量化（SDD 靠纪律，DSL 靠机器，只对需机器校验的边界 DSL 化）
 - **E2E 用例业务化**：`e2e-testing-rules.md`——用例命名带编号+场景中文（TC--AC10.1-前端已赠禁用），UI 操作 + 落库双重验证，截图即证据
-- **Story GWT 验收**：`templates/需求交付Story模板.md` §4——作为/想要/以便 + 场景「假如/当/那么」，验收后回填 Spec `requirements.md`
+- **Story GWT 验收**：`templates/story-delivery-template.md` §4——作为/想要/以便 + 场景「假如/当/那么」，验收后回填 Spec `requirements.md`
 
 ## 骨架
 

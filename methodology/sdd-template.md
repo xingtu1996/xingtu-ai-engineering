@@ -58,4 +58,4 @@ description: SDD 方法论模板——文档先行，Spec 唯一真相源
 
 ## 五、关联
 
-- `rules/constitution.md` §一 + §五 ｜ `rules/specs-rules.md` ｜ `templates/并行Spec开发SOP.md`
+- `rules/constitution.md` §一 + §五 ｜ `rules/specs-rules.md` ｜ `templates/parallel-spec-dev-sop.md`

@@ -58,7 +58,7 @@ description: 质量门禁模板（Quality Gates）——L1~L6 提交门禁清单
 
 ## 六、关联
 
-`constitution.md` §七 ｜ `specs-rules.md` §九 ｜ `templates/MR模板.md` ｜ `skills/adversarial-review/SKILL.md`
+`constitution.md` §七 ｜ `specs-rules.md` §九 ｜ `templates/mr-template.md` ｜ `skills/adversarial-review/SKILL.md`
 
 ## 七、引用备案（背书双轨）
 

@@ -1,8 +1,8 @@
 # 工程实践-自动化本体论（Automation Ontology / Operation Twin）
 
 > 定义：把 harness 自动化脚本映射到**语义/动力学/决策三层**（决策层=Palantir 动态层 Dynamic 的 harness 落地名，因示例企业缺口正是"自动决策+回写"），从"工具脚本"升级为"带决策层的操作孪生"——脚本不再只告诉你"库存不够了"，而是帮你"把单下了"。
-> 渊源：Palantir Ontology 三层模型（`理念-本体论.md`）+ 2026-08-27 六代理并行盘点（wf_b49076c4-a1e）。
-> 关联：`理念-本体论.md`（三层理论）/ `理念-本地轮回.md`（轮回骨架）/ `e2e-testing-rules`（落库双验证）/ constitution 质量门禁。
+> 渊源：Palantir Ontology 三层模型（`理念-ontology.md`）+ 2026-08-27 六代理并行盘点（wf_b49076c4-a1e）。
+> 关联：`理念-ontology.md`（三层理论）/ `理念-local-loop.md`（轮回骨架）/ `e2e-testing-rules`（落库双验证）/ constitution 质量门禁。
 
 ## 一、三层映射表（现状盘点）
 

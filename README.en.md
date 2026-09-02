@@ -16,11 +16,11 @@
 
 | Engineering | File | What |
 |---|---|---|
-| **Context Engineering** | `engineering/上下文工程.md` | Planning, compressing, and budgeting context window/tokens |
-| **Prompt Engineering** | `engineering/提示词工程.md` | Structured prompt design & reuse |
-| **Harness Engineering** | `engineering/驾驭工程.md` | Rules/skills/hooks that turn models into stable productivity |
-| **Graph Engineering** | `engineering/图工程.md` | Dependency/knowledge/task graphs for planable, traceable systems |
-| **Loop Engineering** | `engineering/循环工程.md` | Feedback → fix → persist loops for continuously evolving output |
+| **Context Engineering** | `engineering/context-engineering.md` | Planning, compressing, and budgeting context window/tokens |
+| **Prompt Engineering** | `engineering/prompt-engineering.md` | Structured prompt design & reuse |
+| **Harness Engineering** | `engineering/harness-engineering.md` | Rules/skills/hooks that turn models into stable productivity |
+| **Graph Engineering** | `engineering/graph-engineering.md` | Dependency/knowledge/task graphs for planable, traceable systems |
+| **Loop Engineering** | `engineering/loop-engineering.md` | Feedback → fix → persist loops for continuously evolving output |
 
 ## Six Categories · 73 assets
 

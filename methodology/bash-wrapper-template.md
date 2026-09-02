@@ -1,8 +1,8 @@
 # 方法：Bash 封装模板（AI 友好实操版）
 
 > 定义：把人工操作封装成 **AI 友好、可复现的 bash 脚本**——纯文本交互 + `--json` 结构化 + 统一错误码 + 注释清晰 + 零依赖，让当前 Agent（Claude Code）能直接调用、可解析、可自愈。
-> 渊源：`scripts/_TEMPLATE.sh`（骨架）+ `tool-automation-methodology.md`（五要素）+ `方法-CLI封装模板.md`（动词化理论层）+ fs-ops 实践（`fs-ops/commands/*.sh`）。
-> 关联：`方法-CLI封装模板.md`（理论/动词化）｜ `scripts/_TEMPLATE.sh`（骨架）｜ `fs-ops/commands/_TEMPLATE.sh`（fs-ops 版）。
+> 渊源：`scripts/_TEMPLATE.sh`（骨架）+ `tool-automation-methodology.md`（五要素）+ `方法-cli-wrapper-template.md`（动词化理论层）+ fs-ops 实践（`fs-ops/commands/*.sh`）。
+> 关联：`方法-cli-wrapper-template.md`（理论/动词化）｜ `scripts/_TEMPLATE.sh`（骨架）｜ `fs-ops/commands/_TEMPLATE.sh`（fs-ops 版）。
 
 ## 一句话本质
 
@@ -15,7 +15,7 @@
 | 阶段 | 形态 | 门槛 | 适用 | 何时升级 |
 |------|------|:---:|------|---------|
 | **L1 起步** | bash 脚本（本模板） | **零**，今天能做 | 个人高频操作、单脚本 | 先用起来见利 |
-| **L2 进阶** | CLI 封装（`方法-CLI封装模板.md`） | 中 | 团队共用、多子命令 | 2+ 人高频用、需动词化 |
+| **L2 进阶** | CLI 封装（`方法-cli-wrapper-template.md`） | 中 | 团队共用、多子命令 | 2+ 人高频用、需动词化 |
 | **L3 编排** | Skill 组合 | 低 | 多命令工作流 | 命令稳定后组合 |
 | **L4 平台** | MCP Server | 高 | 外部 AI 平台接入 | 明确需求后（YAGNI） |
 

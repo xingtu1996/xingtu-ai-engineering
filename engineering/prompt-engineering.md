@@ -60,4 +60,4 @@ description: 提示词工程实践——五要素设计高质量提示词
 
 ## 四、关联
 
-- 规范源：驾驭方法论（Checklist）+ `rules/constitution.md` + CLAUDE.md 路由表；场景示例：`templates/提示词模板.md`
+- 规范源：驾驭方法论（Checklist）+ `rules/constitution.md` + CLAUDE.md 路由表；场景示例：`templates/prompt-template.md`

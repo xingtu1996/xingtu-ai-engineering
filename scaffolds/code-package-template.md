@@ -2,7 +2,7 @@
 
 > 用途：新建代码包（后端/前端/harness）按此骨架落地。基准 `java-rules.md` §二 DDD + §七 复杂度 + 各 `_TEMPLATE`。步骤：定类型→复制骨架→建目录→填逻辑→过清单。
 
-## 一、后端包模板（dc-service，完整树见 `服务目录结构样板.md`）
+## 一、后端包模板（dc-service，完整树见 `service-directory-structure-template.md`）
 
 ```
 dc-<service>/src/main/java/com/示例企业/ctf/<service>/

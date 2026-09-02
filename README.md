@@ -18,11 +18,11 @@
 
 | 工程 | 文件 | 说明 |
 |------|------|------|
-| **上下文工程** | `engineering/上下文工程.md` | 上下文窗口/token 的规划、压缩、预算管理 |
-| **提示词工程** | `engineering/提示词工程.md` | 提示词的结构化设计与复用 |
-| **驾驭工程** | `engineering/驾驭工程.md` | 用规则/技能/钩子把模型"驾驭"成稳定生产力 |
-| **图工程** | `engineering/图工程.md` | 依赖图/知识图/任务图，让复杂系统可规划可追溯 |
-| **循环工程** | `engineering/循环工程.md` | 迭代循环（反馈→修正→沉淀），让产出持续进化 |
+| **上下文工程** | `engineering/context-engineering.md` | 上下文窗口/token 的规划、压缩、预算管理 |
+| **提示词工程** | `engineering/prompt-engineering.md` | 提示词的结构化设计与复用 |
+| **驾驭工程** | `engineering/harness-engineering.md` | 用规则/技能/钩子把模型"驾驭"成稳定生产力 |
+| **图工程** | `engineering/graph-engineering.md` | 依赖图/知识图/任务图，让复杂系统可规划可追溯 |
+| **循环工程** | `engineering/loop-engineering.md` | 迭代循环（反馈→修正→沉淀），让产出持续进化 |
 
 ## 🗂️ 六大分类 · 73 个资产
 

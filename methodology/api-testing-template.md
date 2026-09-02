@@ -57,7 +57,7 @@ cleanup: SQL 清理（mutating 三步必备）
 
 ## 五、关联
 
-`specs-rules.md` §5.4 ｜ `test/templates/api-case.json.tmpl` ｜ `contracts/` ｜ `templates/E2E测试报告模板.md`
+`specs-rules.md` §5.4 ｜ `test/templates/api-case.json.tmpl` ｜ `contracts/` ｜ `templates/e2e-test-report-template.md`
 
 ## 六、引用备案（背书双轨）
 

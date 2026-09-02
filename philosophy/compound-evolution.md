@@ -29,7 +29,7 @@ description: 复利进化哲学实践模板——使用→问题→沉淀→反�
 
 | 落点 | 位置 |
 |------|------|
-| 复利 loop 骨架 | `templates/工程实践-循环工程.md` |
+| 复利 loop 骨架 | `templates/工程实践-loop-engineering.md` |
 | 坑→BCI→Gate | `memory/bad-case-index.md`（BCI-001~029） |
 | 生产问题 | `incidents/{TICKET-XXXX}-{简述}-{日期}/`，一工单一目录 |
 | 调研/选型 | `research/`（多源+溯源） |
@@ -47,4 +47,4 @@ description: 复利进化哲学实践模板——使用→问题→沉淀→反�
 
 ## 四、关联
 
-`harness-philosophy.md` ｜ `工程实践-循环工程.md`（操作落地）｜ `bad-case-index.md` ｜ `specs-rules.md` §十一
+`harness-philosophy.md` ｜ `工程实践-loop-engineering.md`（操作落地）｜ `bad-case-index.md` ｜ `specs-rules.md` §十一

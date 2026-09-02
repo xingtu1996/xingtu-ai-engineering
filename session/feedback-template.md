@@ -61,4 +61,4 @@ description: 坑→BCI→红线→自动拦截，错只犯一次
 
 ## 五、关联
 
-`harness-philosophy.md` ｜ `specs-rules.md` §十一 ｜ `bad-case-index.md` ｜ `工程实践-循环工程.md`
+`harness-philosophy.md` ｜ `specs-rules.md` §十一 ｜ `bad-case-index.md` ｜ `工程实践-loop-engineering.md`

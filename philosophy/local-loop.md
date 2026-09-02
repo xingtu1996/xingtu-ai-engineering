@@ -5,7 +5,7 @@
 > **渊源卡**：
 > - 理念出处：harness 哲学"本地轮回"（`rules/harness-philosophy.md` 工作原则 6）
 > - 工程渊源：PDCA 循环（Deming）；双环学习（Argyris）；复利进化（使用→问题→沉淀→反哺→更好）
-> - 本体呼应：`理念-本体论.md` 三层模型——环节=状态节点、前置/回写边=关系、必备产出+门禁=约束
+> - 本体呼应：`理念-ontology.md` 三层模型——环节=状态节点、前置/回写边=关系、必备产出+门禁=约束
 
 ## 背书/引用备案（背书双轨）
 
@@ -17,7 +17,7 @@
 | Double-Loop Learning | Argyris & Schön 1978 | 单环修正行动，双环修正行动背后的心智/规则 | https://en.wikipedia.org/wiki/Double_loop_learning |
 | progressive absorption | Leading-AI-IO | 先 read-first 挂接→验证闭环→逐系统引入写回→退役遗留段 | https://github.com/Leading-AI-IO/palantir-ontology-strategy |
 
-**内部实证**：`理念-复利进化.md`（哲学背书）+ `工程实践-循环工程.md`（理念）+ `理念-本体论.md`（三层建模）；本模板 = wf_b49076c4-a1e I2 循环模板盘点产物（2026-08-27）。
+**内部实证**：`理念-compound-evolution.md`（哲学背书）+ `工程实践-loop-engineering.md`（理念）+ `理念-ontology.md`（三层建模）；本模板 = wf_b49076c4-a1e I2 循环模板盘点产物（2026-08-27）。
 
 ## 深入浅出
 
@@ -54,7 +54,7 @@ flowchart LR
 
 - `jenkins-ci-build.sh` = 「落地→实战」自动节点（触发构建→拿 tag→PATCH argocd→redeploy）
 - `rancher-tool.sh` = 「实战」验证节点（查日志/redeploy/健康检查）
-- 执行后回写部署状态/验证结果，与登记环节索引回写串联成自动闭环——解决"工具游离轮回外、登记靠手写"断点。详见 `工程实践-自动化本体论.md`。
+- 执行后回写部署状态/验证结果，与登记环节索引回写串联成自动闭环——解决"工具游离轮回外、登记靠手写"断点。详见 `工程实践-automation-ontology.md`。
 
 ## 时间维度（4 级节奏：治理是节奏不是事件）
 

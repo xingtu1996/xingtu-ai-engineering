@@ -2,7 +2,7 @@
 
 > 定义：黑盒测试（Black-box Testing）——不查看内部实现，仅从用户/业务视角，通过「输入→输出」验证行为对不对。与白盒（代码逻辑）相对。
 > 用途：业务验收/功能测试用例（SIT/UAT），产品、测试、AI 共用。
-> 关联：`方法-BDD模板.md`（GWT 语言）｜`需求交付Story模板.md` §4（验收回填）｜`test/templates/business-case-template.csv`（用例落表）。
+> 关联：`方法-bdd-template.md`（GWT 语言）｜`story-delivery-template.md` §4（验收回填）｜`test/templates/business-case-template.csv`（用例落表）。
 
 ## 一句话本质
 
@@ -19,8 +19,8 @@
 ## 示例企业实践
 
 - **业务化用例**：`business-case-template.csv`——编号 `TC-{SPEC}-{AC}`、标题业务可读、前置/数据准备/步骤/预期结果（界面可见）、优先级 P0/P1
-- **GWT 场景**：`方法-BDD模板.md`——场景用「假如/当/那么」业务语言，Then 只断可观测结果
-- **Story 验收回填**：`需求交付Story模板.md` §4——GWT 验收交付后回填 Spec `requirements.md` AC
+- **GWT 场景**：`方法-bdd-template.md`——场景用「假如/当/那么」业务语言，Then 只断可观测结果
+- **Story 验收回填**：`story-delivery-template.md` §4——GWT 验收交付后回填 Spec `requirements.md` AC
 
 ## 骨架
 

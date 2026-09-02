@@ -18,7 +18,7 @@ AI 产证据链与方案，**人做判断与方向**。工具会换，思想不�
 
 ## 示例企业实践对应
 - **HITL 交互确认**：关键节点回人确认，不单方面下结论（`memory/interaction-confirm-mode.md`）
-- **驾驭工程模板**：AI 产证据链与方案，人做判断与方向 → `templates/工程实践-驾驭工程.md`
+- **驾驭工程模板**：AI 产证据链与方案，人做判断与方向 → `templates/工程实践-harness-engineering.md`
 - **双保障机制**：Spec 静态真相源 + Plan Mode 动态执行上下文，人审 Spec/AC 批准后执行
 - **约束墙**：质量靠测试金字塔/validator/契约机器拦，人只看关键路径与门禁点
 

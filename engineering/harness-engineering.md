@@ -59,4 +59,4 @@ metadata:
 
 - `rules/constitution.md` §一/§五（铁律+双保障）——规范源，不复制全文
 - `specs/从提示词到高质量Spec-驾驭方法论_20260803.md`——输入 5 要素（锚点/To-Be/澄清/坐标/约定）
-- `templates/并行Spec开发SOP.md`——多需求并行时人机分工规模化
+- `templates/parallel-spec-dev-sop.md`——多需求并行时人机分工规模化

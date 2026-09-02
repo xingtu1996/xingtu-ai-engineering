@@ -1,7 +1,7 @@
 # UI 自动化测试模板（UI Automation Testing — Playwright）
 
 > 定义：界面自动化测试——脚本模拟真实用户点击/输入/浏览，验证界面功能与交互符合预期。属测试金字塔 **L3 E2E**（UI 视角）。
-> 关联：`rules/e2e-testing-rules.md` ＋ `memory/fs-e2e-login-playwright.md` ＋ `templates/E2E测试报告模板.md`。
+> 关联：`rules/e2e-testing-rules.md` ＋ `memory/fs-e2e-login-playwright.md` ＋ `templates/e2e-test-report-template.md`。
 
 ## 深入浅出
 

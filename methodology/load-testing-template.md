@@ -67,7 +67,7 @@ description: 压测模板（Performance/Load Testing），stages/perf
 
 ## 八、关联
 
-`test/README.md`｜`capacity-design-rules.md`｜`方法-质量门禁模板.md`｜`e2e-testing-rules.md`
+`test/README.md`｜`capacity-design-rules.md`｜`方法-quality-gate-template.md`｜`e2e-testing-rules.md`
 
 ## 九、引用备案（背书双轨）
 

@@ -72,6 +72,6 @@ private String parseErrMsg(String json) {
 | 5 根因判定 | 代码 + 数据 + 日志三证据 | CustomErrorDecoder 未覆盖 |
 
 ## 三、关键文件/关联
-- 排查模板：`生产问题排查模板.md`
+- 排查模板：`production-troubleshooting-template.md`
 - 设计模式参考：项目 `FeignSupportConfig$CustomErrorDecoder` / `GravityCommonInterceptor`
 - 案例：spec TICKET-002 `26_库存链路E2E测试方案` / `GuestGiftApplication`

@@ -58,4 +58,4 @@ description: 生产工单对外回复——定性、责任、证据、闭环
 
 ## 六、关联
 
-production-troubleshoot ｜ memory/incident-reply-preferences.md ｜ BUG修复沉淀模板.md
+production-troubleshoot ｜ memory/incident-reply-preferences.md ｜ BUG修复distillation-template.md

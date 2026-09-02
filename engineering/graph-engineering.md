@@ -68,4 +68,4 @@ metadata:
 - `CLAUDE.md` 零-C（三段式检索）+ 零-B（级联影响铁律）
 - `rules/specs-rules.md` §九（契约优先）+ `rules/token-optimization-rules.md` TOK-001/006
 - `skills/codebase-memory` + `skills/three-stage-retrieval`
-- `templates/并行Spec开发SOP.md`（DAG → 多 Spec 并行）
+- `templates/parallel-spec-dev-sop.md`（DAG → 多 Spec 并行）

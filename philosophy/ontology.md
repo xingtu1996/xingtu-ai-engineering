@@ -23,8 +23,8 @@
 
 **内部实证（示例企业落地）**：
 
-- `.claude/contracts/schema/{名}.schema.json` — 微服务边界微型本体实证（required/类型/enum/additionalProperties:false 即类/属性/约束），见 `方法-DSL模板.md` §三
-- CBM 节点/边类型 = 代码世界本体（`工程实践-图工程.md`）— search_graph/trace_path 即语义检索实证
+- `.claude/contracts/schema/{名}.schema.json` — 微服务边界微型本体实证（required/类型/enum/additionalProperties:false 即类/属性/约束），见 `方法-dsl-template.md` §三
+- CBM 节点/边类型 = 代码世界本体（`工程实践-graph-engineering.md`）— search_graph/trace_path 即语义检索实证
 - `.claude/rules-on-demand/specs-rules.md` §5.4 DSL 硬化 — 契约 Schema + Gherkin 把本体约束变机器强制层（漂移即红）
 
 ## 深入浅出
@@ -35,8 +35,8 @@
 
 ## 示例企业实践对应（引用不复制）
 
-- **契约 Schema**：`contracts/schema/{名}.schema.json`（required/类型/enum/additionalProperties:false）= 微服务边界的微型本体。见 `方法-DSL模板.md` §三。
-- **CBM 元数据模型**：CBM 节点/边类型 = 代码世界本体，search_graph/trace_path 即语义检索。见 `工程实践-图工程.md`。
+- **契约 Schema**：`contracts/schema/{名}.schema.json`（required/类型/enum/additionalProperties:false）= 微服务边界的微型本体。见 `方法-dsl-template.md` §三。
+- **CBM 元数据模型**：CBM 节点/边类型 = 代码世界本体，search_graph/trace_path 即语义检索。见 `工程实践-graph-engineering.md`。
 - **DSL 硬化**：契约 Schema + Gherkin 把本体约束变机器强制层。见 `specs-rules.md` §5.4。
 
 ## harness 组件本体论（OOP/OOA 类比）
@@ -51,7 +51,7 @@
 | 实例化 | 注册器登记（描述+触发词→可路由） | `DIRECTORY.md` / `toolbox/` / `CHANGELOG.md` |
 | 继承/复用 | 样板 _TEMPLATE 复制套用 + harness-gate 准入 | `templates/` 五类样板 |
 | 接口规约 | 全局规约（constitution/CLAUDE.md/rules）约束所有组件 | `rules/` + `CLAUDE.md` |
-| 延迟实例化 | **渐进式加载**：常驻指针 → 触发路由 → 按需取全文 → 释放 | 渐进式披露表 + Skill 路由 + `方法-渐进式加载.md` |
+| 延迟实例化 | **渐进式加载**：常驻指针 → 触发路由 → 按需取全文 → 释放 | 渐进式披露表 + Skill 路由 + `方法-progressive-loading.md` |
 | 单一职责 | 一组件一事，可测试可回归 | harness-gate 准入五问 |
 
 **每个组件标准三件套**（用户确立惯例）：① 抽象文件夹（组件本体）② README/自述文件（说明书）③ 注册器登记（CHANGELOG/DIRECTORY/toolbox 全局可见）。

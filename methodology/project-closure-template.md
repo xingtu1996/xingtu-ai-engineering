@@ -6,7 +6,7 @@ description: 业务侧项目结项交付——交付证据+复盘沉淀+知识�
 # 方法-项目结项（Project Closure / Retrospective）
 
 > 定义：**项目结项（Project Closure / Retrospective）** = 交付证据+复盘沉淀+知识归档的结构化总结。
-> 引用备案：某零售电商项目 `deliverables/` 交付物 + `templates/会话复盘模板.md`。
+> 引用备案：某零售电商项目 `deliverables/` 交付物 + `templates/session-review-template.md`。
 
 ## 一、深入浅出
 
@@ -32,7 +32,7 @@ description: 业务侧项目结项交付——交付证据+复盘沉淀+知识�
 | 方法论 | 示例企业落地 | 位置 |
 |--------|---------|------|
 | 项目结项复盘 | 某零售电商项目溯源论证+四方对抗审查（边界不掩盖） | `specs/<项目>/deliverables/` |
-| 会话复盘模板 | T6 小颗粒复盘，结项时聚合为项目级 | `templates/会话复盘模板.md` |
+| 会话复盘模板 | T6 小颗粒复盘，结项时聚合为项目级 | `templates/session-review-template.md` |
 | 量化数据实证 | 52 天 1 人+AI Agent 交付约 16 万行（900+ 文件/50 提交） | `research/<日期>-harness-panorama/00_README.md` |
 | 沉淀到 research/specs/memory | 调研→research/，执行→specs/，教训→memory/BCI | `research/README.md`｜`specs/README.md` |
 
@@ -48,4 +48,4 @@ description: 业务侧项目结项交付——交付证据+复盘沉淀+知识�
 
 ## 五、关联
 
-- `会话复盘模板.md`｜`MR模板.md`/`E2E测试报告模板.md`（验收证据）｜`specs-rules.md`（Spec ✅ 收尾）
+- `session-review-template.md`｜`mr-template.md`/`e2e-test-report-template.md`（验收证据）｜`specs-rules.md`（Spec ✅ 收尾）

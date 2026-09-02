@@ -1,7 +1,7 @@
 # 方法-部署 SOP 模板（Deployment SOP）
 
 > 用途：把"新版本安全放到目标环境"固化为可重复执行的受控变更 SOP，AI 有样学样。
-> 引用：`templates/SOP模板.md`（必带案例铁律）｜`research/20260812-fs-deployment-sop.md` §七（UAT gitops 实测实例）
+> 引用：`templates/sop-template.md`（必带案例铁律）｜`research/20260812-fs-deployment-sop.md` §七（UAT gitops 实测实例）
 > 体积：约 2.3KB
 
 ## 定义
@@ -27,7 +27,7 @@
 | 与它环境区别 | 对比表 | SIT=Jenkins 自动改 vs UAT=手动改 values |
 
 ## SOP 必带案例铁律（引用 SOP模板）
-**每阶段必须附一条真实案例（`例：…`），禁止空骨架。** 先找案例（research/incidents/specs）再套骨架。来源：`templates/SOP模板.md`。
+**每阶段必须附一条真实案例（`例：…`），禁止空骨架。** 先找案例（research/incidents/specs）再套骨架。来源：`templates/sop-template.md`。
 
 ## 示例企业实践
 - **gitops 手动发布**：改 values 镜像 tag → push → ArgoCD 滚动发布（2026-08-24 dc-refund UAT 实测）

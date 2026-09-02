@@ -51,4 +51,4 @@ description: 数据排查方法模板（Data Investigation）——数据不对=
 
 ## 五、关联
 
-`agents/data-investigator.md` ｜ `templates/生产问题排查模板.md` ｜ `memory/bad-case-index.md`（BCI 排查原则）｜ `db-knowledge/db-tables-index.md` ｜ `scripts/pma-sql.sh`
+`agents/data-investigator.md` ｜ `templates/production-troubleshooting-template.md` ｜ `memory/bad-case-index.md`（BCI 排查原则）｜ `db-knowledge/db-tables-index.md` ｜ `scripts/pma-sql.sh`

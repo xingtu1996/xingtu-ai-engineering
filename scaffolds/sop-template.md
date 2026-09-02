@@ -46,7 +46,7 @@
 
 ## 三、规则嵌入（引用不复制全文）
 
-- 并行 Spec 开发 SOP：`templates/并行Spec开发SOP.md`——6 阶段带案例范本，契约优先。
+- 并行 Spec 开发 SOP：`templates/parallel-spec-dev-sop.md`——6 阶段带案例范本，契约优先。
 - 部署 SOP：`research/20260812-fs-deployment-sop.md` §七 UAT gitops 发布——真实命令+验证判定+环境区别表。
 - 新 SOP 优先复用这两例结构，只替换领域内容；每阶段必须带案例，禁止空骨架。
 

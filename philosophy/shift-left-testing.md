@@ -23,7 +23,7 @@ description: 测试左移理念模板——测试越早越便宜、质量内建�
 
 - `.claude/rules/constitution.md` RED-8 — 本地 TDD 左移实证：编译→启动→curl→合并，能本地验证不等 SIT
 - 测试金字塔 L1~L6（根 CLAUDE.md + constitution §七）— 自下而上：L1 单测≥85% → L2 契约 → L3 E2E → L4 变异 → L5 静态 → L6 安全
-- `方法-本地测试模板.md` — build.sh 零错误 + curl 全链路 + RED-6 清理（左移理念的操作化）
+- `方法-local-testing-template.md` — build.sh 零错误 + curl 全链路 + RED-6 清理（左移理念的操作化）
 
 ## 一、深入浅出
 
@@ -34,7 +34,7 @@ description: 测试左移理念模板——测试越早越便宜、质量内建�
 
 - **RED-8 TDD 左移**：编译→本地启动→curl 验证→合并，能本地验证不等 SIT。
 - **金字塔自下而上**：L1 单测（≥85%）→ L2 契约 → L3 E2E → L4 变异 → L5 静态 → L6 安全；底座先铺。
-- **本地测试模板**：`方法-本地测试模板.md`（build.sh 零错误 + curl 全链路 + RED-6 清理）。
+- **本地测试模板**：`方法-local-testing-template.md`（build.sh 零错误 + curl 全链路 + RED-6 清理）。
 - **Spec/BDD 前置**：AC 可测试化，spec 先于代码，测试即活契约。
 
 ## 三、检查清单
@@ -50,5 +50,5 @@ description: 测试左移理念模板——测试越早越便宜、质量内建�
 ## 四、关联
 
 - `rules/constitution.md` RED-8 + 质量门禁
-- `方法-本地测试模板.md` / `方法-TDD模板.md`
+- `方法-local-testing-template.md` / `方法-TDD模板.md`
 - `rules/harness-philosophy.md`（真相第一）
