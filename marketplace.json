@@ -1,0 +1,924 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "name": "xingtu-ai-engineering",
+  "description": "XingTu AI engineering methodology collection - philosophy, methodology, five engineering practices, governance, session resume & scaffolds",
+  "categories": {
+    "philosophy": "理念/哲学",
+    "methodology": "方法",
+    "engineering": "工程实践",
+    "governance": "治理/宪法",
+    "session": "会话/断点续传",
+    "scaffolds": "组件样板"
+  },
+  "items": [
+    {
+      "name": "理念-不机械执行",
+      "description": "不机械执行实践模板（Intent over Compliance / Anti-Mechanical Execution）",
+      "path": "philosophy/不机械执行.md",
+      "tags": [
+        "philosophy",
+        "ai-engineering",
+        "first-principles",
+        "thinking"
+      ],
+      "category": "理念/哲学"
+    },
+    {
+      "name": "理念-举一反三",
+      "description": "举一反三理念实践模板——错只犯一次，一个坑提炼一类 Gate，下次同类自动拦截",
+      "path": "philosophy/举一反三.md",
+      "tags": [
+        "philosophy",
+        "ai-engineering",
+        "first-principles",
+        "thinking"
+      ],
+      "category": "理念/哲学"
+    },
+    {
+      "name": "理念-协作即对抗",
+      "description": "协作即对抗实践模板（Adversarial Collaboration）",
+      "path": "philosophy/协作即对抗.md",
+      "tags": [
+        "philosophy",
+        "ai-engineering",
+        "first-principles",
+        "thinking"
+      ],
+      "category": "理念/哲学"
+    },
+    {
+      "name": "理念-复利进化",
+      "description": "复利进化哲学实践模板——使用→问题→沉淀→反哺→下次更好，越用越强",
+      "path": "philosophy/复利进化.md",
+      "tags": [
+        "philosophy",
+        "ai-engineering",
+        "first-principles",
+        "thinking"
+      ],
+      "category": "理念/哲学"
+    },
+    {
+      "name": "本体论",
+      "description": "理念-本体论（Ontology）",
+      "path": "philosophy/本体论.md",
+      "tags": [
+        "philosophy",
+        "ai-engineering",
+        "first-principles",
+        "thinking"
+      ],
+      "category": "理念/哲学"
+    },
+    {
+      "name": "本地轮回",
+      "description": "A[①想法] --> B[②调研] --> C[③澄清] --> D[④立项] --> E[⑤落地] --> F[⑥实战] --> G[⑦登记]",
+      "path": "philosophy/本地轮回.md",
+      "tags": [
+        "philosophy",
+        "ai-engineering",
+        "first-principles",
+        "thinking"
+      ],
+      "category": "理念/哲学"
+    },
+    {
+      "name": "理念-测试左移",
+      "description": "测试左移理念模板——测试越早越便宜、质量内建非末端把关，TDD 左移背书",
+      "path": "philosophy/测试左移.md",
+      "tags": [
+        "philosophy",
+        "ai-engineering",
+        "first-principles",
+        "thinking"
+      ],
+      "category": "理念/哲学"
+    },
+    {
+      "name": "理念-真相第一",
+      "description": "真相第一理念实践模板——实测>推断、诚实>好看，结论需证据、承诺落机械验证",
+      "path": "philosophy/真相第一.md",
+      "tags": [
+        "philosophy",
+        "ai-engineering",
+        "first-principles",
+        "thinking"
+      ],
+      "category": "理念/哲学"
+    },
+    {
+      "name": "第一性原理",
+      "description": "分解到不可再分的基本事实，再从基础重建——不靠类比、惯例或\"别人都这么做\"。源自古希腊亚里士多德，马斯克用于逆向工程式解复杂问题。",
+      "path": "philosophy/第一性原理.md",
+      "tags": [
+        "philosophy",
+        "ai-engineering",
+        "first-principles",
+        "thinking"
+      ],
+      "category": "理念/哲学"
+    },
+    {
+      "name": "简单即真",
+      "description": "极简 = 高效。能删则删，已有的就是对的（RED-5 追加式）。只解今天的问题，不为假想的未来抽象。简单 ≠ 简陋：简单 = 充分理解。",
+      "path": "philosophy/简单即真.md",
+      "tags": [
+        "philosophy",
+        "ai-engineering",
+        "first-principles",
+        "thinking"
+      ],
+      "category": "理念/哲学"
+    },
+    {
+      "name": "驾驭分工",
+      "description": "AI 产证据链与方案，**人做判断与方向**。工具会换，思想不换——判断权归人（部署方），执行权授权给 AI，各守其位。",
+      "path": "philosophy/驾驭分工.md",
+      "tags": [
+        "philosophy",
+        "ai-engineering",
+        "first-principles",
+        "thinking"
+      ],
+      "category": "理念/哲学"
+    },
+    {
+      "name": "BDD模板",
+      "description": "让业务、测试、开发**用同一语言说话**——一份行为规格，同是需求文档、测试用例、验收标准。",
+      "path": "methodology/BDD模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "CLI封装模板",
+      "description": "{domain}-tool.sh <verb> [target] [--ns X] [--json] [--dry-run] [--apply] [--suggest]",
+      "path": "methodology/CLI封装模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "DSL模板",
+      "description": "1. Fowler《Domain-Specific Languages》(2010)：DSL =「面向特定领域的有限表达力语言」，分 internal/external。→ martinfowler.com/books/dsl.html",
+      "path": "methodology/DSL模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "E2E测试报告模板",
+      "description": "{UI 操作简述 + 落库 SQL 验证，附实际数据/字段值}",
+      "path": "methodology/E2E测试报告模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "E2E测试用例模板",
+      "description": "TC-{Ticket}-AC{模块}.{序号}    # 对齐技术 AC（如 AC-3 物料 / AC-10 同 SKU）",
+      "path": "methodology/E2E测试用例模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "GitWorktree并行",
+      "description": "git fetch origin qa",
+      "path": "methodology/GitWorktree并行.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "方法-Git分支管理",
+      "description": "Git 分支管理——发布节奏隔离 + 建分支 SOP",
+      "path": "methodology/Git分支管理.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "Harness层级模板",
+      "description": "L5 产品层 HARNESS.md → 总纲与导航",
+      "path": "methodology/Harness层级模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "方法-SDD模板",
+      "description": "SDD 方法论模板——文档先行，Spec 唯一真相源",
+      "path": "methodology/SDD模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "UIUX设计管控模板",
+      "description": "□ 先定审美（品牌金黑），不套模板默认 □ 禁蓝紫渐变/三等卡片/Inter 字体",
+      "path": "methodology/UIUX设计管控模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "UI自动化测试模板",
+      "description": "TC-{Ticket}-AC{xx}-{场景}",
+      "path": "methodology/UI自动化测试模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "bash封装模板",
+      "description": "人工操作五要素 → bash 脚本（_TEMPLATE 骨架）",
+      "path": "methodology/bash封装模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "方法-curl脚本模板",
+      "description": "curl 接口验证脚本模板——一行 curl=接口探针，可脚本化回归",
+      "path": "methodology/curl脚本模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "交付检视模板",
+      "description": "代码写完 ≠ 功能完整。交付检视 = 五维逐项勾选；差距分析 = 沿「前端→后端→导出→导入→MQ 消费者→SQL」找缺口。两者配合，堵住\"只测自己链路\"的假完成。",
+      "path": "methodology/交付检视模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "方法-压测模板",
+      "description": "压测模板（Performance/Load Testing），stages/perf",
+      "path": "methodology/压测模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "方法-变异测试模板",
+      "description": "变异测试模板（Mutation Testing / PIT）——L4 变异门禁，注入变异算子测测试是否真能抓错",
+      "path": "methodology/变异测试模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "方法-对抗审查模板",
+      "description": "对抗审查方法论模板——多角色独立挑刺，交叉验证消除单视角盲区",
+      "path": "methodology/对抗审查模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "工具分层",
+      "description": "工具分层 = 把 AI 编程工具按「**能力/掌控度从低到高**」划为 **L0~L4 五层**（单调递增）。**层越高能力越强、工程门槛越高**——不是越高越好，匹配才有效。",
+      "path": "methodology/工具分层.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "方法-工单回复模板",
+      "description": "生产工单对外回复——定性、责任、证据、闭环",
+      "path": "methodology/工单回复模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "并行Spec开发SOP",
+      "description": "理论/调度/门禁见 specs-rules §九/§十、CLAUDE.md「Subagent 并行调度规则」、constitution.md §七。",
+      "path": "methodology/并行Spec开发SOP.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "方法-影响分析模板",
+      "description": "影响分析（Impact Analysis）——改动前级联评估：改一个服务先查 3 跳下游，防基线 BUG",
+      "path": "methodology/影响分析模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "方法-接口自动化测试模板",
+      "description": "API 自动化测试方法论——L2 API 契约（curl + Schema 漂移即红）",
+      "path": "methodology/接口自动化测试模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "方法-数据排查模板",
+      "description": "数据排查方法模板（Data Investigation）——数据不对=先定证据链再下结论，SQL 单点确诊≠全量同因",
+      "path": "methodology/数据排查模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "方案选型调研模板",
+      "description": "1. **调研背景**：要选什么型、为什么、约束（内网/云依赖/成本）",
+      "path": "methodology/方案选型调研模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "智能体形态模板",
+      "description": "Agent=独立执行单元，Subagent=主 Agent 派生的执行子单元，Workflow=程序化编排容器（执行单元=Subagent）。形态按复杂度选，够用即止。",
+      "path": "methodology/智能体形态模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "本地测试模板",
+      "description": "能本地 curl 验证的不等部署——**本地通过再合并**：编译零错误 + 本地启动 + curl 全链路通过，才允许合入 SIT。",
+      "path": "methodology/本地测试模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "渐进式加载",
+      "description": "常驻极简 → 指针索引 → 触发词路由 → 按需取全文 → 用后释放",
+      "path": "methodology/渐进式加载.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "生产问题排查模板",
+      "description": "生产问题排查模板（T1 排查文档骨架）",
+      "path": "methodology/生产问题排查模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "白盒测试模板",
+      "description": "① 正常 典型输入 → assertEquals + verify",
+      "path": "methodology/白盒测试模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "知识可视化",
+      "description": "README 源（先增行）→ 同步（脚本优先/手工镜像）→ HTML 看板（内联数组渲染）→ 登记索引（README 头看板行）",
+      "path": "methodology/知识可视化.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "编译测试模板",
+      "description": "编译测试（Build/Compile Verification）：提交前用统一构建入口将改动模块编译为可运行产物，验证「编译零错误 + 依赖可解析 + 产物已生成」。它是测试金字塔最底层（L0 构建门禁）、Constitution §七 质量门禁第一项，比单元测试更早更机械——编译不过，后续测试无从谈起。",
+      "path": "methodology/编译测试模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "能力分层模板",
+      "description": "能力↑ → 工具层↑ → AI 自主度↑ → 组织成熟度↑",
+      "path": "methodology/能力分层模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "方法-质量门禁模板",
+      "description": "质量门禁模板（Quality Gates）——L1~L6 提交门禁清单，提交前逐项核查",
+      "path": "methodology/质量门禁模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "部署SOP模板",
+      "description": "方法-部署 SOP 模板（Deployment SOP）",
+      "path": "methodology/部署SOP模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "方法-需求澄清模板",
+      "description": "需求澄清（Requirements Clarification / Grill）——模糊需求→精确约束，写码前一次问清省返工",
+      "path": "methodology/需求澄清模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "方法-项目结项模板",
+      "description": "业务侧项目结项交付——交付证据+复盘沉淀+知识归档，供业务/相关方验收收尾",
+      "path": "methodology/项目结项模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "黑盒测试模板",
+      "description": "从用户视角验证\"行为对不对\"，不关心内部实现——用例只写\"做什么→看到什么\"，不写\"代码怎么实现\"。",
+      "path": "methodology/黑盒测试模板.md",
+      "tags": [
+        "methodology",
+        "ai-engineering",
+        "best-practices",
+        "template"
+      ],
+      "category": "方法"
+    },
+    {
+      "name": "Feign异常处理模式",
+      "description": "TICKET-002 客需随礼超量提交返回裸 500（无 err_msg），前端误报障。排查发现：",
+      "path": "engineering/Feign异常处理模式.md",
+      "tags": [
+        "engineering",
+        "context-engineering",
+        "prompt-engineering",
+        "harness",
+        "graph",
+        "loop"
+      ],
+      "category": "工程实践"
+    },
+    {
+      "name": "Jenkins CI自动化接入",
+      "description": "bash .claude/scripts/jenkins-ci-build.sh ci_fs_example-service qa-uat --watch",
+      "path": "engineering/Jenkins CI自动化接入.md",
+      "tags": [
+        "engineering",
+        "context-engineering",
+        "prompt-engineering",
+        "harness",
+        "graph",
+        "loop"
+      ],
+      "category": "工程实践"
+    },
+    {
+      "name": "工程实践-TDD",
+      "description": "TDD（Test-Driven Development）实践模板——先写失败测试→最小实现→重构，测试先行把需求变成可执行约束",
+      "path": "engineering/TDD.md",
+      "tags": [
+        "engineering",
+        "context-engineering",
+        "prompt-engineering",
+        "harness",
+        "graph",
+        "loop"
+      ],
+      "category": "工程实践"
+    },
+    {
+      "name": "工程实践-上下文工程",
+      "description": "上下文工程实践模板——上下文窗口/token 的规划、压缩、预算管理，长会话不退化、短会话不浪费",
+      "path": "engineering/上下文工程.md",
+      "tags": [
+        "engineering",
+        "context-engineering",
+        "prompt-engineering",
+        "harness",
+        "graph",
+        "loop"
+      ],
+      "category": "工程实践"
+    },
+    {
+      "name": "工程实践-图工程",
+      "description": "图工程实践模板——把代码/依赖/契约建成图支撑定位/影响分析/并行编排",
+      "path": "engineering/图工程.md",
+      "tags": [
+        "engineering",
+        "context-engineering",
+        "prompt-engineering",
+        "harness",
+        "graph",
+        "loop"
+      ],
+      "category": "工程实践"
+    },
+    {
+      "name": "工程实践-循环工程",
+      "description": "循环工程实践模板——复利进化 loop（使用→问题→沉淀→反哺→下次自动拦截）",
+      "path": "engineering/循环工程.md",
+      "tags": [
+        "engineering",
+        "context-engineering",
+        "prompt-engineering",
+        "harness",
+        "graph",
+        "loop"
+      ],
+      "category": "工程实践"
+    },
+    {
+      "name": "工程实践-提示词工程（Prompt Engineering）",
+      "description": "提示词工程实践——五要素设计高质量提示词",
+      "path": "engineering/提示词工程.md",
+      "tags": [
+        "engineering",
+        "context-engineering",
+        "prompt-engineering",
+        "harness",
+        "graph",
+        "loop"
+      ],
+      "category": "工程实践"
+    },
+    {
+      "name": "自动化本体论",
+      "description": "subgraph 语义层[语义层 · 看/查]",
+      "path": "engineering/自动化本体论.md",
+      "tags": [
+        "engineering",
+        "context-engineering",
+        "prompt-engineering",
+        "harness",
+        "graph",
+        "loop"
+      ],
+      "category": "工程实践"
+    },
+    {
+      "name": "工程实践-驾驭工程（Harness Engineering）",
+      "description": "驾驭工程实践模板——人机分工、Spec 驱动。AI 产证据链与方案，人做判断与方向",
+      "path": "engineering/驾驭工程.md",
+      "tags": [
+        "engineering",
+        "context-engineering",
+        "prompt-engineering",
+        "harness",
+        "graph",
+        "loop"
+      ],
+      "category": "工程实践"
+    },
+    {
+      "name": "宪法模板",
+      "description": "反模式：①只写愿望不写红线；②红线无机械拦截（规则是愿望，hook 才是墙）；③红线泛滥无门禁。",
+      "path": "governance/宪法模板.md",
+      "tags": [
+        "governance",
+        "constitution",
+        "quality-gates",
+        "delivery"
+      ],
+      "category": "治理/宪法"
+    },
+    {
+      "name": "BUG修复沉淀模板",
+      "description": "{3-5 条具体教训，每条一句话}",
+      "path": "session/BUG修复沉淀模板.md",
+      "tags": [
+        "session",
+        "resume",
+        "continuity",
+        "review",
+        "workflow"
+      ],
+      "category": "会话/断点续传"
+    },
+    {
+      "name": "ponytail-caveman",
+      "description": "❌ 痛点：AI 做\"番茄炒蛋\"加了\"东坡肉\"（不需要的无关功能），PR 注释还解释一大堆\"为什么不需要\"。",
+      "path": "session/ponytail-caveman.md",
+      "tags": [
+        "session",
+        "resume",
+        "continuity",
+        "review",
+        "workflow"
+      ],
+      "category": "会话/断点续传"
+    },
+    {
+      "name": "会话复盘模板",
+      "description": "会话复盘模板（T6 会话复盘/协作复盘）",
+      "path": "session/会话复盘模板.md",
+      "tags": [
+        "session",
+        "resume",
+        "continuity",
+        "review",
+        "workflow"
+      ],
+      "category": "会话/断点续传"
+    },
+    {
+      "name": "反哺模板",
+      "description": "坑→BCI→红线→自动拦截，错只犯一次",
+      "path": "session/反哺模板.md",
+      "tags": [
+        "session",
+        "resume",
+        "continuity",
+        "review",
+        "workflow"
+      ],
+      "category": "会话/断点续传"
+    },
+    {
+      "name": "沉淀模板",
+      "description": "1. **发现**：教训冒头 → 识别\"可复用值得记\"",
+      "path": "session/沉淀模板.md",
+      "tags": [
+        "session",
+        "resume",
+        "continuity",
+        "review",
+        "workflow"
+      ],
+      "category": "会话/断点续传"
+    },
+    {
+      "name": "继续会话提示词模板",
+      "description": "压缩会话后恢复上下文的提示词模板，含已沉淀资产索引 + 待办清单",
+      "path": "session/继续会话提示词模板.md",
+      "tags": [
+        "session",
+        "resume",
+        "continuity",
+        "review",
+        "workflow"
+      ],
+      "category": "会话/断点续传"
+    },
+    {
+      "name": "MCP接入样板",
+      "description": "\"mcpServers\": {",
+      "path": "scaffolds/MCP接入样板.md",
+      "tags": [
+        "scaffold",
+        "template",
+        "agent",
+        "skill",
+        "mcp"
+      ],
+      "category": "组件样板"
+    },
+    {
+      "name": "MR模板",
+      "description": "MR 模板（示例企业 FS 适配）",
+      "path": "scaffolds/MR模板.md",
+      "tags": [
+        "scaffold",
+        "template",
+        "agent",
+        "skill",
+        "mcp"
+      ],
+      "category": "组件样板"
+    },
+    {
+      "name": "Mermaid图表样板",
+      "description": "A[开始] --> B{库存充足?}",
+      "path": "scaffolds/Mermaid图表样板.md",
+      "tags": [
+        "scaffold",
+        "template",
+        "agent",
+        "skill",
+        "mcp"
+      ],
+      "category": "组件样板"
+    },
+    {
+      "name": "SOP模板",
+      "description": "环境、凭据、依赖、已构建产物。缺一项则终止。",
+      "path": "scaffolds/SOP模板.md",
+      "tags": [
+        "scaffold",
+        "template",
+        "agent",
+        "skill",
+        "mcp"
+      ],
+      "category": "组件样板"
+    },
+    {
+      "name": "agent-template",
+      "description": "1. 复制此文件到 `.claude/agents/{your-agent-name}.md`",
+      "path": "scaffolds/agent-template.md",
+      "tags": [
+        "scaffold",
+        "template",
+        "agent",
+        "skill",
+        "mcp"
+      ],
+      "category": "组件样板"
+    },
+    {
+      "name": "代码包模板",
+      "description": "dc-<service>/src/main/java/com/示例企业/ctf/<service>/",
+      "path": "scaffolds/代码包模板.md",
+      "tags": [
+        "scaffold",
+        "template",
+        "agent",
+        "skill",
+        "mcp"
+      ],
+      "category": "组件样板"
+    },
+    {
+      "name": "提示词模板",
+      "description": "角色｜目标｜输入（锚点/坐标/约定）｜输出（产出）｜约束铁律（No Spec No Code、事务内禁远程调用、AC 可测试）",
+      "path": "scaffolds/提示词模板.md",
+      "tags": [
+        "scaffold",
+        "template",
+        "agent",
+        "skill",
+        "mcp"
+      ],
+      "category": "组件样板"
+    },
+    {
+      "name": "服务目录结构样板",
+      "description": "├── src/main/java/com/示例企业/ctf/<service>/",
+      "path": "scaffolds/服务目录结构样板.md",
+      "tags": [
+        "scaffold",
+        "template",
+        "agent",
+        "skill",
+        "mcp"
+      ],
+      "category": "组件样板"
+    },
+    {
+      "name": "需求交付Story模板",
+      "description": "{流程图 + 文字流程说明；关联 Epic / 工单}",
+      "path": "scaffolds/需求交付Story模板.md",
+      "tags": [
+        "scaffold",
+        "template",
+        "agent",
+        "skill",
+        "mcp"
+      ],
+      "category": "组件样板"
+    }
+  ]
+}
