@@ -45,4 +45,4 @@ MIT License.
 
 ---
 
-> AI-assisted creation · Built on real engineering practice · All company-sensitive information removed
+> AI-assisted creation · Built on real engineering practice
