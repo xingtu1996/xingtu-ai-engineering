@@ -45,7 +45,7 @@ permissionMode: default              ***REMOVED*** 可选：default/acceptEdits/
 ***REMOVED******REMOVED*** 你的侦查范围
 
 ***REMOVED******REMOVED******REMOVED*** 核心代码路径
-- `dc-xxx/src/main/java/com/示例企业/ctf/xxx/`
+- `dc-xxx/src/main/java/com/example/xxx/`
 
 ***REMOVED******REMOVED******REMOVED*** 关键能力
 1. **能力1**: 具体描述
