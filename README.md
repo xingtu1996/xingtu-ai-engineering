@@ -2,7 +2,10 @@
 
 > **一仓覆盖 AI 工程化全貌**：理念哲学 · 方法论 · 五大工程实践 · 治理 · 断点续传 · 组件样板
 
-![MIT](https://img.shields.io/badge/license-MIT-green.svg)
+![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)
+![Assets](https://img.shields.io/badge/assets-73-blue.svg)
+![Engineering Practices](https://img.shields.io/badge/engineering%20practices-5-purple.svg)
+![Last Commit](https://img.shields.io/github/last-commit/xingtu1996/xingtu-ai-engineering.svg)
 
 ---
 
@@ -72,7 +75,3 @@ CC BY-NC-SA 4.0（署名-非商业使用-相同方式共享）——方法论内
 
 完整方法论深度篇与实战案例 → 《行途 AI 工程化手册》（出版筹备中）
 深度答疑 / 定制陪跑 / 知识星球 → xingtutech@163.com
-
----
-
-> AI 辅助创作 · 内容基于真实工程实践沉淀
