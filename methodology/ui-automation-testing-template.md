@@ -1,9 +1,9 @@
-***REMOVED*** UI 自动化测试模板（UI Automation Testing — Playwright）
+# UI 自动化测试模板（UI Automation Testing — Playwright）
 
 > 定义：界面自动化测试——脚本模拟真实用户点击/输入/浏览，验证界面功能与交互符合预期。属测试金字塔 **L3 E2E**（UI 视角）。
 > 关联：`rules/e2e-testing-rules.md` ＋ `memory/fs-e2e-login-playwright.md` ＋ `templates/e2e-test-report-template.md`。
 
-***REMOVED******REMOVED*** 深入浅出
+## 深入浅出
 
 **一句话本质**：模拟用户操作，验证「界面看得见的行为」符合预期。
 
@@ -14,7 +14,7 @@
 | 界面看到 ≠ 落库正确 | 数据没写 | 关键用例 UI + db-query 双验证 |
 | 一用例跑全流程 | 失败难定位 | 一用例一场景，前置造数据 |
 
-***REMOVED******REMOVED*** 示例企业实践
+## 示例企业实践
 
 | 环节 | 做法 |
 |------|------|
@@ -24,7 +24,7 @@
 | 截图 | `TC-{Ticket}-AC{xx}-{场景}.png`（编号+场景中文）；存 spec 目录；禁用/二次确认/报错必截 |
 | 结果 | 在线表格「AI 测试结果」列，测试人=AI，含时间+落库证据 |
 
-***REMOVED******REMOVED*** 骨架（用例）
+## 骨架（用例）
 
 ```
 TC-{Ticket}-AC{xx}-{场景}
@@ -43,7 +43,7 @@ TC-{Ticket}-AC{xx}-{场景}
 
 **元素定位**（优先序）：`getByRole`/`getByText`（语义）→ `getByTestId`/数据属性（稳定）→ label 关联 → 兜底 CSS。禁：位置索引（`nth(2)`）与深层 class 链。
 
-***REMOVED******REMOVED*** 检查清单
+## 检查清单
 
 - [ ] 每条用例有**断言**（非只截图）
 - [ ] 关键用例**落库验证**（UI 看到 ≠ 数据正确）

@@ -1,21 +1,21 @@
-***REMOVED*** {Ticket} 测试用例模板（业务化）
+# {Ticket} 测试用例模板（业务化）
 
 > 用途：给产品经理/测试执行的可执行用例，技术术语转业务语言，单元格内换行。
 > 格式：按表格列填充（编号|测试模块|用例标题|前置|步骤|预期|优先级|可自动化）
 > 对齐 TICKET-002/1909 已完整 sheet 风格（覆盖 AC 全量 + 异常/边界/幂等/兼容/数据初始化维度）
 
-***REMOVED******REMOVED*** 用例编号规则
+## 用例编号规则
 
 ```
-TC-{Ticket}-AC{模块}.{序号}    ***REMOVED*** 对齐技术 AC（如 AC-3 物料 / AC-10 同 SKU）
-TC-{Ticket}-REV-{序号}         ***REMOVED*** 逆向（退款/换货/再随礼）
-TC-{Ticket}-CON-{序号}         ***REMOVED*** 幂等/并发
-TC-{Ticket}-BD-{序号}          ***REMOVED*** 边界
-TC-{Ticket}-REG-{序号}         ***REMOVED*** 兼容回归
-TC-{Ticket}-DATA-{序号}        ***REMOVED*** 数据初始化
+TC-{Ticket}-AC{模块}.{序号}    # 对齐技术 AC（如 AC-3 物料 / AC-10 同 SKU）
+TC-{Ticket}-REV-{序号}         # 逆向（退款/换货/再随礼）
+TC-{Ticket}-CON-{序号}         # 幂等/并发
+TC-{Ticket}-BD-{序号}          # 边界
+TC-{Ticket}-REG-{序号}         # 兼容回归
+TC-{Ticket}-DATA-{序号}        # 数据初始化
 ```
 
-***REMOVED******REMOVED*** 用例内容格式（单元格内换行，1. 2. 3. 分行）
+## 用例内容格式（单元格内换行，1. 2. 3. 分行）
 
 ```
 标题：{一句话业务场景，如"给订单添加物料赠品（物料无需选择商品/活动）"}
@@ -32,7 +32,7 @@ TC-{Ticket}-DATA-{序号}        ***REMOVED*** 数据初始化
 优先级：{P0/P1} | 可自动化：{是/部分/否}
 ```
 
-***REMOVED******REMOVED*** 改写原则
+## 改写原则
 
 1. **技术术语转业务语言**：去掉 dc_order_item/giftsType/SQL/接口名等 → "订单中出现赠品记录""库存是否占用"
 2. **步骤详尽**（打开→选择→填写→提交→查看），3 条左右
@@ -41,7 +41,7 @@ TC-{Ticket}-DATA-{序号}        ***REMOVED*** 数据初始化
 5. 标注优先级 + 是否可 Playwright 自动化
 6. 截图命名：`TC-{Ticket}-AC{xx}-{场景}.png`
 
-***REMOVED******REMOVED*** 参考
+## 参考
 
 - 完整样例：`specs/2026080313-TICKET-002-giveaway-guest-gift/23_测试用例补充清单`
 - 规范：`rules/e2e-testing-rules.md`

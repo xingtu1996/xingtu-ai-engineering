@@ -1,4 +1,4 @@
-***REMOVED*** 理念-本体论（Ontology）
+# 理念-本体论（Ontology）
 
 > 定义：本体论=领域**概念/实体/关系的显式规范**（类/属性/关系/约束），是图的**语义层**——无本体图只是数据，有本体图才有可推理语义。
 >
@@ -7,7 +7,7 @@
 > - 工程：**Gruber 1993**《A translation approach to portable ontology specifications》首提「本体=概念化的显式规范（an explicit specification of a conceptualization）」；Studer 1998 补「形式化的共享概念化规范」。
 > - 语义网：RDF 三元组→RDFS 轻量词汇→OWL（2004 描述逻辑形式语义）→SHACL（闭世界校验）。
 
-***REMOVED******REMOVED*** 背书/引用备案（背书双轨）
+## 背书/引用备案（背书双轨）
 
 **外部权威**：
 
@@ -27,19 +27,19 @@
 - CBM 节点/边类型 = 代码世界本体（`工程实践-graph-engineering.md`）— search_graph/trace_path 即语义检索实证
 - `.claude/rules-on-demand/specs-rules.md` §5.4 DSL 硬化 — 契约 Schema + Gherkin 把本体约束变机器强制层（漂移即红）
 
-***REMOVED******REMOVED*** 深入浅出
+## 深入浅出
 
 **一句话本质**：无本体图只是数据，有本体图才有可推理语义——概念/实体/关系显式定义，机器才能解释/校验/推理。
 
 **反模式**：无 schema 自由文本（语义靠人脑）；概念歧义（同字段跨服务漂移）；过度建模（先搜已有再建）。
 
-***REMOVED******REMOVED*** 示例企业实践对应（引用不复制）
+## 示例企业实践对应（引用不复制）
 
 - **契约 Schema**：`contracts/schema/{名}.schema.json`（required/类型/enum/additionalProperties:false）= 微服务边界的微型本体。见 `方法-dsl-template.md` §三。
 - **CBM 元数据模型**：CBM 节点/边类型 = 代码世界本体，search_graph/trace_path 即语义检索。见 `工程实践-graph-engineering.md`。
 - **DSL 硬化**：契约 Schema + Gherkin 把本体约束变机器强制层。见 `specs-rules.md` §5.4。
 
-***REMOVED******REMOVED*** harness 组件本体论（OOP/OOA 类比）
+## harness 组件本体论（OOP/OOA 类比）
 
 > harness 自身就是一套本体：**组件=抽象封装，注册器=显式实例化，渐进式加载=按需实例化**。像 OOP 的类→对象，harness 的"概念显式化"落到可检索结构。
 
@@ -56,11 +56,11 @@
 
 **每个组件标准三件套**（用户确立惯例）：① 抽象文件夹（组件本体）② README/自述文件（说明书）③ 注册器登记（CHANGELOG/DIRECTORY/toolbox 全局可见）。
 
-***REMOVED******REMOVED*** AI 时代层：从数据到行动（Palantir Ontology 借鉴）
+## AI 时代层：从数据到行动（Palantir Ontology 借鉴）
 
 > **一句话**：传统中台告诉你"库存不够了"（语言层/昂贵镜像），本体论帮你"把单下了"（执行层/感知→决策→写回→闭环）。"Nouns must be paired with verbs"——数据库存名词事实，决策不是事实列表。
 
-***REMOVED******REMOVED******REMOVED*** 三层本体模型（Palantir Foundry 官方）
+### 三层本体模型（Palantir Foundry 官方）
 
 | 层 | 要素 | 示例企业对应 |
 |----|------|---------|
@@ -71,20 +71,20 @@
 
 **关键定位**：Ontology 是"决策与行动层"非纯语义层；可审计的决策传播是分析系统与操作系统的分界线。官方引文："The Ontology is designed to represent the complex, interconnected decisions of an enterprise, not simply the data"；"Schemas describe data; ontologies describe reality"。
 
-***REMOVED******REMOVED******REMOVED*** 案例（背书双轨）
+### 案例（背书双轨）
 
 - **BP**：200 万传感器数字孪生，决策时间数天→数小时；累计约 10 亿美元成本优化（注：10 亿/72h/380 万为聚合站转述，官方稿未含）；Mad Dog 预测性维护提前 72h/92% 准确率省约 380 万美元；2024-09-09 五年战略协议 + AIP（LLM 决策建议 + data provenance 防幻觉 + 完全可审计）。
 - **Airbus**：Foundry 整合工程/生产/质控/供应链，A350 交付提速约 33%、一年产量翻四倍（"25x"仅单一中文来源非官方 ROI 口径，引用需标注）。
 - **Palantir×xAI×TWG**（2025-05）：Grok + Colossus，目标企业 CEO 部署数十万 AI agent，TWG 主导实施。
 - **渐进落地**：progressive absorption——先 read-first 只读监控层挂接遗留系统，验证一个闭环后逐系统引入 Actions 写回并退役遗留段，反对 big-bang。"本体在你停止触碰它的那一刻开始腐烂"。
 
-***REMOVED******REMOVED******REMOVED*** 中台 vs 本体论
+### 中台 vs 本体论
 
 - 数据中台"已死"动因：数据消费主体从人转向 AI，95% 数据平台操作将由机器接管，"给人看"的 BI 宽表/看板场景萎缩，引擎类组件保留。
 - 纯看板批判："你构建的只是一个昂贵镜像——观察现实但不操作现实，那是 dashboard，不是闭环"。
 - 推荐顺序：数据平台→BI/看板→知识库→Agent——"数据平台是大脑皮层，Agent 是嘴巴和手脚"，跳过基础直接上 Agent 是让手脚没有大脑皮层。
 
-***REMOVED******REMOVED******REMOVED*** AI 产品经理四能力（映射示例企业）
+### AI 产品经理四能力（映射示例企业）
 
 | 能力 | 业界 | 示例企业落地 |
 |------|------|---------|
@@ -95,14 +95,14 @@
 
 > 据报道 LinkedIn 2025 AI PM 岗位 +340%、2026 春招 +369%（今日头条转述，待官方验证）；PM:工程师比 1:5→1:2（无直接来源）。机会属于懂业务语义+对象建模的复合型人才。
 
-***REMOVED******REMOVED******REMOVED*** 示例企业落地：名词+动词双要素
+### 示例企业落地：名词+动词双要素
 
 - **名词**=对象/属性/关系（contracts + CBM）；**动词**=可执行写回（Feign/HTTP/MQ/Zeebe worker）。
 - **轻量 action-registry**：登记自动化脚本的输入/校验/副作用/审计，先以 harness 自身（build.sh/rancher-tool/new-branch.sh）试点，不必引入完整本体建模产品。
 - **Decision Capture**：把工单决策链（数据→逻辑→行动→结果）落盘为可回放记录，强化复利进化 loop 机械闭环（人审保留=HITL）。
 - **受控 Action 出口**：AIP agent 只能通过预定义 Action 行动（RBAC + 高风险人审 + 审计）；示例企业对应"AI 只通过 Action 行动，禁止裸调 DB/SQL/Feign"——承接 constitution 禁止模式（事务内远程调用/消费者不幂等）作 Action 级校验规则。
 
-***REMOVED******REMOVED*** 备注卡（速查）
+## 备注卡（速查）
 
 - **关系**：本体（概念/关系定义）→Schema（结构实现）→契约（跨服务边界落地）→DSL（机器可校验，漂移即红）。DSL 化只对需机器校验的边界。
 - **何时建本体**：数据/图跨 2+ 服务共享且语义易歧义（共享表字段/Feign DTO/MQ 事件体/状态机）；单机内部不建。

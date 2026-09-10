@@ -1,16 +1,16 @@
-***REMOVED*** 方法：Git Worktree 并行（Git Worktree）
+# 方法：Git Worktree 并行（Git Worktree）
 
 > 定义：同一仓库（共享 .git/objects）挂多个独立工作树，各占独立目录/分支/编译产物。
 > 引用：Git 官方 `git-worktree(1)`；spec `2026072816-worktree-vs-ai-planning`（8/04 修正）；CLAUDE.md L87。
 
-***REMOVED******REMOVED*** 一、本质
+## 一、本质
 
 **同仓库多工作树并行 = 空间换时间**：把"人同时改多文件"的物理冲突用目录隔离推迟，互不抢 checkout。
 **反模式（AI 滥用）**：规划/读码/写文档用 worktree = 杀鸡用牛刀（建树/清树/依赖重复成本高）。
 
 > 铁律：worktree=空间换时间（给人）；AI=时间换空间，先规划再并行。
 
-***REMOVED******REMOVED*** 二、场景判断表
+## 二、场景判断表
 
 | 场景 | 用？ | 依据 |
 |------|:---:|------|
@@ -19,48 +19,48 @@
 | **AI 编码多会话写代码** | ✅ | 8/04 修正：规划不需 worktree，编码需——多会话改文件须物理隔离 |
 | 同一文件多人改 | ⚠️ | 仍 merge conflict |
 
-***REMOVED******REMOVED*** 三、操作 SOP
+## 三、操作 SOP
 
-***REMOVED******REMOVED******REMOVED*** 1. 创建（建分支+建树一步，等价 new-branch.sh 基线保证）
+### 1. 创建（建分支+建树一步，等价 new-branch.sh 基线保证）
 ```bash
 git fetch origin qa
-git worktree add -b dev-TICKET-002 .worktrees/worktree-001 origin/qa   ***REMOVED*** 基线=远端 origin/qa（RED-7）
+git worktree add -b dev-TICKET-002 .worktrees/worktree-001 origin/qa   # 基线=远端 origin/qa（RED-7）
 cd .worktrees/worktree-001 && bash ../.claude/scripts/build.sh clean install
 ```
 
-***REMOVED******REMOVED******REMOVED*** 2. 查看 / 切换
+### 2. 查看 / 切换
 ```bash
-git worktree list   ***REMOVED*** 全部工作树（主树第一）；checkout 只切该树分支
+git worktree list   # 全部工作树（主树第一）；checkout 只切该树分支
 ```
 
-***REMOVED******REMOVED******REMOVED*** 3. 清理（红线：禁 rm -rf，用 git worktree remove）
+### 3. 清理（红线：禁 rm -rf，用 git worktree remove）
 ```bash
-cd <主仓库> && git worktree remove .worktrees/worktree-001   ***REMOVED*** 有未提交改动会拒绝，先保存
-git branch -d dev-TICKET-002                              ***REMOVED*** remove 不删分支，单独删
-git worktree prune                                     ***REMOVED*** 手工删目录后清管理文件
+cd <主仓库> && git worktree remove .worktrees/worktree-001   # 有未提交改动会拒绝，先保存
+git branch -d dev-TICKET-002                              # remove 不删分支，单独删
+git worktree prune                                     # 手工删目录后清管理文件
 ```
 
-***REMOVED******REMOVED******REMOVED*** 4. 与 new-branch.sh 结合
+### 4. 与 new-branch.sh 结合
 - 主树已建分支：先切回原分支（同分支不能挂两树），再 `git worktree add <path> <branch>`。
 - 推荐直接走步骤 1：一条命令等价 new-branch.sh"远端基线+拒重名"。
 
-***REMOVED******REMOVED*** 四、注意事项
+## 四、注意事项
 - 同分支不能同时 checkout 两树（除非 --force）；各树独立 target/，Maven 共享 .m2；建树目录用 `.worktrees/<spec>`。
 
-***REMOVED******REMOVED*** 版本历史
+## 版本历史
 | 日期 | 版本 | 变更 |
 |------|:---:|------|
 | 2026-08-25 | V1.0 | 新建：场景判断表 + 创建/清理 SOP |
 
-***REMOVED******REMOVED*** 五、引用备案
+## 五、引用备案
 
-***REMOVED******REMOVED******REMOVED*** 外部权威（方法论可信度背书）
+### 外部权威（方法论可信度背书）
 
 | 来源 | 作者 | 年份 | URL | 背书要点 |
 |------|------|:---:|------|---------|
 | Git 官方 `git-worktree(1)` 文档 | Git 项目 | 持续更新 | https://git-scm.com/docs/git-worktree | 多工作树权威语义：add/list/lock/move/remove/prune、`-b <branch>` 一步建分支建树、refs 共享规则、worktreeConfig 隔离 → 对应操作 SOP 全部命令的官方依据 |
 
-***REMOVED******REMOVED******REMOVED*** 内部实证（示例企业真实用过）
+### 内部实证（示例企业真实用过）
 
 | 落点 | 类型 | 链接 | 实证内容 |
 |------|------|------|---------|

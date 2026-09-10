@@ -1,4 +1,4 @@
-***REMOVED*** XingTu AI Engineering
+# XingTu AI Engineering
 
 > **One repo, the full landscape of AI engineering**: philosophy · methodology · five engineering practices · governance · session resume · scaffolds
 
@@ -6,13 +6,13 @@
 
 ---
 
-***REMOVED******REMOVED*** What is this
+## What is this
 
 `xingtu-ai-engineering` is the flagship methodology repository of the XingTu open-source matrix. It distills years of hands-on AI engineering practice into structured, **copy-paste-ready templates** (with checklists, commands, and verification steps) across six categories.
 
 **Audience**: tech leads, engineers, and AI engineering practitioners who want a systematic understanding of how to harness AI for productive output — not scattered tips.
 
-***REMOVED******REMOVED*** The Five Engineering Practices (core)
+## The Five Engineering Practices (core)
 
 | Engineering | File | What |
 |---|---|---|
@@ -22,7 +22,7 @@
 | **Graph Engineering** | `engineering/graph-engineering.md` | Dependency/knowledge/task graphs for planable, traceable systems |
 | **Loop Engineering** | `engineering/loop-engineering.md` | Feedback → fix → persist loops for continuously evolving output |
 
-***REMOVED******REMOVED*** Six Categories · 73 assets
+## Six Categories · 73 assets
 
 - `philosophy/` (11) — ontology, first principles, compounding evolution, shift-left testing, truth first, adversarial collaboration, ...
 - `methodology/` (37) — SDD, TDD/BDD/DSL, adversarial review, progressive disclosure, requirement clarification, impact analysis, Git worktree, Harness hierarchy, test templates (black/white/mutation/load/API/UI/E2E/compile), ticket reply, incident troubleshooting, delivery checklist, quality gates, ...
@@ -31,15 +31,15 @@
 - `session/` (6) — session resume prompt, session review, bug-sediment, feedback, ponytail/caveman share
 - `scaffolds/` (9) — agent template, MCP scaffold, code-package template, service structure, Mermaid scaffold, MR template, SOP template, story template
 
-***REMOVED******REMOVED*** AI discoverability
+## AI discoverability
 
 `marketplace.json` provides a machine-readable index (name + description + path + tags) for find-skills / AI search engines:
 
 ```bash
-cat marketplace.json   ***REMOVED*** 73 asset entries
+cat marketplace.json   # 73 asset entries
 ```
 
-***REMOVED******REMOVED*** License
+## License
 
 MIT License.
 

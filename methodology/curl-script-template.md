@@ -3,17 +3,17 @@ name: 方法-curl脚本模板
 description: curl 接口验证脚本模板——一行 curl=接口探针，可脚本化回归
 ---
 
-***REMOVED*** 方法-curl脚本模板（curl Verification Script）
+# 方法-curl脚本模板（curl Verification Script）
 
 > 定义：**curl 接口验证脚本（curl Verification Script）** = curl 发 HTTP + `-w` 状态码 + jq 断言响应体 + SQL 核落库 + 幂等可重跑。
 
-***REMOVED******REMOVED*** 一、深入浅出
+## 一、深入浅出
 **本质**：一行 curl = 接口探针，把"发请求→验响应→核落库"固化成可重复回归的脚本。
 **反模式**：① 只看 200 不验响应体→结构漂移静默；② 硬编码 token→泄露+过期即坏；③ 不幂等→重跑脏数据。
 
-***REMOVED******REMOVED*** 二、curl 骨架模板
+## 二、curl 骨架模板
 ```bash
-TOKEN=${TOKEN:-}      ***REMOVED*** 环境变量注入，禁硬编码
+TOKEN=${TOKEN:-}      # 环境变量注入，禁硬编码
 BODY='{"skuCodes":["SKU001"],"activityId":"ACT-1","channelId":"CH-T"}'
 code=$(curl -s -o /tmp/r.json -w '%{http_code}' -X POST \
   http://localhost:8111/api/promotion/stock/query \
@@ -26,7 +26,7 @@ echo PASS
 ```
 **幂等**：mutating 先 SQL 预检 count=0 → 跑后断言 count=1 → 重跑安全。
 
-***REMOVED******REMOVED*** 三、常见模式表
+## 三、常见模式表
 | 模式 | 要点 |
 |------|------|
 | GET 查询 | URL 参数 + jq 断言字段 |
@@ -36,14 +36,14 @@ echo PASS
 | 分页 | 断言 total + 行数≤pageSize |
 | 批量 | for 循环 + 单条失败即记 |
 
-***REMOVED******REMOVED*** 四、示例企业实践
+## 四、示例企业实践
 | 实践 | 落地 |
 |------|------|
 | validator curl | specs-rules.md §5.4：AC 派生 TC-API-01…，L2≥3 条 |
 | 本地栈 | dc-goods 8111 / dc-giveaway 18083（local-test-stack.md，RED-8） |
 | 契约对照 | 请求体按 contracts/samples（dc-promotion-stock.query.ok.json）构造 |
 
-***REMOVED******REMOVED*** 五、检查清单
+## 五、检查清单
 ```
 □ 状态码？200 + 4xx/5xx 全覆盖？
 □ 响应体断言？jq 关键字段，非只 -w 看 200？
@@ -52,5 +52,5 @@ echo PASS
 □ token 非硬编码？${TOKEN:-} 环境变量注入？
 ```
 
-***REMOVED******REMOVED*** 六、关联
+## 六、关联
 `方法-api-testing-template.md` ｜ `specs-rules.md` §5.4 ｜ `contracts/samples/` ｜ `local-test-stack.md`

@@ -1,4 +1,4 @@
-***REMOVED*** 工程实践-Jenkins CI 自动化接入（案例模板）
+# 工程实践-Jenkins CI 自动化接入（案例模板）
 
 > **用途**：对接示例企业 Jenkins（Remote Access API）实现 CI 镜像构建自动化——触发构建 → 提取镜像 tag → argocd 部署 → SLS 观察。可复用为任意服务 CI 抓手。
 > **案例**：TICKET-002 example-service（2026-08-27 落地，脚本 `.claude/scripts/jenkins-ci-build.sh`）。
@@ -6,7 +6,7 @@
 
 ---
 
-***REMOVED******REMOVED*** 一、认证方式（3 种，推荐 API Token）
+## 一、认证方式（3 种，推荐 API Token）
 
 | 方式 | 配置 | 优点 | 缺点 |
 |------|------|------|------|
@@ -16,7 +16,7 @@
 
 > ⚠️ **Cookie 会过期**：重登后 F12 刷新；脚本用 API Token 最稳（认证优先级：API Token > Cookie，见脚本）。
 
-***REMOVED******REMOVED*** 二、常用 API 清单（Jenkins Remote Access API 2.x）
+## 二、常用 API 清单（Jenkins Remote Access API 2.x）
 
 | 端点 | 方法 | 用途 |
 |------|:---:|------|
@@ -30,7 +30,7 @@
 
 > 认证参数：API Token 用 `-u user:token`；cookie 用 `-b "COOKIE"`。
 
-***REMOVED******REMOVED*** 三、构建参数（ci_fs_example-service 示例）
+## 三、构建参数（ci_fs_example-service 示例）
 
 | 参数 | 值 | 说明 |
 |------|-----|------|
@@ -40,26 +40,26 @@
 | `ENABLE_UNIT_TEST` | `false` | 默认关 |
 | `PUSH_TO_ALI` | `true` | **必开**（推 ACR 供 argocd 拉取） |
 
-***REMOVED******REMOVED*** 四、脚本（`.claude/scripts/jenkins-ci-build.sh`）
+## 四、脚本（`.claude/scripts/jenkins-ci-build.sh`）
 
 ```bash
-***REMOVED*** 触发 qa-uat 构建 + 自动提取镜像 tag（--watch）
+# 触发 qa-uat 构建 + 自动提取镜像 tag（--watch）
 bash .claude/scripts/jenkins-ci-build.sh ci_fs_example-service qa-uat --watch
-***REMOVED*** 跳过 sonar 快速构建（默认已跳过，需 sonar 用 --sonar）
+# 跳过 sonar 快速构建（默认已跳过，需 sonar 用 --sonar）
 ```
 
 - 配置 `~/.jenkins-ci.env`（chmod 600）：`JENKINS_URL` / `JENKINS_USER` / `JENKINS_API_TOKEN`（或 `JENKINS_COOKIE`）
 - 流程：查 job → `buildWithParameters`（BRANCH_NAME 等）→ 轮询 `lastBuild` → `consoleText` grep 镜像 tag（`qa-uat-x.x.x.x-commit`）
 - 镜像 tag 拿到后：改 argocd `values-example-service.yaml` `Image.Tag` → push 触发部署 → SLS 观察
 
-***REMOVED******REMOVED*** 五、完整链路（TICKET-002 验证通过的流程）
+## 五、完整链路（TICKET-002 验证通过的流程）
 
 ```
-改代码推 qa-uat → jenkins-ci-build.sh 触发 CI → 构建 ***REMOVED***N SUCCESS → 提取镜像 tag
+改代码推 qa-uat → jenkins-ci-build.sh 触发 CI → 构建 #N SUCCESS → 提取镜像 tag
 → argocd 改 Image.Tag push → 自动部署 UAT → SLS 观察启动 → curl 业务验证
 ```
 
-***REMOVED******REMOVED*** 六、坑（BCI 沉淀）
+## 六、坑（BCI 沉淀）
 
 | 坑 | 现象 | 解决 |
 |----|------|------|
@@ -68,7 +68,7 @@ bash .claude/scripts/jenkins-ci-build.sh ci_fs_example-service qa-uat --watch
 | macOS `head -n -1` 不支持 | 提取 HTTP 码报错 | 用 `awk 'END{print}'` |
 | eval 引号地狱 | 变量带乱码（`HTTP�`） | 不用 eval，直接 curl 数组参数 |
 
-***REMOVED******REMOVED*** 版本历史
+## 版本历史
 
 | 日期 | 变更 | 变更人 |
 |------|------|--------|

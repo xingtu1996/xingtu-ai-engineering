@@ -3,17 +3,17 @@ name: 方法-质量门禁模板
 description: 质量门禁模板（Quality Gates）——L1~L6 提交门禁清单，提交前逐项核查
 ---
 
-***REMOVED*** 方法-质量门禁（Quality Gates）
+# 方法-质量门禁（Quality Gates）
 
 > 定义：**质量门禁（Quality Gates）** = 提交前用机器 + 清单强制拦截质量红线的关卡。未过门禁不进主干。
 
-***REMOVED******REMOVED*** 一、深入浅出
+## 一、深入浅出
 
 **一句话本质**：门禁 = 提交前机器/清单强制拦质量红线，不是自觉承诺。
 
 **反模式**：① 跳门禁（`--no-verify`）→ 事故漏网；② 口头承诺无证据 → 无法复核；③ 形同虚设（空 check / 过不了就删）→ 更糟。
 
-***REMOVED******REMOVED*** 二、测试金字塔 6 层门禁表
+## 二、测试金字塔 6 层门禁表
 
 | 层 | 门禁 | 工具 | 通过标准 |
 |:--:|------|------|---------|
@@ -24,7 +24,7 @@ description: 质量门禁模板（Quality Gates）——L1~L6 提交门禁清单
 | L2 | API 契约 | validator curl | ≥3 条全过 |
 | L1 | 单元 | JUnit5 | Service ≥85% |
 
-***REMOVED******REMOVED*** 三、示例企业实践（引用不复制）
+## 三、示例企业实践（引用不复制）
 
 | 门禁 | 示例企业落地 | 位置 |
 |------|---------|------|
@@ -35,7 +35,7 @@ description: 质量门禁模板（Quality Gates）——L1~L6 提交门禁清单
 | 对抗审查 | 三角色 Refuter/Optimizer/Auditor 无 🔴 | `skills/adversarial-review` |
 | 六层 Token | rtk + Caveman + Headroom 已激活 | `CLAUDE.md` 六层 |
 
-***REMOVED******REMOVED*** 四、骨架：提交前逐项勾选
+## 四、骨架：提交前逐项勾选
 
 ```
 □ Constitution Check（§六 无命中）
@@ -48,7 +48,7 @@ description: 质量门禁模板（Quality Gates）——L1~L6 提交门禁清单
 □ 编译零错误（build.sh）| 测试后进程已清理（RED-6）
 ```
 
-***REMOVED******REMOVED*** 五、检查清单
+## 五、检查清单
 
 - [ ] L1~L6 每层门禁全过
 - [ ] 安全三条件明确（计费/库存/权限必填）
@@ -56,11 +56,11 @@ description: 质量门禁模板（Quality Gates）——L1~L6 提交门禁清单
 - [ ] 对抗审查无 🔴 阻塞项
 - [ ] 未跳门禁（无 `--no-verify` / 无空断言 / 证据可复核）
 
-***REMOVED******REMOVED*** 六、关联
+## 六、关联
 
 `constitution.md` §七 ｜ `specs-rules.md` §九 ｜ `templates/mr-template.md` ｜ `skills/adversarial-review/SKILL.md`
 
-***REMOVED******REMOVED*** 七、引用备案（背书双轨）
+## 七、引用备案（背书双轨）
 
 **外部权威**：
 

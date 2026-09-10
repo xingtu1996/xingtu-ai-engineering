@@ -5,12 +5,12 @@ metadata:
   type: project
 ---
 
-***REMOVED*** 工程实践-上下文工程（Context Engineering）
+# 工程实践-上下文工程（Context Engineering）
 
 > 定义：对上下文窗口/token 的规划、压缩、预算管理——短会话不浪费、长会话不退化。
 > 示例企业依据：token 六层优化（上行 spec→CBM→rtk→Headroom→模型；下行 Caveman+Concise→Ponytail）+ harness 体积标准（5% 规则、每 KB 常驻=上下文税）。
 
-***REMOVED******REMOVED*** 理念与权威引用
+## 理念与权威引用
 
 > 英文术语确认：**Context Engineering**（上下文工程），非 "Content Engineering"（内容工程，属内容营销领域）。业界共识正从 "Prompt Engineering" 演进到 "Context Engineering"：优化对象从单条 prompt 变为模型推理时看到的**完整上下文**（指令/知识/工具/记忆/状态/请求），本模板即其工程实践落地。
 
@@ -23,7 +23,7 @@ metadata:
 
 > 补充备案（待验证）：第三方报道称 OpenAI 2026-02 提出 "Harness Engineering" 概念，定位为 Context Engineering 之上的系统级约束/自动化验证/编排——与本项目 harness 体系命名巧合，无官方一手出处，仅备案不引证。
 
-***REMOVED******REMOVED*** 一、实践方法模板
+## 一、实践方法模板
 
 **1. 上下文预算分配（常驻 vs 按需）**
 - 常驻（CLAUDE.md + rules + memory）：只留"删掉会犯错"的，越大越退化。
@@ -41,7 +41,7 @@ metadata:
 **4. 体积门禁**
 - 改 CLAUDE.md / rules / hooks 后跑 `bash .claude/scripts/harness-size.sh -g`；FAIL = 治理信号（登记 CHANGELOG + 达标路径），不改口径消 FAIL。
 
-***REMOVED******REMOVED*** 二、骨架表
+## 二、骨架表
 
 | 场景 | 手段 | 产出 |
 |------|------|------|
@@ -52,14 +52,14 @@ metadata:
 | 长会话退化 | /compact + 继续会话提示词 | 上下文恢复续接 |
 | harness 膨胀 | harness-size.sh -g | 体积门禁报告 |
 
-***REMOVED******REMOVED*** 三、约束/铁律
+## 三、约束/铁律
 
 - **TOK-001~007**：CBM 优先 / 读源码用 snippet / Bash 加 rtk / 输出精简 / 最少代码 / CBM 索引按需 / Spec 精简。
 - **5% 规则**：常驻 token ≤ 有效窗口 5%。
 - **每 KB 常驻 = 固定上下文税**：>64K token 性能退化 30%+。
 - **压缩前确认 STATUS 完整**：关键决策全落档，不靠对话记忆。
 
-***REMOVED******REMOVED*** 四、关联
+## 四、关联
 
 - [[session-context-management]] / [[session-compression-guide]]（长会话五要素/压缩机制）
 - `rules/token-optimization-rules.md` + `rules/harness-size-standard.md`（规范源，不复制全文）

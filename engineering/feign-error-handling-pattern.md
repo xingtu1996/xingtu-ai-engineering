@@ -1,9 +1,9 @@
-***REMOVED*** 工程实践-Feign 异常处理模式（示例企业）
+# 工程实践-Feign 异常处理模式（示例企业）
 
 > 用途：跨服务 Feign 调用失败的异常处理统一风格，避免"裸 500 误报障"踩坑（TICKET-002 实证 2026-08-27）
 > 来源：dc-order GuestGiftApplication 修复（500 误报障）+ CustomErrorDecoder 发现
 
-***REMOVED******REMOVED*** 〇、核心教训（为什么需要此模板）
+## 〇、核心教训（为什么需要此模板）
 
 TICKET-002 客需随礼超量提交返回裸 500（无 err_msg），前端误报障。排查发现：
 - dc-order 用**自定义 `CustomErrorDecoder`**：Feign 非 2xx → `new RuntimeException(response body JSON)`，**不是标准 FeignException**
@@ -11,9 +11,9 @@ TICKET-002 客需随礼超量提交返回裸 500（无 err_msg），前端误报
 
 **教训**：写 Feign 异常处理前，**先查项目 Feign 异常机制**（ErrorDecoder / fallback / 拦截器），再设计处理。
 
-***REMOVED******REMOVED*** 一、Feign 异常处理设计模式（示例企业统一风格）
+## 一、Feign 异常处理设计模式（示例企业统一风格）
 
-***REMOVED******REMOVED******REMOVED*** 1. 先查项目 Feign 机制（必做）
+### 1. 先查项目 Feign 机制（必做）
 ```
 grep -rln "ErrorDecoder\|CustomErrorDecoder\|FallbackFactory" <服务>/src/main/java
 ```
@@ -23,7 +23,7 @@ grep -rln "ErrorDecoder\|CustomErrorDecoder\|FallbackFactory" <服务>/src/main/
 | 标准 Feign | `FeignException`（contentUTF8() 取 body）|
 | Hystrix fallback | `HystrixRuntimeException`（cause 链含 FeignException）|
 
-***REMOVED******REMOVED******REMOVED*** 2. 统一异常解包 + err_msg 提取（模板代码）
+### 2. 统一异常解包 + err_msg 提取（模板代码）
 ```java
 catch (Exception e) {
     String errMsg = extractErrMsg(orderId, e);  // 多源提取
@@ -55,13 +55,13 @@ private String parseErrMsg(String json) {
 }
 ```
 
-***REMOVED******REMOVED******REMOVED*** 3. 单测覆盖（必须）
+### 3. 单测覆盖（必须）
 - CustomErrorDecoder RuntimeException（message=body JSON）
 - 标准 FeignException（contentUTF8）
 - Hystrix 包装（unwrap）
 - 非 JSON → 兜底
 
-***REMOVED******REMOVED*** 二、异常出库排查/论证方法论（三层归因 + 本地复现）
+## 二、异常出库排查/论证方法论（三层归因 + 本地复现）
 
 | 步骤 | 方法 | 证据 |
 |------|------|------|
@@ -71,7 +71,7 @@ private String parseErrMsg(String json) {
 | 4 本地复现 | 本地启动（关 Eureka + Feign 直连 UAT）→ 复现 | 日志异常解包 |
 | 5 根因判定 | 代码 + 数据 + 日志三证据 | CustomErrorDecoder 未覆盖 |
 
-***REMOVED******REMOVED*** 三、关键文件/关联
+## 三、关键文件/关联
 - 排查模板：`production-troubleshooting-template.md`
 - 设计模式参考：项目 `FeignSupportConfig$CustomErrorDecoder` / `GravityCommonInterceptor`
 - 案例：spec TICKET-002 `26_库存链路E2E测试方案` / `GuestGiftApplication`

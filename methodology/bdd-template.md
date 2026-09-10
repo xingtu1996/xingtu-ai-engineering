@@ -1,9 +1,9 @@
-***REMOVED*** BDD 方法论模板（Behavior-Driven Development）
+# BDD 方法论模板（Behavior-Driven Development）
 
 > 定义：行为驱动开发（Behavior-Driven Development）——用**业务语言**描述系统行为，行为描述即可执行的验收测试。需求/测试/代码共用同一份规格。
 > 用途：Spec `requirements.md` AC 派生测试、E2E 用例编写、Story 验收。**克制**：只对 P0 核心验收/状态/契约 DSL 化，勿全量化。
 
-***REMOVED******REMOVED*** 权威引用备案
+## 权威引用备案
 
 | 来源 | 要点 |
 |------|------|
@@ -11,11 +11,11 @@
 | Martin Fowler bliki《GivenWhenThen》 | GWT 三句式由 Daniel Terhorst-North 与 Chris Matts 提出 |
 | Cucumber 官方 Gherkin 参考（cucumber.io/docs/gherkin/reference） | Gherkin 语法标准；场景短小（3-5 步）；用声明式业务语言非技术步骤 |
 
-***REMOVED******REMOVED*** 一句话本质
+## 一句话本质
 
 让业务、测试、开发**用同一语言说话**——一份行为规格，同是需求文档、测试用例、验收标准。
 
-***REMOVED******REMOVED*** 反模式
+## 反模式
 
 | 症状 | 后果 |
 |------|------|
@@ -24,13 +24,13 @@
 | 每条 AC 都上 Gherkin 全量化 | 文档膨胀，维护成本 > 收益 |
 | Then 断言数据库内部字段 | 测试耦合实现，丢失业务语言 |
 
-***REMOVED******REMOVED*** 示例企业实践对应
+## 示例企业实践对应
 
 - **Gherkin 克制映射**：`specs-rules.md` §5.4——AC 涉及 P0 核心验收时用 Given/When/Then 子集映射测试，克制勿全量化（SDD 靠纪律，DSL 靠机器，只对需机器校验的边界 DSL 化）
 - **E2E 用例业务化**：`e2e-testing-rules.md`——用例命名带编号+场景中文（TC--AC10.1-前端已赠禁用），UI 操作 + 落库双重验证，截图即证据
 - **Story GWT 验收**：`templates/story-delivery-template.md` §4——作为/想要/以便 + 场景「假如/当/那么」，验收后回填 Spec `requirements.md`
 
-***REMOVED******REMOVED*** 骨架
+## 骨架
 
 ```
 作为 {角色}，我想要 {目标}，以便 {价值}        ← 用户故事（Story 编号 = TICKET-XXX）

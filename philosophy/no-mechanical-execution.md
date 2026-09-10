@@ -3,14 +3,14 @@ name: 理念-不机械执行
 description: 不机械执行实践模板（Intent over Compliance / Anti-Mechanical Execution）
 ---
 
-***REMOVED*** 理念-不机械执行（Intent over Compliance / Anti-Mechanical Execution）
+# 理念-不机械执行（Intent over Compliance / Anti-Mechanical Execution）
 
 > 定义：**清单是候选不是命令，先懂为什么再执行**。
 > 示例企业依据：harness 哲学 原则 2/11，规范源 `rules/harness-philosophy.md`，只引用不复制。
 
-***REMOVED******REMOVED*** 〇、引用备案
+## 〇、引用备案
 
-| ***REMOVED*** | 权威来源 | 要点 | 对应落地 |
+| # | 权威来源 | 要点 | 对应落地 |
 |---|---------|------|---------|
 | 1 | A. Fortuna《process addiction》'24 | "checkbox compliance"——团队"go through the motions"不知为何 | 照单全抄=合规表演 |
 | 2 | Catapult Labs《Breathing Life...》 | 仪式变"checklist items, stripped of intended purpose" | 清单剥掉"为什么"即失效 |
@@ -18,7 +18,7 @@ description: 不机械执行实践模板（Intent over Compliance / Anti-Mechani
 
 > 术语边界：取 Intent over Compliance，区别于 Compliance Gap。
 
-***REMOVED******REMOVED*** 一、深入浅出
+## 一、深入浅出
 
 **本质一句话**：清单是候选不是命令，先懂为什么再执行。
 
@@ -27,7 +27,7 @@ description: 不机械执行实践模板（Intent over Compliance / Anti-Mechani
 - 为合规而合规：以"走了流程"免责，产出对错没人管。
 - 清单当护身符：勾满即安心，不质疑清单本身是否过时。
 
-***REMOVED******REMOVED*** 二、示例企业实践对应
+## 二、示例企业实践对应
 
 | 实践 | 落地位置 | 作用 |
 |------|---------|------|
@@ -36,7 +36,7 @@ description: 不机械执行实践模板（Intent over Compliance / Anti-Mechani
 | 清单理解意图 | delivery-checklist / gap-analysis / BCI | 先问"为什么查"再落证据 |
 | BDD 意图路由 | AI 分析意图+建议深度，人确认后执行 | 人保留判断权 |
 
-***REMOVED******REMOVED*** 三、检查清单
+## 三、检查清单
 
 ```
 □ 理解意图了吗？  这条为什么存在？不查会出什么错？
@@ -46,7 +46,7 @@ description: 不机械执行实践模板（Intent over Compliance / Anti-Mechani
 □ 结果有人复核？  勾了≠对，证据链留档了吗？
 ```
 
-***REMOVED******REMOVED*** 四、关联
+## 四、关联
 
 - `rules/harness-philosophy.md`（原则 2 不机械执行 / 11 机械生效，规范源）
 - CLAUDE.md 测试金字塔（人看关键路径和门禁点）

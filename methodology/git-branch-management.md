@@ -3,12 +3,12 @@ name: 方法-Git分支管理
 description: Git 分支管理——发布节奏隔离 + 建分支 SOP
 ---
 
-***REMOVED*** 方法-Git分支管理（Git Branching Model）
+# 方法-Git分支管理（Git Branching Model）
 
 > 定义：**Git 分支管理模型** = 用分支隔离发布节奏：常驻分支承载稳定/集成线，短命分支承载特性/修复，合并路径决定发布节奏。
 > 引用：Driessen《A Successful Git Branching Model》(2010)；Hammant《Trunk-Based Development》(2013)；GitHub Flow 文档。
 
-***REMOVED******REMOVED*** 一、三种模型对比
+## 一、三种模型对比
 
 | 维度 | Git Flow | Trunk-based | GitHub Flow |
 |------|:---:|:---:|:---:|
@@ -21,13 +21,13 @@ description: Git 分支管理——发布节奏隔离 + 建分支 SOP
 
 > 反思：Git Flow 非银弹；Google 95% 单主干。
 
-***REMOVED******REMOVED*** 二、深入浅出
+## 二、深入浅出
 
 **一句话本质**：分支 = 发布节奏的隔离——从哪建/何时合，决定发布节奏与冲突成本。
 
 **反模式（RED-7）**：从落后本地分支建分支——把旧基线带进新功能 → 合并冲突/返工。
 
-***REMOVED******REMOVED*** 三、示例企业分支模型
+## 三、示例企业分支模型
 
 | 分支 | 定位 | 依据 |
 |------|------|------|
@@ -37,52 +37,52 @@ description: Git 分支管理——发布节奏隔离 + 建分支 SOP
 | `qa-sit`/`qa-uat` | 环境部署分支，待确认 | 部署惯例推断 |
 | `dev-FS-*`/`fix/FS-*` | 短命开发/修复，从 origin/qa 建 | new-branch.sh |
 
-***REMOVED******REMOVED*** 四、建分支 SOP（RED-7）
+## 四、建分支 SOP（RED-7）
 
 ```bash
-***REMOVED*** 一律走脚本，禁手动 git checkout -b（BCI-001）
-bash .claude/scripts/new-branch.sh dev-TICKET-002            ***REMOVED*** 默认 origin/qa
-bash .claude/scripts/new-branch.sh fix/TICKET-001 --carry   ***REMOVED*** 携带未提交修改
-bash .claude/scripts/new-branch.sh dev-TICKET-002 main       ***REMOVED*** 指定 origin/main
+# 一律走脚本，禁手动 git checkout -b（BCI-001）
+bash .claude/scripts/new-branch.sh dev-TICKET-002            # 默认 origin/qa
+bash .claude/scripts/new-branch.sh fix/TICKET-001 --carry   # 携带未提交修改
+bash .claude/scripts/new-branch.sh dev-TICKET-002 main       # 指定 origin/main
 ```
 
 流程：① 工作区干净（脏则拒/--carry）→ ② 重名校验 → ③ fetch origin/<base> → ④ checkout -b 于 origin/<base> → ⑤ 输出基线证据。
 
 **基线落后自检**（期望 `0 <N>`）：
 ```bash
-git rev-list --left-right --count origin/qa...HEAD   ***REMOVED*** 左=落后，右=领先
+git rev-list --left-right --count origin/qa...HEAD   # 左=落后，右=领先
 ```
 
-***REMOVED******REMOVED*** 五、commit 规范
+## 五、commit 规范
 
 ```
 t-[TICKET]-[SUBTASK]-[DESCRIPTION]-[AUTHOR]
-***REMOVED*** t-[履约-4.10.05.05]-[TICKET-002]-[赠品/物料出库履约-物料匹配异常特性支持]-[XingTu]
+# t-[履约-4.10.05.05]-[TICKET-002]-[赠品/物料出库履约-物料匹配异常特性支持]-[XingTu]
 ```
 SUBTASK：`TICKET-XXX`/`CTF-XXXXX`/`dev-TICKET-XXX`；方括号禁空格；禁 Co-Authored-By/--no-verify/--force。
 
-***REMOVED******REMOVED*** 六、合并/基线同步
+## 六、合并/基线同步
 
 ```bash
-git fetch origin <base> && git merge origin/<base>   ***REMOVED*** 功能分支同步基线
-git branch -f <base> origin/<base>                    ***REMOVED*** 本地基线同步
-***REMOVED*** MR：source=<分支> → target=<base>
+git fetch origin <base> && git merge origin/<base>   # 功能分支同步基线
+git branch -f <base> origin/<base>                    # 本地基线同步
+# MR：source=<分支> → target=<base>
 ```
 
-***REMOVED******REMOVED*** 七、关联
+## 七、关联
 
 `rules/git-rules.md` §二/§四 ｜ `constitution.md` §三 RED-7 ｜ `scripts/new-branch.sh` ｜ `memory/bad-case-index.md` BCI-001
 
-***REMOVED******REMOVED*** 八、引用备案
+## 八、引用备案
 
-***REMOVED******REMOVED******REMOVED*** 外部权威（方法论可信度背书）
+### 外部权威（方法论可信度背书）
 
 | 来源 | 作者 | 年份 | URL | 背书要点 |
 |------|------|:---:|------|---------|
 | 《A Successful Git Branching Model》(Git Flow 原始文) | Vincent Driessen | 2010 | https://nvie.com/posts/a-successful-git-branching-model/ | Git Flow 定义（master+develop+feature/release/hotfix）；含 2020 反思：web/持续交付场景应走简化流程，**非银弹** → 对应本文"反思：Git Flow 非银弹" |
 | Trunk-Based Development | Paul Hammant | 2013+ | https://trunkbaseddevelopment.com/ | 主干开发实践（Google 95% 单主干佐证）；短命分支 1-2 天合并 → 对应对比表"Trunk-based"列 |
 
-***REMOVED******REMOVED******REMOVED*** 内部实证（示例企业真实用过）
+### 内部实证（示例企业真实用过）
 
 | 落点 | 类型 | 链接 | 实证内容 |
 |------|------|------|---------|

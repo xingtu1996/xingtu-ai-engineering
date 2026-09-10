@@ -1,4 +1,4 @@
-***REMOVED*** XingTu AI Engineering · 一线 AI 工程化方法论旗舰仓
+# XingTu AI Engineering · 一线 AI 工程化方法论旗舰仓
 
 > **一仓覆盖 AI 工程化全貌**：理念哲学 · 方法论 · 五大工程实践 · 治理 · 断点续传 · 组件样板
 
@@ -9,7 +9,7 @@
 
 ---
 
-***REMOVED******REMOVED*** 🎯 这是什么
+## 🎯 这是什么
 
 `xingtu-ai-engineering` 是行途开源矩阵的**方法论旗舰仓**，把多年一线 AI 工程化实践中沉淀的**理念、方法、工程实践、治理规则、会话工作流、组件样板**归纳为结构化资产，供工程师直接借鉴、裁剪、落地。
 
@@ -17,7 +17,7 @@
 
 **核心价值**：每个文件都是**可直接落地的模板**（含检查清单、命令、验证方法），不是空泛的理念。
 
-***REMOVED******REMOVED*** 📐 五大工程实践（核心）
+## 📐 五大工程实践（核心）
 
 | 工程 | 文件 | 说明 |
 |------|------|------|
@@ -27,51 +27,51 @@
 | **图工程** | `engineering/graph-engineering.md` | 依赖图/知识图/任务图，让复杂系统可规划可追溯 |
 | **循环工程** | `engineering/loop-engineering.md` | 迭代循环（反馈→修正→沉淀），让产出持续进化 |
 
-***REMOVED******REMOVED*** 🗂️ 六大分类 · 73 个资产
+## 🗂️ 六大分类 · 73 个资产
 
-***REMOVED******REMOVED******REMOVED*** philosophy/ · 理念哲学（11）
+### philosophy/ · 理念哲学（11）
 本体论 · 第一性原理 · 复利进化 · 测试左移 · 真相第一 · 驾驭分工 · 简单即真 · 举一反三 · 本地轮回 · 协作即对抗 · 不机械执行
 
-***REMOVED******REMOVED******REMOVED*** methodology/ · 方法（37）
+### methodology/ · 方法（37）
 SDD · TDD/BDD/DSL · 对抗审查 · 渐进式加载 · 需求澄清 · 影响分析 · 工具/能力分层 · Git 分支管理 · GitWorktree 并行 · Harness 层级 · 知识可视化 · 各类测试模板（黑盒/白盒/变异/压测/接口/UI/E2E/编译）· 工单回复 · 生产问题排查 · 部署 SOP · 交付检视 · 质量门禁 · 方案选型调研 等
 
-***REMOVED******REMOVED******REMOVED*** engineering/ · 工程实践（9）
+### engineering/ · 工程实践（9）
 上下文工程 · 提示词工程 · 驾驭工程 · 图工程 · 循环工程 · 自动化本体论 · TDD · Feign 异常处理模式 · Jenkins CI 自动化接入
 
-***REMOVED******REMOVED******REMOVED*** governance/ · 治理/宪法（1）
+### governance/ · 治理/宪法（1）
 宪法模板（S/M/L 裁剪 · 质量门禁 · 交付检视基线）
 
-***REMOVED******REMOVED******REMOVED*** session/ · 会话/断点续传（6）
+### session/ · 会话/断点续传（6）
 继续会话提示词 · 会话复盘模板 · BUG 修复沉淀 · 反哺模板 · 沉淀模板 · ponytail/caveman 分享
 
-***REMOVED******REMOVED******REMOVED*** scaffolds/ · 组件样板（9）
+### scaffolds/ · 组件样板（9）
 agent 模板 · MCP 接入样板 · 代码包模板 · 服务目录结构样板 · 提示词模板 · Mermaid 图表样板 · MR 模板 · SOP 模板 · 需求交付 Story 模板
 
-***REMOVED******REMOVED*** 🚀 快速开始
+## 🚀 快速开始
 
 ```bash
-***REMOVED*** 方式一：按需阅读
-***REMOVED*** 从 philosophy/ 建立底层认知 → methodology/ 学方法 → engineering/ 看五大工程实践
+# 方式一：按需阅读
+# 从 philosophy/ 建立底层认知 → methodology/ 学方法 → engineering/ 看五大工程实践
 
-***REMOVED*** 方式二：AI 可检索
-***REMOVED*** 直接让 AI 读 marketplace.json，按 description 检索到对应资产
+# 方式二：AI 可检索
+# 直接让 AI 读 marketplace.json，按 description 检索到对应资产
 ```
 
-***REMOVED******REMOVED*** 🤖 AI 可检索
+## 🤖 AI 可检索
 
 `marketplace.json` 提供机器可读索引（name + description + path + tags），供 find-skills / AI 搜索引擎检索：
 
 ```bash
-cat marketplace.json   ***REMOVED*** 73 条资产索引
+cat marketplace.json   # 73 条资产索引
 ```
 
 > 🧩 本仓方法论与模板面向 AI 工程化（含 DeepSeek Harness 类「一切皆插件」工作流），模板可直接裁剪落地到 DSH / Claude Code / CodeBuddy 等工具链。
 
-***REMOVED******REMOVED*** 许可证
+## 许可证
 
 CC BY-NC-SA 4.0（署名-非商业使用-相同方式共享）——方法论内容资产，禁止商用；商业使用 / 出版合作请联系作者。
 
-***REMOVED******REMOVED*** 深度内容与咨询
+## 深度内容与咨询
 
 完整方法论深度篇与实战案例 → 《行途 AI 工程化手册》（出版筹备中）
 深度答疑 / 定制陪跑 / 知识星球 → xingtutech@163.com

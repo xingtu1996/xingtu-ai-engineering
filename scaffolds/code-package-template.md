@@ -1,8 +1,8 @@
-***REMOVED*** 代码包模板（AI 生成代码包有样学样）
+# 代码包模板（AI 生成代码包有样学样）
 
 > 用途：新建代码包（后端/前端/harness）按此骨架落地。基准 `java-rules.md` §二 DDD + §七 复杂度 + 各 `_TEMPLATE`。步骤：定类型→复制骨架→建目录→填逻辑→过清单。
 
-***REMOVED******REMOVED*** 一、后端包模板（dc-service，完整树见 `service-directory-structure-template.md`）
+## 一、后端包模板（dc-service，完整树见 `service-directory-structure-template.md`）
 
 ```
 dc-<service>/src/main/java/com/示例企业/ctf/<service>/
@@ -18,7 +18,7 @@ dc-<service>/src/main/java/com/示例企业/ctf/<service>/
 
 禁止：直调 DAO/事务内远程/domain 带业务/无分页/空 catch/SQL `${}`/循环远程/不幂等。
 
-***REMOVED******REMOVED*** 二、前端包模板（React，基准 ctf-backend 实际结构）
+## 二、前端包模板（React，基准 ctf-backend 实际结构）
 
 ```
 src/
@@ -36,7 +36,7 @@ src/
 
 规则：逻辑在 containers、UI 在 components、API 只经 services；新模块 `config`+`containers` 成对建。
 
-***REMOVED******REMOVED*** 三、harness 包模板（skill/agent/rule/hook/script）
+## 三、harness 包模板（skill/agent/rule/hook/script）
 
 | 类型 | 位置 | 骨架 | 注册 |
 |------|------|------|------|
@@ -48,7 +48,7 @@ src/
 
 新组件必经：`harness-gate.md` 准入五问 + `harness-size.sh` 门禁 + `CHANGELOG.md` 登记。
 
-***REMOVED******REMOVED*** 四、代码实现脚本模板（Service 方法骨架）
+## 四、代码实现脚本模板（Service 方法骨架）
 
 > 三段式：校验→幂等→业务+写库。
 
@@ -70,7 +70,7 @@ log.info("完成, orderId={}", orderId);
 
 规范：application 写方法加 `@Transactional`；方法≤50/类≤500/嵌套≤3/参数≤5；ERROR 日志必传异常；注释只讲业务（无流程编号）。
 
-***REMOVED******REMOVED*** 五、检查清单
+## 五、检查清单
 
 - [ ] DDD 分层正确？事务内无远程调用？
 - [ ] 幂等/分页/参数化 SQL 齐全？

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema***REMOVED***",
+  "$schema": "https://json-schema.org/draft-07/schema#",
   "name": "xingtu-ai-engineering",
   "description": "XingTu AI engineering methodology collection - philosophy, methodology, five engineering practices, governance, session resume & scaffolds",
   "categories": {
@@ -193,7 +193,7 @@
     },
     {
       "name": "E2E测试用例模板",
-      "description": "TC-{Ticket}-AC{模块}.{序号}    ***REMOVED*** 对齐技术 AC（如 AC-3 物料 / AC-10 同 SKU）",
+      "description": "TC-{Ticket}-AC{模块}.{序号}    # 对齐技术 AC（如 AC-3 物料 / AC-10 同 SKU）",
       "path": "methodology/e2e-test-case-template.md",
       "tags": [
         "methodology",

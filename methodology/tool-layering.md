@@ -1,9 +1,9 @@
-***REMOVED*** 方法：AI 编程工具分层（AI Coding Tool Tiers）
+# 方法：AI 编程工具分层（AI Coding Tool Tiers）
 
 > 按「用户工程能力 + 约束需求」选 AI 编程工具层级的决策方法。
 > 溯源：`research/2026082514-harness-panorama-methodology/00_README.md` + 2026-08 WebSearch（Omarchy/dsh/Codex Harness 开源）。
 
-***REMOVED******REMOVED*** 定义
+## 定义
 
 工具分层 = 把 AI 编程工具按「**能力/掌控度从低到高**」划为 **L0~L4 五层**（单调递增）。**层越高能力越强、工程门槛越高**——不是越高越好，匹配才有效。
 
@@ -15,13 +15,13 @@
 | L3 | 专业 CLI | 专业受控执行 | 高 |
 | L4 | 操作系统级 harness | 顶级自建环境 | 最高 |
 
-***REMOVED******REMOVED*** 引用备案
+## 引用备案
 
 - 极客公园《硅谷押注的下一个 Harness，是整个桌面操作系统》— geekpark.net/news/369298
 - InfoQ《The Open-Sourcing of DeepSeek Harness》— infoq.com/news/2026/08/deep-seek-harness
 - awesome-harness-engineering — github.com/walkinglabs/awesome-harness-engineering
 
-***REMOVED******REMOVED*** 深入浅出
+## 深入浅出
 
 **一句话本质**：按「工程能力 × 约束需求」选层——层越高能力越强但门槛越高，各层服务不同用户，**匹配 > 求高**。
 
@@ -33,7 +33,7 @@
 | 外行用高层（L2/L3） | 门槛高不会用 | 用 L1 搭 MVP |
 | 全员上 L4 | 成本 > 收益 | 按需选层，POC 最小 |
 
-***REMOVED******REMOVED*** L0~L4 分层表（能力单调递增）
+## L0~L4 分层表（能力单调递增）
 
 | 层 | 工具 | 用户画像 | 工程背景 | 交互范式 | 能力边界 | 适用任务 | 示例企业选择 |
 |----|------|---------|:---:|---------|---------|---------|:---:|
@@ -43,7 +43,7 @@
 | **L3 专业 CLI** | Claude Code/Codex CLI/Gemini CLI | 专业开发/架构师 | High | 命令式 executor | 全仓重构/长自主会话/CI headless、受控精准 | 全仓级重构、CI 自动化 | ✅ 日常 |
 | **L4 操作系统级 harness** | Omarchy/dsh/Codex Harness | 顶级工程师/平台团队 | High+ | 环境式，Agent 一等公民 | 最高：自建工具/规则/流程/知识体系（AI 原生 OS） | 自建 harness 体系 | 演进方向 |
 
-***REMOVED******REMOVED*** 选层决策
+## 选层决策
 
 | 维度 | 判断 | 倾向 |
 |------|------|------|
@@ -52,13 +52,13 @@
 | 约束需求 | 生产要「输出可控」 | 避开 L0/L1，用 L3 |
 | 自建诉求 | 有 harness 体系诉求 | L4 |
 
-***REMOVED******REMOVED*** 检查清单
+## 检查清单
 
 - [ ] 层级匹配用户工程能力？（外行不推 L3 CLI）
 - [ ] 生产允许「输出不确定」吗？（否 → 避开 L0/L1）
 - [ ] 有自建 harness 诉求？（有 → L4；日常 → L3）
 
-***REMOVED******REMOVED*** 版本历史
+## 版本历史
 
 | 日期 | 版本 | 变更 | 变更人 |
 |------|:---:|------|--------|

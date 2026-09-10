@@ -6,68 +6,68 @@
 <title>XingTu AI Engineering · 项目工作台</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:***REMOVED***f7f9fc; color:***REMOVED***1e293b; padding:40px 20px; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f7f9fc; color:#1e293b; padding:40px 20px; }
   .wrap { max-width:1060px; margin:0 auto; }
 
   .top { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-wrap:wrap; gap:12px; }
   .logo { display:flex; align-items:center; gap:14px; }
-  .icon { width:48px; height:48px; background:***REMOVED***2E8B57; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:23px; color:***REMOVED***fff; box-shadow:0 4px 14px rgba(46,139,87,.28); }
-  .logo h1 { font-size:23px; color:***REMOVED***0f172a; letter-spacing:.5px; }
-  .logo .en { font-size:12px; color:***REMOVED***64748b; margin-top:3px; }
+  .icon { width:48px; height:48px; background:#2E8B57; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:23px; color:#fff; box-shadow:0 4px 14px rgba(46,139,87,.28); }
+  .logo h1 { font-size:23px; color:#0f172a; letter-spacing:.5px; }
+  .logo .en { font-size:12px; color:#64748b; margin-top:3px; }
   .badges { display:flex; gap:8px; flex-wrap:wrap; }
-  .badge { background:***REMOVED***fff; border:1px solid ***REMOVED***e2e8f0; border-radius:999px; padding:5px 14px; font-size:12px; color:***REMOVED***475569; }
-  .badge.green { background:***REMOVED***2E8B57; border-color:***REMOVED***2E8B57; color:***REMOVED***fff; }
+  .badge { background:#fff; border:1px solid #e2e8f0; border-radius:999px; padding:5px 14px; font-size:12px; color:#475569; }
+  .badge.green { background:#2E8B57; border-color:#2E8B57; color:#fff; }
 
-  .intro { background:***REMOVED***fff; border:1px solid ***REMOVED***eef2f7; border-radius:16px; padding:26px 30px; margin:18px 0; box-shadow:0 1px 4px rgba(0,0,0,.05); }
-  .intro .q { color:***REMOVED***2E8B57; font-weight:700; font-size:16px; margin-bottom:10px; }
-  .intro p { font-size:14.5px; color:***REMOVED***475569; line-height:1.95; }
-  .intro b { color:***REMOVED***0f172a; }
+  .intro { background:#fff; border:1px solid #eef2f7; border-radius:16px; padding:26px 30px; margin:18px 0; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  .intro .q { color:#2E8B57; font-weight:700; font-size:16px; margin-bottom:10px; }
+  .intro p { font-size:14.5px; color:#475569; line-height:1.95; }
+  .intro b { color:#0f172a; }
 
-  .sec-title { display:flex; align-items:center; gap:9px; font-size:16px; font-weight:700; color:***REMOVED***0f172a; margin:30px 0 14px; }
-  .sec-title .bar { width:4px; height:17px; background:***REMOVED***2E8B57; border-radius:2px; }
-  .sec-title .sub { font-size:12px; color:***REMOVED***94a3b8; font-weight:400; }
+  .sec-title { display:flex; align-items:center; gap:9px; font-size:16px; font-weight:700; color:#0f172a; margin:30px 0 14px; }
+  .sec-title .bar { width:4px; height:17px; background:#2E8B57; border-radius:2px; }
+  .sec-title .sub { font-size:12px; color:#94a3b8; font-weight:400; }
 
   /* ===== 图解1：从问题到产物（流程架构图） ===== */
-  .flow { background:***REMOVED***fff; border:1px solid ***REMOVED***eef2f7; border-radius:16px; padding:28px 22px; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  .flow { background:#fff; border:1px solid #eef2f7; border-radius:16px; padding:28px 22px; box-shadow:0 1px 4px rgba(0,0,0,.05); }
   .flow-row { display:flex; align-items:stretch; justify-content:space-between; gap:6px; }
-  .fnode { flex:1; background:***REMOVED***f8fafc; border:1px solid ***REMOVED***e2e8f0; border-radius:12px; padding:14px 10px; text-align:center; position:relative; }
-  .fnode .t { font-size:13px; font-weight:600; color:***REMOVED***0f172a; margin-bottom:3px; }
-  .fnode .d { font-size:10.5px; color:***REMOVED***94a3b8; line-height:1.4; }
-  .fnode .n { display:inline-block; font-size:10px; color:***REMOVED***2E8B57; background:***REMOVED***e8f5ee; border-radius:999px; padding:1px 8px; margin-top:5px; }
-  .fnode.hl { background:***REMOVED***2E8B57; border-color:***REMOVED***2E8B57; }
-  .fnode.hl .t, .fnode.hl .d { color:***REMOVED***fff; }
-  .fnode.hl .n { background:rgba(255,255,255,.2); color:***REMOVED***fff; }
-  .arrow { display:flex; align-items:center; color:***REMOVED***cbd5e1; font-size:18px; padding:0 2px; flex-shrink:0; }
-  .flow-cap { text-align:center; font-size:11.5px; color:***REMOVED***94a3b8; margin-top:14px; }
+  .fnode { flex:1; background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:14px 10px; text-align:center; position:relative; }
+  .fnode .t { font-size:13px; font-weight:600; color:#0f172a; margin-bottom:3px; }
+  .fnode .d { font-size:10.5px; color:#94a3b8; line-height:1.4; }
+  .fnode .n { display:inline-block; font-size:10px; color:#2E8B57; background:#e8f5ee; border-radius:999px; padding:1px 8px; margin-top:5px; }
+  .fnode.hl { background:#2E8B57; border-color:#2E8B57; }
+  .fnode.hl .t, .fnode.hl .d { color:#fff; }
+  .fnode.hl .n { background:rgba(255,255,255,.2); color:#fff; }
+  .arrow { display:flex; align-items:center; color:#cbd5e1; font-size:18px; padding:0 2px; flex-shrink:0; }
+  .flow-cap { text-align:center; font-size:11.5px; color:#94a3b8; margin-top:14px; }
 
   /* ===== 图解2：五大工程 ===== */
   .five { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; }
-  .fitem { background:***REMOVED***fff; border:1px solid ***REMOVED***eef2f7; border-radius:14px; padding:16px 12px; text-align:center; box-shadow:0 1px 4px rgba(0,0,0,.05); border-top:3px solid ***REMOVED***2E8B57; transition:transform .15s; }
+  .fitem { background:#fff; border:1px solid #eef2f7; border-radius:14px; padding:16px 12px; text-align:center; box-shadow:0 1px 4px rgba(0,0,0,.05); border-top:3px solid #2E8B57; transition:transform .15s; }
   .fitem:hover { transform:translateY(-3px); }
-  .fitem .zh { font-size:15px; font-weight:600; color:***REMOVED***0f172a; }
-  .fitem .en { font-size:10px; color:***REMOVED***94a3b8; margin:4px 0 8px; letter-spacing:1px; }
-  .fitem .p { font-size:10.5px; color:***REMOVED***64748b; background:***REMOVED***f1f5f9; border-radius:6px; padding:3px 6px; word-break:break-all; }
+  .fitem .zh { font-size:15px; font-weight:600; color:#0f172a; }
+  .fitem .en { font-size:10px; color:#94a3b8; margin:4px 0 8px; letter-spacing:1px; }
+  .fitem .p { font-size:10.5px; color:#64748b; background:#f1f5f9; border-radius:6px; padding:3px 6px; word-break:break-all; }
 
   /* ===== 图解3：六大分类结构图 ===== */
   .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-  .card { background:***REMOVED***fff; border:1px solid ***REMOVED***eef2f7; border-radius:14px; padding:20px; box-shadow:0 1px 4px rgba(0,0,0,.05); }
-  .card h3 { font-size:14.5px; color:***REMOVED***0f172a; margin-bottom:11px; display:flex; align-items:center; gap:8px; }
-  .card .cnt { margin-left:auto; background:***REMOVED***e8f5ee; color:***REMOVED***2E8B57; border-radius:999px; padding:2px 10px; font-size:12px; font-weight:600; }
+  .card { background:#fff; border:1px solid #eef2f7; border-radius:14px; padding:20px; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  .card h3 { font-size:14.5px; color:#0f172a; margin-bottom:11px; display:flex; align-items:center; gap:8px; }
+  .card .cnt { margin-left:auto; background:#e8f5ee; color:#2E8B57; border-radius:999px; padding:2px 10px; font-size:12px; font-weight:600; }
   .card ul { list-style:none; }
-  .card li { font-size:12.5px; color:***REMOVED***64748b; padding:4.5px 0; border-bottom:1px dashed ***REMOVED***eef2f7; }
+  .card li { font-size:12.5px; color:#64748b; padding:4.5px 0; border-bottom:1px dashed #eef2f7; }
   .card li:last-child { border-bottom:none; }
 
   /* ===== 快速开始 ===== */
   .start { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-  .scard { background:***REMOVED***fff; border:1px solid ***REMOVED***eef2f7; border-radius:14px; padding:20px 22px; box-shadow:0 1px 4px rgba(0,0,0,.05); }
-  .scard h3 { font-size:14.5px; color:***REMOVED***0f172a; margin-bottom:10px; }
-  .scard code { display:block; background:***REMOVED***f1f5f9; border-radius:8px; padding:10px 12px; font-size:12px; color:***REMOVED***334155; margin:6px 0; line-height:1.7; font-family:"SF Mono",Menlo,monospace; }
-  .scard p { font-size:13px; color:***REMOVED***64748b; line-height:1.7; }
+  .scard { background:#fff; border:1px solid #eef2f7; border-radius:14px; padding:20px 22px; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  .scard h3 { font-size:14.5px; color:#0f172a; margin-bottom:10px; }
+  .scard code { display:block; background:#f1f5f9; border-radius:8px; padding:10px 12px; font-size:12px; color:#334155; margin:6px 0; line-height:1.7; font-family:"SF Mono",Menlo,monospace; }
+  .scard p { font-size:13px; color:#64748b; line-height:1.7; }
 
   .links { display:flex; gap:10px; margin:26px 0 10px; flex-wrap:wrap; }
-  .links a { background:***REMOVED***fff; border:1px solid ***REMOVED***e2e8f0; color:***REMOVED***334155; text-decoration:none; padding:11px 20px; border-radius:10px; font-size:13px; font-weight:500; transition:all .15s; }
-  .links a:hover { background:***REMOVED***2E8B57; border-color:***REMOVED***2E8B57; color:***REMOVED***fff; }
-  .footer { text-align:center; color:***REMOVED***94a3b8; font-size:12px; padding-top:18px; border-top:1px solid ***REMOVED***eef2f7; margin-top:10px; }
+  .links a { background:#fff; border:1px solid #e2e8f0; color:#334155; text-decoration:none; padding:11px 20px; border-radius:10px; font-size:13px; font-weight:500; transition:all .15s; }
+  .links a:hover { background:#2E8B57; border-color:#2E8B57; color:#fff; }
+  .footer { text-align:center; color:#94a3b8; font-size:12px; padding-top:18px; border-top:1px solid #eef2f7; margin-top:10px; }
   @media (max-width:820px){ .flow-row{ flex-wrap:wrap; } .fnode{ min-width:30%; } .arrow{ transform:rotate(90deg); } .five,.grid,.start{ grid-template-columns:1fr 1fr; } .grid,.start{ grid-template-columns:1fr; } }
 </style>
 </head>
@@ -138,7 +138,7 @@
   <div class="sec-title"><span class="bar"></span>快速开始<small class="sub">两种用法，看场景选</small></div>
   <div class="start">
     <div class="scard"><h3>👤 按需阅读</h3><p>从 philosophy 建立底层认知 → methodology 学方法 → engineering 看五大工程落地。</p></div>
-    <div class="scard"><h3>🤖 AI 可检索</h3><p>让 AI 读 marketplace.json，按 description 检索资产，自动匹配最适合你的文件。</p><code>cat marketplace.json  ***REMOVED*** 73 条资产索引</code></div>
+    <div class="scard"><h3>🤖 AI 可检索</h3><p>让 AI 读 marketplace.json，按 description 检索资产，自动匹配最适合你的文件。</p><code>cat marketplace.json  # 73 条资产索引</code></div>
   </div>
 
   <div class="links">

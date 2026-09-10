@@ -3,19 +3,19 @@ name: 理念-举一反三
 description: 举一反三理念实践模板——错只犯一次，一个坑提炼一类 Gate，下次同类自动拦截
 ---
 
-***REMOVED*** 理念-举一反三（Learn Once Apply Many / Transferable Lessons）
+# 理念-举一反三（Learn Once Apply Many / Transferable Lessons）
 
 > 定义：**错只犯一次——一个坑提炼一类 Gate，下次同类自动拦截。** 抽象模式→推广同类→编码拦截，不靠记忆。
 > 示例企业依据：`rules/harness-philosophy.md` 原则 5 + `rules/specs-rules.md` §十一（引用不复制）。
 
-***REMOVED******REMOVED*** 〇、权威引用备案
+## 〇、权威引用备案
 
-| ***REMOVED*** | 权威引用 | 来源 | 对应 |
+| # | 权威引用 | 来源 | 对应 |
 |---|---------|------|------|
 | 1 | Senge：靠过去理解未来 = 反复解同一个问题，须系统思考迁移教训 | 《The Fifth Discipline》 | 反模式"每次重新踩"根源 |
 | 2 | LfI：教训须可理解/可转化/可追踪/及时，编入后台系统才算转移 | Jacobs.com《From Insight to Impact》 | Gate 落机械机制非靠记忆 |
 
-***REMOVED******REMOVED*** 一、深入浅出
+## 一、深入浅出
 
 **本质**：一个坑提炼一类 Gate，下次同类自动拦截。
 
@@ -24,7 +24,7 @@ description: 举一反三理念实践模板——错只犯一次，一个坑提�
 - 每次重新踩：沉淀不落 Gate，同类靠人记。
 - 抽象到实体非模式：只记"这单咋修"，没提炼"这类咋防"。
 
-***REMOVED******REMOVED*** 二、示例企业实践对应（引用不复制）
+## 二、示例企业实践对应（引用不复制）
 
 | 落点 | 位置 |
 |------|------|
@@ -32,7 +32,7 @@ description: 举一反三理念实践模板——错只犯一次，一个坑提�
 | 举一反三原则 | `rules/specs-rules.md` §十一 原则 2 + 铁律 8 |
 | 机械拦截 | hooks/门禁（`harness-size.sh -g` / `validate-contracts.sh`） |
 
-***REMOVED******REMOVED*** 三、举一反三骨架（遇错必走）
+## 三、举一反三骨架（遇错必走）
 
 ```
 遇错 → 1. 提炼模式（属哪类：并发/幂等/容量/SQL/契约）
@@ -42,7 +42,7 @@ description: 举一反三理念实践模板——错只犯一次，一个坑提�
      → 5. 验证拦截（构造同类样例确认被拦）
 ```
 
-***REMOVED******REMOVED*** 四、检查清单
+## 四、检查清单
 
 ```
 □ 个案修完推广了吗？——同类 grep 过，不只修工单那条路
@@ -52,6 +52,6 @@ description: 举一反三理念实践模板——错只犯一次，一个坑提�
 □ 验证拦截了吗？——同类样例确认被机械拦下
 ```
 
-***REMOVED******REMOVED*** 五、关联
+## 五、关联
 
 `harness-philosophy.md` 原则 5 ｜ `specs-rules.md` §十一 ｜ `bad-case-index.md` ｜ `理念-compound-evolution.md`

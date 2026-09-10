@@ -3,16 +3,16 @@ name: 工程实践-提示词工程（Prompt Engineering）
 description: 提示词工程实践——五要素设计高质量提示词
 ---
 
-***REMOVED*** 工程实践-提示词工程（Prompt Engineering）
+# 工程实践-提示词工程（Prompt Engineering）
 
 > 定义：提示词工程 = 设计高质量提示词让 AI 精准执行。核心=人给够上下文、少留猜测空间。
 > 依据：`specs/从提示词到高质量Spec-驾驭方法论_20260803.md`（GIGO 反面）+ CLAUDE.md 路由表（动词+目标）。
 
-***REMOVED******REMOVED*** 〇、理念与权威引用
+## 〇、理念与权威引用
 
 > **英文术语确认**：**Prompt Engineering（提示词工程）**——Lilian Weng 称其为 *In-Context Prompting*（上下文内提示，2023）；Andrej Karpathy 2025 年将其演进为 **Context Engineering（上下文工程）**：LLM=处理器、上下文窗口=RAM，每步装入正确信息。本模板五要素即上述理念的示例企业落地。
 
-| ***REMOVED*** | 来源 | 作者 | 年份 | 一句话核心理念 |
+| # | 来源 | 作者 | 年份 | 一句话核心理念 |
 |---|------|------|:---:|---------------|
 | 1 | [OpenAI Prompting Guide](https://developers.openai.com/api/docs/guides/prompting) | OpenAI 官方 | 2023~ | 指令写清楚具体、给足参考上下文（grounding）、拆复杂任务、给模型思考时间；新模型仅需「目标/上下文/输出/边界」四要素，勿微管理步骤 |
 | 2 | [Prompt Engineering（博客）](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/) | Lilian Weng（OpenAI 应用研究负责人） | 2023 | 提示词工程是「经验科学」：few-shot/指令式/CoT/自一致性，效果随模型而异；角色提示 + 具体精确的指令（说"要做什么"而非"别做什么"） |
@@ -29,9 +29,9 @@ description: 提示词工程实践——五要素设计高质量提示词
 | 输出格式 | OpenAI：显式指定输出结构/格式/长度 |
 | 铁律 | OpenAI 四要素之 Boundaries（约束/不可改数据）；Karpathy 可验证性驱动 + 人审关键产出（计费/库存/决策） |
 
-***REMOVED******REMOVED*** 一、提示词设计方法模板
+## 一、提示词设计方法模板
 
-| ***REMOVED*** | 要素 | 要填什么 | 缺失后果 |
+| # | 要素 | 要填什么 | 缺失后果 |
 |---|------|---------|---------|
 | 1 | 角色 | 你是谁（架构师/排查/审查） | 立场漂移 |
 | 2 | 目标 | 交付什么，"作为…想要…以便…" | 产出不可验收 |
@@ -43,7 +43,7 @@ description: 提示词工程实践——五要素设计高质量提示词
 
 **质量检查**：锚点/坐标/约定齐？AI 有两种理解→先补再发。
 
-***REMOVED******REMOVED*** 二、骨架表
+## 二、骨架表
 
 | 场景 | 角色 | 目标 | 输入 | 输出 | 铁律 |
 |------|------|------|------|------|------|
@@ -52,12 +52,12 @@ description: 提示词工程实践——五要素设计高质量提示词
 | 复盘 | 复盘者 | 沉淀可复用资产 | 完成项+关键决策(为什么) | memory/session-record-{日期}-{主题}.md | 提交 ID 可追溯 |
 | 审查 | 审查者 | 找违例/缺陷/级联风险 | diff/分支/关联 Spec | 问题清单(位置\|问题\|修法) | 只报不改 |
 
-***REMOVED******REMOVED*** 三、约束
+## 三、约束
 
 - **GIGO 反面**：低质量输入→AI 猜测→返工→上下文膨胀；高质量输入→精准执行→低返工。Spec=把模糊需求变精确约束。
 - **意图路由**：按"动词+目标"识别（排查XX/实现XX/分析XX），非关键词；无动作/目标词不路由；冲突按 Bug > 代码分析 > 功能开发。
 - **禁 Spec 流程编号进代码注释**：注释只讲业务逻辑，不写 AC-/Phase-/任务号/修订标记（java-rules）。
 
-***REMOVED******REMOVED*** 四、关联
+## 四、关联
 
 - 规范源：驾驭方法论（Checklist）+ `rules/constitution.md` + CLAUDE.md 路由表；场景示例：`templates/prompt-template.md`

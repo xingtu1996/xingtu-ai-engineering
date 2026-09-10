@@ -1,14 +1,14 @@
-***REMOVED*** 方法-黑盒测试模板（Black-box Testing）
+# 方法-黑盒测试模板（Black-box Testing）
 
 > 定义：黑盒测试（Black-box Testing）——不查看内部实现，仅从用户/业务视角，通过「输入→输出」验证行为对不对。与白盒（代码逻辑）相对。
 > 用途：业务验收/功能测试用例（SIT/UAT），产品、测试、AI 共用。
 > 关联：`方法-bdd-template.md`（GWT 语言）｜`story-delivery-template.md` §4（验收回填）｜`test/templates/business-case-template.csv`（用例落表）。
 
-***REMOVED******REMOVED*** 一句话本质
+## 一句话本质
 
 从用户视角验证"行为对不对"，不关心内部实现——用例只写"做什么→看到什么"，不写"代码怎么实现"。
 
-***REMOVED******REMOVED******REMOVED*** 反模式
+### 反模式
 
 | 症状 | 后果 |
 |------|------|
@@ -16,13 +16,13 @@
 | 用例不可执行（缺前置/数据/步骤含糊） | 验收靠人肉猜，无法回填 |
 | 写"点按钮"不写业务目的 | 绑定 UI，改界面即失效 |
 
-***REMOVED******REMOVED*** 示例企业实践
+## 示例企业实践
 
 - **业务化用例**：`business-case-template.csv`——编号 `TC-{SPEC}-{AC}`、标题业务可读、前置/数据准备/步骤/预期结果（界面可见）、优先级 P0/P1
 - **GWT 场景**：`方法-bdd-template.md`——场景用「假如/当/那么」业务语言，Then 只断可观测结果
 - **Story 验收回填**：`story-delivery-template.md` §4——GWT 验收交付后回填 Spec `requirements.md` AC
 
-***REMOVED******REMOVED*** 骨架
+## 骨架
 
 ```
 用例编号：TC-{SPEC}-{AC}
@@ -34,14 +34,14 @@
 关联用例：{requirements.md AC 编号}
 ```
 
-***REMOVED******REMOVED*** 检查清单
+## 检查清单
 
 - [ ] 业务语言？—— 无实现细节（字段名/方法名/DB 断言）
 - [ ] 可执行？—— 前置/数据/步骤/预期齐全，他人能照做
 - [ ] 边界场景？—— 正常/异常/权限/空数据各一
 - [ ] 验收可回填？—— 预期对回 AC（curl/SQL/Both）
 
-***REMOVED******REMOVED*** 引用备案（背书双轨）
+## 引用备案（背书双轨）
 
 **外部权威**：
 

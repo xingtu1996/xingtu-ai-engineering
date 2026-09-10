@@ -3,17 +3,17 @@ name: 方法-变异测试模板
 description: 变异测试模板（Mutation Testing / PIT）——L4 变异门禁，注入变异算子测测试是否真能抓错
 ---
 
-***REMOVED*** 方法-变异测试（Mutation Testing / PIT）
+# 方法-变异测试（Mutation Testing / PIT）
 
 > 定义：**变异测试（Mutation Testing，PIT）** = 故意向被测代码注入微小缺陷（变异算子），重跑测试，能杀死变异（测试失败）才算测试有效。测的是测试的质量，非代码质量。
 
-***REMOVED******REMOVED*** 一、深入浅出
+## 一、深入浅出
 
 **一句话本质**：故意注入变异算子，测测试是否真能抓错——**覆盖率不等于有效性**（行覆盖只证"执行过"，不证"断言过"）。
 
 **反模式**：① 只看行覆盖不看杀死率 → 高覆盖仍漏测；② 变异算子太少 → 盲区；③ 未杀死变异不判定 → 漏测藏雷。
 
-***REMOVED******REMOVED*** 二、变异算子表
+## 二、变异算子表
 
 | 算子 | 示例 | 测什么 |
 |------|------|--------|
@@ -24,14 +24,14 @@ description: 变异测试模板（Mutation Testing / PIT）——L4 变异门禁
 | 返回值修改 | `true`→`false`、返 `null` | 返回断言 |
 | 移除条件 | 条件恒真/恒假 | 防御分支 |
 
-***REMOVED******REMOVED*** 三、示例企业实践
+## 三、示例企业实践
 
 - 工具：PIT（pitest-maven，字节码级）：`build.sh org.pitest:pitest-maven:mutationCoverage`
 - 指标：**变异分数 MS = killed / (total - equivalent)**；门禁用存活率 < 阈值（质量门禁 L4）
 - 流程：跑 PIT → 看 `target/pit-reports/` HTML → **未杀死变异逐个判定**：漏测补测试 vs 等价变异豁免记录
 - 铁律：等价变异豁免须记录理由；禁静默改阈值凑数（机械生效）
 
-***REMOVED******REMOVED*** 四、骨架
+## 四、骨架
 
 ```
 1. 基线：行覆盖达标（Service ≥85%）
@@ -41,7 +41,7 @@ description: 变异测试模板（Mutation Testing / PIT）——L4 变异门禁
 5. 门禁：MS ≥ 目标，存活率 < 阈值
 ```
 
-***REMOVED******REMOVED*** 五、检查清单
+## 五、检查清单
 
 - [ ] MS 达标（killed / (total - equivalent) ≥ 目标）
 - [ ] 未杀死变异全判定（无未说明存活）
@@ -49,11 +49,11 @@ description: 变异测试模板（Mutation Testing / PIT）——L4 变异门禁
 - [ ] 变异算子未缩水（DEFAULTS 起步）
 - [ ] 报告留档 `target/pit-reports/`
 
-***REMOVED******REMOVED*** 六、关联
+## 六、关联
 
 `test/README.md`（L4 ⚪ 远期）｜ `specs-rules.md` §测试金字塔 ｜ `templates/方法-quality-gate-template.md`（L4 门禁）
 
-***REMOVED******REMOVED*** 七、引用备案（背书双轨）
+## 七、引用备案（背书双轨）
 
 **外部权威**：
 

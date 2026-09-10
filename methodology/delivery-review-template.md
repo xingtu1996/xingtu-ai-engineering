@@ -1,19 +1,19 @@
-***REMOVED*** 方法-交付检视模板（Delivery Checklist / Gap Analysis）
+# 方法-交付检视模板（Delivery Checklist / Gap Analysis）
 
 > 宣称"代码完成"前的最后一道闸——六维 26 项交付检视 + 全链路差距分析，防"假完成"。触发于 Phase 5 验证前 / MR 前。
 > 引用（不复制）：`memory/delivery-checklist.md` + `memory/gap-analysis-checklist.md`。体积：约 2.1KB。
 
-***REMOVED******REMOVED*** 定义
+## 定义
 
 代码写完 ≠ 功能完整。交付检视 = 五维逐项勾选；差距分析 = 沿「前端→后端→导出→导入→MQ 消费者→SQL」找缺口。两者配合，堵住"只测自己链路"的假完成。
 
-***REMOVED******REMOVED*** 深入浅出
+## 深入浅出
 
 **本质**：宣称"代码完成"前，过六维 26 项 + 全链路差距分析（含 MQ 消费者），否则"完成"只是你一段，非用户。
 
 **反模式**：只测自己链路（Controller 通就说完成）｜漏 MQ 消费者（批导事件无 `@StreamListener`）｜不查导出/导入（DTO 缺失页面没反应）｜只看编译不看回归（已有功能坏了不知）。
 
-***REMOVED******REMOVED*** 六维 26 项骨架（引用 delivery-checklist，完整逐项见源）
+## 六维 26 项骨架（引用 delivery-checklist，完整逐项见源）
 
 | 维度 | 关键项 | 教训 |
 |------|--------|:---:|
@@ -23,7 +23,7 @@
 | 配置 | bootstrap-local.yml；config.yaml；SIT/UAT/PROD 环境差异 | 本地起不来 |
 | 测试 | 编译零错误；本地 curl 全覆盖；导出可下载；DB 前后一致；已有功能回归；进程清理（RED-6） | 假完成 |
 
-***REMOVED******REMOVED*** 6 步差距分析（引用 gap-analysis-checklist）
+## 6 步差距分析（引用 gap-analysis-checklist）
 
 ```
 1. 读前端代码 → 收集所有 API 调用
@@ -34,7 +34,7 @@
 6. 读 SQL 目录确认脚本匹配
 ```
 
-***REMOVED******REMOVED*** 检查清单
+## 检查清单
 
 - [ ] 六维 26 项逐项勾选
 - [ ] 6 步差距分析跑完
@@ -42,7 +42,7 @@
 - [ ] 导出/导入链路已查（DTO/ServiceType）
 - [ ] 未部署 SIT 也敢断言"代码完成"
 
-***REMOVED******REMOVED*** 版本历史
+## 版本历史
 
 | 日期 | 版本 | 变更 | 变更人 |
 |------|:---:|------|--------|

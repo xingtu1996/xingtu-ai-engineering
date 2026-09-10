@@ -1,9 +1,9 @@
-***REMOVED*** 方法：能力分层（Capability Tiers / Maturity Levels）
+# 方法：能力分层（Capability Tiers / Maturity Levels）
 
 > 定义：人的能力决定**用哪层工具 + harness 介入多少**。从「开发者熟练度 / 工具使用级 / AI 自主度 / 组织成熟度」四维定位人和团队现在在哪、下一步升哪——**能力越强 → 工具层越高 → AI 自主度越高 → 组织成熟度越高**。
 > 引用备案：全景 §三/§六/§七（`research/2026082514-harness-panorama-methodology/00_README.md`）｜Cutler 5 阶段成熟度模型（cutler.sg）｜DORA 2024｜Gartner 2026｜方法-工具分层 L0~L4
 
-***REMOVED******REMOVED*** 深入浅出
+## 深入浅出
 
 **一句话本质**：能力定工具层级与 harness 介入度——越强上越高层工具、给 AI 越多自主；新手靠 harness 兜底（介入度高），专家被 harness 放行（介入度低，甚至自建）。
 
@@ -15,7 +15,7 @@
 | 专家被低层限制（L0/L1） | 不可控、没效率 | 上高层工具，减 harness 束缚 |
 | 全员套同一层（不按能力分层） | 新手够不着 / 专家被拖累 | 四维定位，按人分层 |
 
-***REMOVED******REMOVED*** 四维能力层级表
+## 四维能力层级表
 
 **① 开发者熟练度**（Development Proficiency）
 
@@ -55,7 +55,7 @@
 | 4 | Delegated | 委派（Agent 独立执行，人审决策） |
 | 5 | Distributed | 组织级分布式（Gartner 2026：80% 大型工程组织设专职平台团队） |
 
-***REMOVED******REMOVED*** 四层联动关系
+## 四层联动关系
 
 ```
 能力↑ → 工具层↑ → AI 自主度↑ → 组织成熟度↑
@@ -66,7 +66,7 @@
 - 卡点识别：卡工具层 = 能力没跟上；卡 Stage 2 = 只沉淀未强制（缺 Enforced 机械层）。
 - 示例企业落点：单人 AI 选手 = 演进线中间态偏左；多 Agent 蜂群侦查（12 investigator + 3 adversarial）+ multi-agent-orchestration 形态选择 = Stage 3→4 的 Delegated 特征。
 
-***REMOVED******REMOVED*** 骨架（定位 → 提升 → 积木包）
+## 骨架（定位 → 提升 → 积木包）
 
 ```
 ① 定位当前层：四维各答一问
@@ -80,20 +80,20 @@
    skills/（场景流程）→ rules/（护栏）→ hooks/（机械墙）→ agents/（角色）→ workflows/（SOP）
 ```
 
-***REMOVED******REMOVED*** 案例
+## 案例
 
 - **新手反例**：给业务同学直接上 Claude Code CLI（L3）→ 不会用、输出不可控 → 正解：先 L1 低代码/L2 IDE + 强模板兜底。
 - **专家反例**：资深工程师只用 ChatGPT 网页（L0）逐段贴代码 → 不可控低效 → 正解：上 L3 CLI + 自建 harness。
 - **组织卡 Stage 2**：团队沉淀了 rules/skills 但只靠人自觉执行 → DORA 稳定性下滑 → 正解：把高频红线做成 hook/门禁机械拦截（Enforced），再谈委派。
 
-***REMOVED******REMOVED*** 检查清单
+## 检查清单
 
 - □ 已四维定位当前层？（熟练度/工具/自主度/组织 Stage）
 - □ 工具层匹配能力？（新手不上 L3/L4，专家不用 L0/L1）
 - □ 卡在哪层？下一步只升一维？有对应积木包？
 - □ Stage 2 卡死信号？（只沉淀未强制 → 补 hook/门禁）
 
-***REMOVED******REMOVED*** 引用备案（背书双轨）
+## 引用备案（背书双轨）
 
 **外部权威**：
 
@@ -109,7 +109,7 @@
 - 示例企业落点（本文 §四层联动）：单人 AI 选手 = 中间态偏左；12 investigator + 3 adversarial 蜂群 + multi-agent-orchestration 形态选择 = Stage 3→4 Delegated 特征
 - 工具使用级 L0~L4 对应 `.claude/toolbox/`（工具箱全集）+ `方法-工具分层模板.md`（L0 裸聊→L4 OS harness 的现实映射）
 
-***REMOVED******REMOVED*** 版本历史
+## 版本历史
 
 | 日期 | 版本 | 变更 | 变更人 |
 |------|:---:|------|--------|

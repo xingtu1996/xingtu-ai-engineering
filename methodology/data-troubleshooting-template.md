@@ -3,11 +3,11 @@ name: 方法-数据排查模板
 description: 数据排查方法模板（Data Investigation）——数据不对=先定证据链再下结论，SQL 单点确诊≠全量同因
 ---
 
-***REMOVED*** 方法-数据排查模板（Data Investigation）
+# 方法-数据排查模板（Data Investigation）
 
 > 定义：**数据排查（Data Investigation）** = 从"数据不对"现象出发，用 SQL 证据链定位根因的流程。先定证据链再下结论，**SQL 单点确诊 ≠ 全量同因**。
 
-***REMOVED******REMOVED*** 一、深入浅出
+## 一、深入浅出
 **本质**：数据不对 = 先定证据链再下结论。一条 SQL 确诊单个订单 ≠ 全量同因，必须先查影响面再定性。
 
 **反模式**：
@@ -18,7 +18,7 @@ description: 数据排查方法模板（Data Investigation）——数据不对=
 | 单点当全量（BCI 排查原则） | 修复只覆盖个例，同因批量漏 |
 | 改数据不溯源（直接 UPDATE 不清业务链路） | 数据"修对"但链路再写错，二次污染 |
 
-***REMOVED******REMOVED*** 二、示例企业实践
+## 二、示例企业实践
 
 | 实践 | 落地 |
 |------|------|
@@ -28,7 +28,7 @@ description: 数据排查方法模板（Data Investigation）——数据不对=
 | 单点≠全量 | BCI 排查原则：单点确诊后必查全量影响面，区分"个案"与"批量同因" |
 | 时间戳来源 | 数据证据带查询时间 + 环境（dev/qa/prod），防跨环境误判 |
 
-***REMOVED******REMOVED*** 三、骨架
+## 三、骨架
 
 ```
 现象（单号/时间/异常值）
@@ -39,7 +39,7 @@ description: 数据排查方法模板（Data Investigation）——数据不对=
   → 修复影响面（订单数/下游消费者/幂等回滚）
 ```
 
-***REMOVED******REMOVED*** 四、检查清单
+## 四、检查清单
 
 ```
 □ 证据链闭合？每条结论有 SQL+时间戳+来源，无凭印象？
@@ -49,6 +49,6 @@ description: 数据排查方法模板（Data Investigation）——数据不对=
 □ 生产只读？走 pma-sql.sh，未直接写生产库？
 ```
 
-***REMOVED******REMOVED*** 五、关联
+## 五、关联
 
 `agents/data-investigator.md` ｜ `templates/production-troubleshooting-template.md` ｜ `memory/bad-case-index.md`（BCI 排查原则）｜ `db-knowledge/db-tables-index.md` ｜ `scripts/pma-sql.sh`

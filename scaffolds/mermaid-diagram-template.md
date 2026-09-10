@@ -1,9 +1,9 @@
-***REMOVED*** Mermaid 图表样板（7 图型）
+# Mermaid 图表样板（7 图型）
 
 > 用途：流程/SOP/架构/时序/状态文档配图，AI 有样学样——选图型→套骨架→自检。
 > 语法源：mermaid.js.org 官方 docs + mermaid.live 校验。
 
-***REMOVED******REMOVED*** 一、图型速查表
+## 一、图型速查表
 
 | 图型 | 声明 | 适用场景 | 语法要点 |
 |------|------|---------|---------|
@@ -15,9 +15,9 @@
 | 饼图 | `pie` | 占比统计 | `"标签" : 数值`；`showData` 显数值 |
 | 思维导图 | `mindmap` | 结构/概念梳理 | **缩进用空格非 Tab**；`((根))`/`[方]`/`(圆)` |
 
-***REMOVED******REMOVED*** 二、语法骨架（可复制）
+## 二、语法骨架（可复制）
 
-***REMOVED******REMOVED******REMOVED*** 1 流程图
+### 1 流程图
 ```mermaid
 flowchart TD
     A[开始] --> B{库存充足?}
@@ -26,7 +26,7 @@ flowchart TD
     C --> E[结束]
 ```
 
-***REMOVED******REMOVED******REMOVED*** 2 时序图
+### 2 时序图
 ```mermaid
 sequenceDiagram
     participant C as Controller
@@ -37,7 +37,7 @@ sequenceDiagram
     deactivate S
 ```
 
-***REMOVED******REMOVED******REMOVED*** 3 状态图
+### 3 状态图
 ```mermaid
 stateDiagram-v2
     [*] --> 待付款
@@ -45,7 +45,7 @@ stateDiagram-v2
     已付款 --> [*]
 ```
 
-***REMOVED******REMOVED******REMOVED*** 4 类图
+### 4 类图
 ```mermaid
 classDiagram
     class Order {
@@ -56,7 +56,7 @@ classDiagram
     Order "*" --> "1" OrderItem : 包含
 ```
 
-***REMOVED******REMOVED******REMOVED*** 5 甘特图
+### 5 甘特图
 ```mermaid
 gantt
     dateFormat YYYY-MM-DD
@@ -65,14 +65,14 @@ gantt
     测试 : after a1, 2d
 ```
 
-***REMOVED******REMOVED******REMOVED*** 6 饼图
+### 6 饼图
 ```mermaid
 pie showData
     "预占未释放" : 47
     "重复匹配" : 12
 ```
 
-***REMOVED******REMOVED******REMOVED*** 7 思维导图
+### 7 思维导图
 ```mermaid
 mindmap
     root((示例企业))
@@ -83,7 +83,7 @@ mindmap
             example-eureka
 ```
 
-***REMOVED******REMOVED*** 三、最佳实践
+## 三、最佳实践
 
 1. **图+文双轨**：图配文字并存，图直观、文可检索；渲染失败降级读文字。
 2. **复杂拆子图**：单图 <20 节点，超限按阶段 `subgraph` 或多图。
@@ -91,12 +91,12 @@ mindmap
 4. **`%%` 注释**：复杂边/条件必加注释。
 5. **渲染前自检**：块 `end` 配对、保留字加引号、mindmap 用空格——mermaid.live 校验。
 
-***REMOVED******REMOVED*** 四、示例企业实例
+## 四、示例企业实例
 
 - `rules/harness-philosophy.md`：顶部 mermaid `mindmap`（三层体系）+ `flowchart`（复利 loop）。
 - `rules/specs-rules.md` §十：mermaid 流程图（并行决策矩阵）。
 
-***REMOVED******REMOVED*** 版本历史
+## 版本历史
 
 | 日期 | 版本 | 变更 |
 |------|:---:|------|

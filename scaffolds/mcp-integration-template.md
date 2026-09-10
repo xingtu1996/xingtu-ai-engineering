@@ -1,9 +1,9 @@
-***REMOVED*** MCP 接入样板
+# MCP 接入样板
 
 > 用途：扩展 Claude 工具，补内置不足。落地项目根 `.mcp.json`（gitignore 护密钥）。
 > 接入步骤：选型 → 配置 .mcp.json → 验证 → 登记 CHANGELOG
 
-***REMOVED******REMOVED*** MCP 类型表
+## MCP 类型表
 | 类型 | 配置 | 场景 |
 |------|------|------|
 | 官方 | `type:"http"` + 官方 url + headers | 官方托管 SaaS |
@@ -11,7 +11,7 @@
 | 本地 | `type:"stdio"` + command + args + env | 自有脚本封装，不出内网 |
 | 远程 | `type:"sse"` + url | 自建远程服务 |
 
-***REMOVED******REMOVED*** 配置样板（.mcp.json）
+## 配置样板（.mcp.json）
 ```json
 {
   "mcpServers": {
@@ -31,7 +31,7 @@
 ```
 stdio 用 command/args/env，HTTP 用 url/headers；密钥走 env 禁明文；项目级 `.mcp.json`，个人级 `claude mcp add --scope user`。
 
-***REMOVED******REMOVED*** 准入检查（任一「是」→ 拒）
+## 准入检查（任一「是」→ 拒）
 | 检查 | 来源 | 判定 |
 |------|------|------|
 | 现有组件已覆盖？ | harness-gate 五问-a | 拒 |
@@ -41,7 +41,7 @@ stdio 用 command/args/env，HTTP 用 url/headers；密钥走 env 禁明文；�
 | 来源信任分级？ | skills-governance §一 | 官方>已验证>社区 |
 | 安全审查？ | skills-governance §四 | 注入/外泄/破坏性/`!` 命令 |
 
-***REMOVED******REMOVED*** 接入骨架
+## 接入骨架
 ```
 1 目的: 解决什么工具缺口
 2 类型: 按上表选官方/npm/本地/远程
@@ -51,8 +51,8 @@ stdio 用 command/args/env，HTTP 用 url/headers；密钥走 env 禁明文；�
 6 登记: CHANGELOG + toolbox/ + mcp/README
 ```
 
-***REMOVED******REMOVED*** 验证命令
+## 验证命令
 ```bash
-claude mcp list | grep <server-name>   ***REMOVED*** 确认注册
-***REMOVED*** 冒烟: curl tools/list 或对话触发工具
+claude mcp list | grep <server-name>   # 确认注册
+# 冒烟: curl tools/list 或对话触发工具
 ```

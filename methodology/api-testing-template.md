@@ -3,18 +3,18 @@ name: 方法-接口自动化测试模板
 description: API 自动化测试方法论——L2 API 契约（curl + Schema 漂移即红）
 ---
 
-***REMOVED*** 方法-接口自动化测试（API Automation Testing）
+# 方法-接口自动化测试（API Automation Testing）
 
 > 定义：**接口自动化测试（API Automation Testing）** = 对 HTTP 接口发请求，校验入参/返回/状态码/契约，测"接口合不合约"。
 > 备案：测试金字塔 L2 API 契约层｜api-case.json.tmpl｜contracts/。
 
-***REMOVED******REMOVED*** 一、深入浅出
+## 一、深入浅出
 
 **本质**：把接口当"输入→输出"黑盒，测入参合规、返回合约、状态码合预期——测接口与调用方的握手协议。
 
 **反模式**：① 只测 200 不测异常/边界；② 只看状态码不校验响应体 → 结构漂移静默。
 
-***REMOVED******REMOVED*** 二、示例企业实践
+## 二、示例企业实践
 
 | 实践 | 落地 | 位置 |
 |------|------|------|
@@ -24,7 +24,7 @@ description: API 自动化测试方法论——L2 API 契约（curl + Schema 漂
 
 落点：① 无 Response 包装，JSONPath 按实际结构写（勿照抄 `$.code`）；② mutating 必带 cleanup + idempotent；③ 契约样例 `dc-refund.gifts-materials-inbound.schema.json`（additionalProperties:false）。
 
-***REMOVED******REMOVED*** 三、骨架：用例结构
+## 三、骨架：用例结构
 
 ```
 {case_id: TC-{Spec}-{AC} | layer: graybox | service | idempotent}
@@ -44,7 +44,7 @@ cleanup: SQL 清理（mutating 三步必备）
 | 异常 | 参数非法 4xx / 业务异常 | 缺 skuCode→400；库存不足 |
 | 边界 | 空数据 / 极限 / 重复 | odoId=null；重复提交幂等 |
 
-***REMOVED******REMOVED*** 四、检查清单
+## 四、检查清单
 
 ```
 □ 状态码？200 + 4xx/5xx 全覆盖？
@@ -55,11 +55,11 @@ cleanup: SQL 清理（mutating 三步必备）
 □ 复用？落到 test/cases/<service>/graybox/<case_id>.json？
 ```
 
-***REMOVED******REMOVED*** 五、关联
+## 五、关联
 
 `specs-rules.md` §5.4 ｜ `test/templates/api-case.json.tmpl` ｜ `contracts/` ｜ `templates/e2e-test-report-template.md`
 
-***REMOVED******REMOVED*** 六、引用备案（背书双轨）
+## 六、引用备案（背书双轨）
 
 **外部权威**：
 

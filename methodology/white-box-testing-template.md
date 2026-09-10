@@ -1,14 +1,14 @@
-***REMOVED*** 方法-白盒测试（White-box Testing）
+# 方法-白盒测试（White-box Testing）
 
 > 定义：**白盒测试（White-box Testing）** = 代码级测试：基于代码内部结构（分支/路径/边界）设计用例，验证"实现对不对"，对应测试金字塔 L1（单元测试）。出处：Myers《The Art of Software Testing》(1979)。
 
-***REMOVED******REMOVED*** 一、深入浅出
+## 一、深入浅出
 
 **一句话本质**：看代码内部逻辑测——分支、边界、异常路径全走一遍，测"实现对不对"，不是只测"功能能不能用"。
 
 **反模式**：只测 happy path 不测分支（边界裸奔）｜ mock 全依赖｜ 只 assertNotNull｜ 补测试刷覆盖率。
 
-***REMOVED******REMOVED*** 二、示例企业实践对应（引用不复制）
+## 二、示例企业实践对应（引用不复制）
 
 | 白盒要素 | 示例企业落地 | 位置 |
 |---------|---------|------|
@@ -19,7 +19,7 @@
 
 **tmpl**：`ServiceTest.java.tmpl`（Mockito 打桩）｜ `MapperTest.java.tmpl`（MybatisTest 测 SQL）｜ `ControllerTest.java.tmpl`（WebMvcTest 测 HTTP）。
 
-***REMOVED******REMOVED*** 三、骨架：用例设计 + @Test 断言模式
+## 三、骨架：用例设计 + @Test 断言模式
 
 ```
 用例四类（按逻辑补全）：
@@ -44,13 +44,13 @@
 }
 ```
 
-***REMOVED******REMOVED*** 四、检查清单
+## 四、检查清单
 
 - [ ] 分支覆盖：每个 if/else/switch 至少一用例
 - [ ] 异常路径：参数非法 + 依赖失败传播
 - [ ] 边界值：0/空/最大/金额精度；断言验值 + verify 交互
 - [ ] 覆盖率 Service ≥85%；先写测试后实现（🔴→🟢→🔵）
 
-***REMOVED******REMOVED*** 五、关联
+## 五、关联
 
 `test/templates/` 三层 tmpl ｜ `工程实践-TDD.md` ｜ `specs-rules.md` §5.5 ｜ `constitution.md` RED-8

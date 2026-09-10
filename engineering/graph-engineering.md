@@ -5,13 +5,13 @@ metadata:
   type: project
 ---
 
-***REMOVED*** 工程实践-图工程（Graph Engineering / Code Knowledge Graph / Agent Graph / Graph RAG）
+# 工程实践-图工程（Graph Engineering / Code Knowledge Graph / Agent Graph / Graph RAG）
 
 > 定义：图工程 = 把代码、依赖、契约、**多 Agent 编排**建成**图**，支撑快速定位、级联影响分析、契约并行编排、Agent 流程编排。
 > 市场演进：继 **Loop Engineering**（2026-06 引爆）之后的主战场——多 Agent 编排以图的形式显式化（节点=Agent/任务，边=依赖/数据流/状态转移），赢家不靠单个模型而靠编排结构。
 > 示例企业依据：CBM 代码图谱 + 三段式检索（CLAUDE.md 零-C）+ 契约优先（`rules/specs-rules.md` §九）+ 多 Agent 并行编排（`skills/multi-agent-orchestration` + `workflows/_TEMPLATE`）。
 
-***REMOVED******REMOVED*** 理念与权威引用
+## 理念与权威引用
 
 **术语确认**（2026-08 WebSearch 多源核实，非自造）：
 
@@ -36,7 +36,7 @@ metadata:
 
 **一句话结论**：图工程 2024-2026 从"代码/知识图谱 + Graph RAG"演进到"**多 Agent 编排图**"（继 Loop Engineering 后主战场），本体论是其语义地基；本模板的 CBM 图谱 + 依赖 DAG + 契约图 + Workflow 编排即其工程落地，非闭门造车。
 
-***REMOVED******REMOVED*** 一、图构建与使用模板
+## 一、图构建与使用模板
 
 **1. 建图**：`index_status` 查索引，有效直接用，过期（HEAD 变 >100 commits）增量索引（TOK-006）。
 
@@ -48,7 +48,7 @@ metadata:
 
 **5. 并行 DAG**：接口依赖=先契约后并行 / 数据依赖=先 schema 后并行 / 完全独立=全并行 / 同文件=串行。无依赖组 Subagent 并行，回写 contracts/。
 
-***REMOVED******REMOVED*** 二、骨架表：图类型 → 工具 → 用途
+## 二、骨架表：图类型 → 工具 → 用途
 
 | 图类型 | 工具 | 用途 |
 |--------|------|------|
@@ -56,14 +56,14 @@ metadata:
 | 依赖图 | CBM trace_path depth=3 + grep 补漏 | 级联影响分析、高警戒服务兜底 |
 | 契约图 | contracts/ + validate-contracts.sh + ast-grep | 握手协议、并行 DAG 分组依据 |
 
-***REMOVED******REMOVED*** 三、约束/铁律
+## 三、约束/铁律
 
 - **CBM 优先 grep 补漏（TOK-001）**：图定位缩到 2-3 服务，禁全仓扫。
 - **三段式检索**：图定位 → ast-grep 精确提取 → grep 落点确认（CLAUDE.md 零-C）。
 - **契约变更 → validate**：漂移即红；改契约必同步 contract-change-log.md。
 - **级联影响**：改任何服务前 trace_path 3 跳 + Constitution 禁止模式对照。
 
-***REMOVED******REMOVED*** 四、关联
+## 四、关联
 
 - `CLAUDE.md` 零-C（三段式检索）+ 零-B（级联影响铁律）
 - `rules/specs-rules.md` §九（契约优先）+ `rules/token-optimization-rules.md` TOK-001/006

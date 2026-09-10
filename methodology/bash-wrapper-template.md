@@ -1,14 +1,14 @@
-***REMOVED*** 方法：Bash 封装模板（AI 友好实操版）
+# 方法：Bash 封装模板（AI 友好实操版）
 
 > 定义：把人工操作封装成 **AI 友好、可复现的 bash 脚本**——纯文本交互 + `--json` 结构化 + 统一错误码 + 注释清晰 + 零依赖，让当前 Agent（Claude Code）能直接调用、可解析、可自愈。
 > 渊源：`scripts/_TEMPLATE.sh`（骨架）+ `tool-automation-methodology.md`（五要素）+ `方法-cli-wrapper-template.md`（动词化理论层）+ fs-ops 实践（`fs-ops/commands/*.sh`）。
 > 关联：`方法-cli-wrapper-template.md`（理论/动词化）｜ `scripts/_TEMPLATE.sh`（骨架）｜ `fs-ops/commands/_TEMPLATE.sh`（fs-ops 版）。
 
-***REMOVED******REMOVED*** 一句话本质
+## 一句话本质
 
 **脚本 = 人工操作的"AI 抓手"**——把"人肉点控制台"翻译成 Agent 能直接 shell 调用的命令。核心不是脚本本身，是**如何让 Agent 读懂并调用**。
 
-***REMOVED******REMOVED*** 定位：bash 是起步，CLI 是进阶（渐进路径）
+## 定位：bash 是起步，CLI 是进阶（渐进路径）
 
 > **bash 脚本 = 封装的第一级（起步）**，不是低配版，而是最轻的起点——零依赖、零框架、今天就能做。跑通价值后再进阶。
 
@@ -23,7 +23,7 @@
 
 > 反模式：一上来就搭 CLI 框架（Cobra/picocli）——没验证价值就过度建设。先从一条 bash 命令开始，见利后再升级。
 
-***REMOVED******REMOVED*** 封装五步（人工操作 → AI 友好脚本）
+## 封装五步（人工操作 → AI 友好脚本）
 
 | 步 | 动作 | 产出 |
 |----|------|------|
@@ -33,9 +33,9 @@
 | 4 | 套 `_TEMPLATE.sh` 骨架改业务 | 脚本 |
 | 5 | **AI 友好化**（见下） | Agent 可直接调 |
 
-***REMOVED******REMOVED*** AI 友好化 5 要点（Agent 能否用，取决于此）
+## AI 友好化 5 要点（Agent 能否用，取决于此）
 
-| ***REMOVED*** | 要素 | 做法 | 效果 |
+| # | 要素 | 做法 | 效果 |
 |---|------|------|------|
 | 1 | 纯文本交互 | 参数 + stdout | Agent shell 直接调 |
 | 2 | `--json` 输出 | 结构化 | Agent 可解析 |
@@ -43,7 +43,7 @@
 | 4 | 头部注释清晰 | 用法/环境/认证/依赖写全 | Agent 读注释即懂，他人可逆向 |
 | 5 | 零依赖 | bash3.2 + python3 标准库 | 任何机器能跑 |
 
-***REMOVED******REMOVED*** 如何给当前 Agent 使用（作用机制）
+## 如何给当前 Agent 使用（作用机制）
 
 ```
 人工操作五要素 → bash 脚本（_TEMPLATE 骨架）
@@ -56,13 +56,13 @@
 - **方式 2 Skill 组合**：多脚本编成工作流，`.claude/skills/<name>/SKILL.md`，触发词唤起
 - **方式 3 fs-ops CLI**：脚本升级为命令，`fs-ops <verb> --env <env>` 统一入口
 
-***REMOVED******REMOVED*** 最小示例（AI 友好版骨架）
+## 最小示例（AI 友好版骨架）
 
 ```bash
-***REMOVED***!/usr/bin/env bash
-***REMOVED*** mytool.sh — 查服务状态（AI 友好：--json + 错误码 + 注释）
-***REMOVED*** 用法: bash mytool.sh <APP> [--json]
-***REMOVED*** 认证: 零认证（示例）｜ 依赖: curl + python3
+#!/usr/bin/env bash
+# mytool.sh — 查服务状态（AI 友好：--json + 错误码 + 注释）
+# 用法: bash mytool.sh <APP> [--json]
+# 认证: 零认证（示例）｜ 依赖: curl + python3
 set -euo pipefail
 APP="${1:-}"; [ -z "$APP" ] && { echo "用法: mytool.sh <APP> [--json]"; exit 2; }
 JSON=0; for a in "$@"; do [ "$a" = "--json" ] && JSON=1; done
@@ -74,14 +74,14 @@ fi
 [ "$JSON" = "1" ] && echo "$OUT" || echo "$OUT" | python3 -m json.tool 2>/dev/null || echo "$OUT"
 ```
 
-***REMOVED******REMOVED*** 快速自查（封装前问自己）
+## 快速自查（封装前问自己）
 
 ```
 □ 每周重复 ≥3 次？□ 五要素齐？□ --dry-run 预演？□ --json 输出？
 □ 写守卫/确认有？□ 头部注释清晰？□ toolbox 登记？□ 已 grep 复用不重复造？
 ```
 
-***REMOVED******REMOVED*** 版本历史
+## 版本历史
 | 日期 | 变更 |
 |------|------|
 | 2026-08-27 | 新建：AI 友好 bash 封装实操模板（五步 + AI 友好 5 要点 + 三种 Agent 使用方式） |

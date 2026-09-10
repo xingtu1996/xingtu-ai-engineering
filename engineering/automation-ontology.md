@@ -1,10 +1,10 @@
-***REMOVED*** 工程实践-自动化本体论（Automation Ontology / Operation Twin）
+# 工程实践-自动化本体论（Automation Ontology / Operation Twin）
 
 > 定义：把 harness 自动化脚本映射到**语义/动力学/决策三层**（决策层=Palantir 动态层 Dynamic 的 harness 落地名，因示例企业缺口正是"自动决策+回写"），从"工具脚本"升级为"带决策层的操作孪生"——脚本不再只告诉你"库存不够了"，而是帮你"把单下了"。
 > 渊源：Palantir Ontology 三层模型（`理念-ontology.md`）+ 2026-08-27 六代理并行盘点（wf_b49076c4-a1e）。
 > 关联：`理念-ontology.md`（三层理论）/ `理念-local-loop.md`（轮回骨架）/ `e2e-testing-rules`（落库双验证）/ constitution 质量门禁。
 
-***REMOVED******REMOVED*** 一、三层映射表（现状盘点）
+## 一、三层映射表（现状盘点）
 
 | 层 | 脚本 | 一句话能力 | 断点 |
 |----|------|-----------|------|
@@ -18,7 +18,7 @@
 | | rancher-tool.sh | 查部署/pod/日志 + redeploy | 无健康失败自动回滚 |
 | 决策层（自动决策+回写行动） | — | — | 全部断点在此，空转 |
 
-***REMOVED******REMOVED*** 二、决策层升级路径（每脚本现状→升级）
+## 二、决策层升级路径（每脚本现状→升级）
 
 | 脚本 | 升级动作 | 价值 | 优先级 |
 |------|---------|------|:---:|
@@ -30,7 +30,7 @@
 | check-feign-consumers.sh | 加契约注册表漂移检测 | 契约防漂移 | P2 |
 | pma-sql.sh | 保持取数原语不动，上层组合脚本封装业务判定 | 避免每场景重写 SQL | P2 |
 
-***REMOVED******REMOVED*** 三、可视化（三层操作孪生）
+## 三、可视化（三层操作孪生）
 
 ```mermaid
 flowchart TB
@@ -46,11 +46,11 @@ flowchart TB
   语义层 --> 动力学层 --> 决策层
 ```
 
-***REMOVED******REMOVED*** 四、编排层落地形态
+## 四、编排层落地形态
 
 - sls-log + pma-sql + return-order-diagnose + incidents 组合成 production-troubleshoot 自动诊断子 Agent：产出结论 → 回写工单（决策层落地形态）。
 
-***REMOVED******REMOVED*** 五、约束铁律（决策层安全边界）
+## 五、约束铁律（决策层安全边界）
 
 1. **多读少写**：巡检只读；回写必须确认事件驱动窄操作；幂等键=commit SHA/构建号，重复触发安全。
 2. **HITL 门禁**：**计费/库存/发版/生产回滚=人闸门 L1 每步批准**（对应 constitution 安全三条件：计费/库存/权限）；"仅建议"模式（输出结构化 JSON status/decision/action/payload 由人确认）仅适用于低险常规写；自治度用 feature flag 控制。
