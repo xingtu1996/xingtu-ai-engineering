@@ -59,7 +59,7 @@ git rev-list --left-right --count origin/qa...HEAD   # 左=落后，右=领先
 t-[TICKET]-[SUBTASK]-[DESCRIPTION]-[AUTHOR]
 # t-[履约-4.10.05.05]-[TICKET-002]-[赠品/物料出库履约-物料匹配异常特性支持]-[XingTu]
 ```
-SUBTASK：`TICKET-XXX`/`CTF-XXXXX`/`dev-TICKET-XXX`；方括号禁空格；禁 Co-Authored-By/--no-verify/--force。
+SUBTASK：`TICKET-XXX`/`dev-TICKET-XXX`；方括号禁空格；禁 Co-Authored-By/--no-verify/--force。
 
 ## 六、合并/基线同步
 
