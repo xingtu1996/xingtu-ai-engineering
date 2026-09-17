@@ -75,3 +75,14 @@ CC BY-NC-SA 4.0（署名-非商业使用-相同方式共享）——方法论内
 
 完整方法论深度篇与实战案例 → 《行途 AI 工程化手册》（出版筹备中）
 深度答疑 / 定制陪跑 / 知识星球 → 公众号「行途技术手记」留言
+
+---
+
+## 👤 关于行途
+
+一线 builder，仍在写代码。专注 AI 工具链与工程化落地，分享可抄作业的实战经验。
+
+- 𝕏 X：[@xingtu1996](https://x.com/xingtu1996)（AI工程化实战，build in public）
+- GitHub：[github.com/xingtu1996](https://github.com/xingtu1996)
+- 🌐 个人站：[xingtu1996.pages.dev](https://xingtu1996.pages.dev)
+- 📱 公众号：「行途技术手记」（深度长文 + 可抄作业的实战经验）
