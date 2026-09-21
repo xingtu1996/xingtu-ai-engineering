@@ -2,7 +2,7 @@
 
 > **一仓覆盖 AI 工程化全貌**：理念哲学 · 方法论 · 五大工程实践 · 治理 · 断点续传 · 组件样板
 
-![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Assets](https://img.shields.io/badge/assets-73-blue.svg)
 ![Engineering Practices](https://img.shields.io/badge/engineering%20practices-5-purple.svg)
 ![Last Commit](https://img.shields.io/github/last-commit/xingtu1996/xingtu-ai-engineering.svg)
@@ -69,7 +69,7 @@ cat marketplace.json   # 73 条资产索引
 
 ## 许可证
 
-CC BY-NC-SA 4.0（署名-非商业使用-相同方式共享）——方法论内容资产，禁止商用；商业使用 / 出版合作请联系作者。
+本仓库采用 **MIT License**。方法论、模板、工程实践可自由使用、修改与商用，保留版权声明即可。署名：行途 / xingtu1996。
 
 ## 深度内容与咨询
 
