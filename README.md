@@ -67,6 +67,17 @@ cat marketplace.json   # 73 条资产索引
 
 > 🧩 本仓方法论与模板面向 AI 工程化（含 DeepSeek Harness 类「一切皆插件」工作流），模板可直接裁剪落地到 DSH / Claude Code / CodeBuddy 等工具链。
 
+## 关于作者
+
+我是**行途**，一线技术人 + 仍在写代码。这里沉淀的是 AI 工程化的实战方法论：harness、skills、上下文管理与 token 效率，全部来自真实项目。
+
+- 🔔 公众号 **「行途技术手记」**：微信搜索关注，看 AI 工程化落地实战
+- 🐙 GitHub：[@xingtu1996](https://github.com/xingtu1996)
+- 📦 仓库：[xingtu1996/xingtu-ai-engineering](https://github.com/xingtu1996/xingtu-ai-engineering)
+
+---
+
+
 ## 许可证
 
 本仓库采用 **MIT License**。方法论、模板、工程实践可自由使用、修改与商用，保留版权声明即可。署名：行途 / xingtu1996。
