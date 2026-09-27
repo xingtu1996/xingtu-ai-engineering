@@ -7,6 +7,12 @@
 ![Engineering Practices](https://img.shields.io/badge/engineering%20practices-5-purple.svg)
 ![Last Commit](https://img.shields.io/github/last-commit/xingtu1996/xingtu-ai-engineering.svg)
 
+## 📖 延伸阅读
+
+- [FDE 能力模型：8 个维度拆解](https://github.com/xingtu1996/xingtu-articles/blob/main/articles/2026/09/2026-09-14-fde-capability-model-8-dimensions.md)
+- [FDE 工作法：进场、在场、离场，AI 落地是这样跑完的](https://github.com/xingtu1996/xingtu-articles/blob/main/articles/2026/09/2026-09-25-fde-working-method-three-stages.md)
+- [PEC 2026 AI 创新者大会台下一天](https://github.com/xingtu1996/xingtu-articles/blob/main/articles/2026/09/2026-09-13-pec-2026-conference-field-notes.md)
+
 ---
 
 ## 🎯 这是什么
