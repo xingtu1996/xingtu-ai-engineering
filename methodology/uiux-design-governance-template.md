@@ -54,7 +54,7 @@
 
 | 实践场景 | 做法 | 依据 |
 |----------|------|------|
-| 需求原型/界面实现 | 先定 token（金黑）再写 UI；弹窗居中 Modal；全色值走 Less 变量 | `research/20260807-panshi-ui-baseline.md` |
+| 需求原型/界面实现 | 先定 token（金黑）再写 UI；弹窗居中 Modal；全色值走 Less 变量 | `research/20260807-ui-baseline-research.md` |
 | 审美方向 | 先定品牌金黑，不套模板默认，禁 AI 味 | `skills/frontend-design` |
 | UI 代码审计 | 对照 Web 标准输出 file:line 问题 | `skills/web-design-guidelines` |
 | 代码 Review | 过 §七 检查清单（token/组件/反 AI 味/UX） | 本模板 |
