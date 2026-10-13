@@ -77,8 +77,8 @@ pie showData
 mindmap
     root((示例企业))
         业务域
-            dc-order
-            dc-giveaway
+            order-svc
+            giveaway-svc
         基础设施
             example-eureka
 ```

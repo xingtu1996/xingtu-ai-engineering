@@ -19,7 +19,7 @@ description: 影响分析（Impact Analysis）——改动前级联评估：改�
 | 方法论 | 示例企业落地 | 位置 |
 |--------|---------|------|
 | 3 跳级联影响 | CBM `trace_path` depth=3 | `CLAUDE.md` 零-B |
-| 高警戒服务 | dc-order/promotion/giveaway 全量 grep | `constitution.md` §二 |
+| 高警戒服务 | order-svc/promotion/giveaway 全量 grep | `constitution.md` §二 |
 | 消费者追踪 | Feign 调用方 / MQ `@StreamListener` / 共享表读写方 | `impact-analysis/SKILL.md` |
 | CBM 盲区补漏 | ast-grep 提取 `@FeignClient`/`@StreamListener`/`@Resource` | `CLAUDE.md` 零-C |
 
@@ -44,7 +44,7 @@ description: 影响分析（Impact Analysis）——改动前级联评估：改�
 
 ## 五、适用边界
 
-- **用**：改 Feign 接口/DTO、MQ 消息体、共享表、`@Transactional` 边界、库存 SQL、dc-order/promotion/giveaway
+- **用**：改 Feign 接口/DTO、MQ 消息体、共享表、`@Transactional` 边界、库存 SQL、order-svc/promotion/giveaway
 - **不用**：单文件 <20 行纯内部逻辑（无跨服务出口）
 
 ## 六、关联

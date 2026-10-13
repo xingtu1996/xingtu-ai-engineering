@@ -2,7 +2,7 @@
 
 > 用途：新建代码包（后端/前端/harness）按此骨架落地。基准 `java-rules.md` §二 DDD + §七 复杂度 + 各 `_TEMPLATE`。步骤：定类型→复制骨架→建目录→填逻辑→过清单。
 
-## 一、后端包模板（dc-service，完整树见 `service-directory-structure-template.md`）
+## 一、后端包模板（demo-svc，完整树见 `service-directory-structure-template.md`）
 
 ```
 dc-<service>/src/main/java/com/示例企业/ctf/<service>/
@@ -18,7 +18,7 @@ dc-<service>/src/main/java/com/示例企业/ctf/<service>/
 
 禁止：直调 DAO/事务内远程/domain 带业务/无分页/空 catch/SQL `${}`/循环远程/不幂等。
 
-## 二、前端包模板（React，基准 ctf-backend 实际结构）
+## 二、前端包模板（React，基准 admin-console 实际结构）
 
 ```
 src/

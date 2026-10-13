@@ -22,7 +22,7 @@ description: API 自动化测试方法论——L2 API 契约（curl + Schema 漂
 | Schema 漂移即红 | contracts/*.schema.json + validate-contracts.sh | `contracts/` |
 | 可执行用例模板 | steps/assert_http/body/db/cleanup | `test/templates/api-case.json.tmpl` |
 
-落点：① 无 Response 包装，JSONPath 按实际结构写（勿照抄 `$.code`）；② mutating 必带 cleanup + idempotent；③ 契约样例 `dc-refund.gifts-materials-inbound.schema.json`（additionalProperties:false）。
+落点：① 无 Response 包装，JSONPath 按实际结构写（勿照抄 `$.code`）；② mutating 必带 cleanup + idempotent；③ 契约样例 `refund-svc.gifts-materials-inbound.schema.json`（additionalProperties:false）。
 
 ## 三、骨架：用例结构
 
@@ -72,6 +72,6 @@ cleanup: SQL 清理（mutating 三步必备）
 
 | 案例 | 位置 | 证明什么 |
 |------|------|---------|
-| 契约 Schema 实样 | `contracts/schema/dc-refund.gifts-materials-inbound.schema.json`（`additionalProperties:false`）+ `dc-giveaway-match.request.schema.json` + `dc-promotion-stock.query.schema.json` | 示例企业真实契约样例，JSON Schema 结构校验落地 |
+| 契约 Schema 实样 | `contracts/schema/refund-svc.gifts-materials-inbound.schema.json`（`additionalProperties:false`）+ `giveaway-match.request.schema.json` + `promotion-stock.query.schema.json` | 示例企业真实契约样例，JSON Schema 结构校验落地 |
 | 契约校验脚本 | `scripts/validate-contracts.sh`（+ `scripts/validate-contracts.py`） | 契约自动化校验机制（漂移即红） |
 | 可执行用例模板 | `test/templates/api-case.json.tmpl` + `test/cases/_schema/api-case.schema.json` | API 用例结构（steps/assert_http/assert_body/assert_db/cleanup）落地 |

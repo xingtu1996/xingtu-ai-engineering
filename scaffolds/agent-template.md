@@ -45,7 +45,7 @@ permissionMode: default              # 可选：default/acceptEdits/bypassPermis
 ## 你的侦查范围
 
 ### 核心代码路径
-- `dc-xxx/src/main/java/com/example/xxx/`
+- `svc-xxx/src/main/java/com/example/xxx/`
 
 ### 关键能力
 1. **能力1**: 具体描述
@@ -61,7 +61,7 @@ permissionMode: default              # 可选：default/acceptEdits/bypassPermis
 返回结构化 Markdown 报告：
 
 ```markdown
-## dc-xxx 侦查报告
+## svc-xxx 侦查报告
 
 ### 分析维度1
 - 发现: [具体内容]

@@ -58,7 +58,7 @@
 | 审美方向 | 先定品牌金黑，不套模板默认，禁 AI 味 | `skills/frontend-design` |
 | UI 代码审计 | 对照 Web 标准输出 file:line 问题 | `skills/web-design-guidelines` |
 | 代码 Review | 过 §七 检查清单（token/组件/反 AI 味/UX） | 本模板 |
-| 实证校验 | ctf-backend：Modal 268/Drawer 1（配置抽屉例外）；antd 实装 3.26.15；主题变量在 variables.less | 2026-08-26 实测 |
+| 实证校验 | admin-console：Modal 268/Drawer 1（配置抽屉例外）；antd 实装 3.26.15；主题变量在 variables.less | 2026-08-26 实测 |
 
 ## 七、检查清单
 

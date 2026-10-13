@@ -42,7 +42,7 @@ metadata:
 
 **2. 定位**：search_graph 语义搜节点/边，定位 2-3 候选服务；trace_path 追调用链；get_code_snippet 读方法体（TOK-002）。
 
-**3. 影响分析（3 跳）**：trace_path depth=3 确认影响面；高警戒服务（dc-order/dc-promotion/dc-giveaway）加全量 grep 兜底。CBM 盲区（@Resource/@FeignClient/@StreamListener/HTTP 路由）用 `ast-grep-annotations.sh` 提取，grep 落点确认。
+**3. 影响分析（3 跳）**：trace_path depth=3 确认影响面；高警戒服务（order-svc/promotion-svc/giveaway-svc）加全量 grep 兜底。CBM 盲区（@Resource/@FeignClient/@StreamListener/HTTP 路由）用 `ast-grep-annotations.sh` 提取，grep 落点确认。
 
 **4. 契约**：握手协议定死（Provider 签名 + Consumer 幂等 + 降级）→ contracts/；变更跑 `validate-contracts.sh`（漂移即红）+ 记 contract-change-log.md。
 

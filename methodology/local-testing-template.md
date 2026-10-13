@@ -9,7 +9,7 @@
 |------|------|
 | Constitution RED-8 | TDD 左移：编译→本地启动→curl 验证→合并 |
 | Constitution RED-6 | 测完清理进程：kill 残留 + `ps aux \| grep java` |
-| memory/local-test-stack.md | 灰盒环境：Eureka 8001 / dc-goods 8111 / dc-giveaway 18083 |
+| memory/local-test-stack.md | 灰盒环境：Eureka 8001 / goods-svc 8111 / giveaway-svc 18083 |
 
 ## 一句话本质
 
@@ -27,7 +27,7 @@
 ## 示例企业实践
 
 - **编译**：`bash .claude/scripts/build.sh clean install -DskipTests`（JDK8 + 内部 settings，禁裸 mvn）
-- **本地栈**（local-test-stack.md）：Eureka 8001 → dc-goods 8111 → dc-giveaway 18083（追加 `allow-bean-definition-overriding=true`）
+- **本地栈**（local-test-stack.md）：Eureka 8001 → goods-svc 8111 → giveaway-svc 18083（追加 `allow-bean-definition-overriding=true`）
 - **curl 全链路**：等 `curl /actuator/health` 200 → 调业务接口 → 200 + 预期字段
 - **环境**：profile local（默认），中间件见 `.claude/config.yaml` §environments.local
 - **Feign 直连**：已有接口临时解 url 直连 SIT/UAT，⚠️ 测完恢复不提交
@@ -37,7 +37,7 @@
 
 ```
 ① 编译     build.sh clean install -DskipTests → 零错误
-② 启动依赖  Eureka → dc-goods → dc-giveaway，逐一等 health 200
+② 启动依赖  Eureka → goods-svc → giveaway-svc，逐一等 health 200
 ③ curl 验证 目标业务接口 → HTTP 200 + 预期字段断言
 ④ 数据核对  写操作必须落库验证
 ⑤ 清理     kill 全部 java + lsof 确认端口释放 + 恢复临时改动

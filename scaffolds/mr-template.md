@@ -31,7 +31,7 @@
 
 ## 评审检查清单
 - [ ] 编码规范：DDD 分层正确、方法 ≤50 行、`#{}` 参数化（`rules/java-rules.md`）
-- [ ] 级联影响：CBM 3 跳已查，**高警戒 dc-order / dc-promotion / dc-giveaway 全量 grep**（constitution §二）
+- [ ] 级联影响：CBM 3 跳已查，**高警戒 order-svc / promotion-svc / giveaway-svc 全量 grep**（constitution §二）
 - [ ] 事务内无远程调用（Feign/RabbitMQ）
 - [ ] MQ 消费者幂等（`rules/mq-rules.md`）
 - [ ] 外部调用 try-catch + log.error + 降级

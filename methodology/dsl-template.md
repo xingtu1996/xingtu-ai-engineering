@@ -14,7 +14,7 @@
 
 ## 三、示例企业实践对应
 - **DSL 硬化**（CLAUDE.md 测试金字塔）：契约 JSON Schema 自动校验 = L2 强制层（漂移即红）；AC Gherkin 映射 = L1。人看门禁点，测试看其余。
-- **contracts/ 落地**（引用不复制）：`.claude/contracts/` 存 JSON Schema（`additionalProperties:false` 防漂移）+ samples ok/bad；`validate-contracts.sh --all` 零依赖校验。真实案例：`dc-refund.gifts-materials-inbound`（TICKET-001 实测，`odoId=null`=匹配失败）。变更流程见 §四.4。
+- **contracts/ 落地**（引用不复制）：`.claude/contracts/` 存 JSON Schema（`additionalProperties:false` 防漂移）+ samples ok/bad；`validate-contracts.sh --all` 零依赖校验。真实案例：`refund-svc.gifts-materials-inbound`（TICKET-001 实测，`odoId=null`=匹配失败）。变更流程见 §四.4。
 - 规范源：`specs-rules.md` §5.4 ｜ `contracts/README.md`（引用路径，不复制全文）。
 
 ## 四、骨架：DSL 化决策 + 契约 Schema + 验证

@@ -30,7 +30,7 @@
 **每阶段必须附一条真实案例（`例：…`），禁止空骨架。** 先找案例（research/incidents/specs）再套骨架。来源：`templates/sop-template.md`。
 
 ## 示例企业实践
-- **gitops 手动发布**：改 values 镜像 tag → push → ArgoCD 滚动发布（2026-08-24 dc-refund UAT 实测）
+- **gitops 手动发布**：改 values 镜像 tag → push → ArgoCD 滚动发布（2026-08-24 refund-svc UAT 实测）
 - **部署顺序**：先 pull 再改（防覆盖他人）→ 一次一个服务 → 先确认 tag 已构建
 - **回滚**：git revert values 到旧 tag + push，ArgoCD 回滚旧版本
 
@@ -54,5 +54,5 @@
 
 | 落点 | 类型 | 链接 | 实证内容 |
 |------|------|------|---------|
-| `research/20260812-fs-deployment-sop.md` | 调研/实证 | `.claude/research/20260812-fs-deployment-sop.md` | TICKET-002 dc-promotion SIT 部署实测（Jenkins #473 完整日志 + Rancher + Kibana 三视角验证），部署架构+可 AI 托管环节 |
-| 模板内实例 | 实战 | 本文档"示例企业实践"节 | 2026-08-24 dc-refund UAT gitops 手动发布：改 values 镜像 tag → push → ArgoCD 滚动发布 |
+| `research/20260812-fs-deployment-sop.md` | 调研/实证 | `.claude/research/20260812-fs-deployment-sop.md` | TICKET-002 promotion-svc SIT 部署实测（Jenkins #473 完整日志 + Rancher + Kibana 三视角验证），部署架构+可 AI 托管环节 |
+| 模板内实例 | 实战 | 本文档"示例企业实践"节 | 2026-08-24 refund-svc UAT gitops 手动发布：改 values 镜像 tag → push → ArgoCD 滚动发布 |

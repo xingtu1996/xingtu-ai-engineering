@@ -21,7 +21,7 @@ dc-<service>/
 │   ├── bootstrap-dev.yml    # 开发
 │   ├── bootstrap-qa.yml     # QA
 │   └── bootstrap-remote.yml # 生产
-└── pom.xml              # parent=ctf-parent/adpt-parent
+└── pom.xml              # parent=platform-parent/platform-parent
 ```
 
 ## 二、DDD 分层职责（java-rules.md §二）
@@ -41,7 +41,7 @@ dc-<service>/
 - [ ] 层级正确？controller 不直调 DAO
 - [ ] 事务内无远程调用？
 - [ ] 类级 `@Transactional` 防 Feign 误入？
-- [ ] bootstrap profile？默认 local，qa/prod 走 ctf-config
-- [ ] parent POM？DC→ctf-parent / ADPT→adpt-parent
+- [ ] bootstrap profile？默认 local，qa/prod 走 config-repo
+- [ ] parent POM？DC→platform-parent / ADPT→platform-parent
 - [ ] SQL 表名带库名？`example_store.dc_xxx`（TICKET-002 教训）
 - [ ] 构建走 `bash .claude/scripts/build.sh`（禁裸 mvn）

@@ -40,8 +40,8 @@ echo PASS
 | 实践 | 落地 |
 |------|------|
 | validator curl | specs-rules.md §5.4：AC 派生 TC-API-01…，L2≥3 条 |
-| 本地栈 | dc-goods 8111 / dc-giveaway 18083（local-test-stack.md，RED-8） |
-| 契约对照 | 请求体按 contracts/samples（dc-promotion-stock.query.ok.json）构造 |
+| 本地栈 | goods-svc 8111 / giveaway-svc 18083（local-test-stack.md，RED-8） |
+| 契约对照 | 请求体按 contracts/samples（promotion-stock.query.ok.json）构造 |
 
 ## 五、检查清单
 ```

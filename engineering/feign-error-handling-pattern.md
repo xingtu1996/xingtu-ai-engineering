@@ -1,12 +1,12 @@
 # 工程实践-Feign 异常处理模式（示例企业）
 
 > 用途：跨服务 Feign 调用失败的异常处理统一风格，避免"裸 500 误报障"踩坑（TICKET-002 实证 2026-08-27）
-> 来源：dc-order GuestGiftApplication 修复（500 误报障）+ CustomErrorDecoder 发现
+> 来源：order-svc GuestGiftApplication 修复（500 误报障）+ CustomErrorDecoder 发现
 
 ## 〇、核心教训（为什么需要此模板）
 
 TICKET-002 客需随礼超量提交返回裸 500（无 err_msg），前端误报障。排查发现：
-- dc-order 用**自定义 `CustomErrorDecoder`**：Feign 非 2xx → `new RuntimeException(response body JSON)`，**不是标准 FeignException**
+- order-svc 用**自定义 `CustomErrorDecoder`**：Feign 非 2xx → `new RuntimeException(response body JSON)`，**不是标准 FeignException**
 - 按 FeignException 假设写的 catch 没覆盖 → 裸 500
 
 **教训**：写 Feign 异常处理前，**先查项目 Feign 异常机制**（ErrorDecoder / fallback / 拦截器），再设计处理。
@@ -65,7 +65,7 @@ private String parseErrMsg(String json) {
 
 | 步骤 | 方法 | 证据 |
 |------|------|------|
-| 1 部署确认 | Rancher Pod 镜像 / actuator build-info | dc-order 1.6.30.0 + commit |
+| 1 部署确认 | Rancher Pod 镜像 / actuator build-info | order-svc 1.6.30.0 + commit |
 | 2 日志归因 | SLS 查异常（先定 logstore：fs-uat-applog） | CustomErrorDecoder RuntimeException 堆栈 |
 | 3 数据核对 | db-query 落库（订单行/库存/幂等） | 无孤儿行 |
 | 4 本地复现 | 本地启动（关 Eureka + Feign 直连 UAT）→ 复现 | 日志异常解包 |
