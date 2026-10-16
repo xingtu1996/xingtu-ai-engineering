@@ -870,7 +870,7 @@
     },
     {
       "name": "代码包模板",
-      "description": "dc-<service>/src/main/java/com/示例企业/ctf/<service>/",
+      "description": "svc-<service>/src/main/java/com/示例企业/plat/<service>/",
       "path": "scaffolds/code-package-template.md",
       "tags": [
         "scaffold",
@@ -896,7 +896,7 @@
     },
     {
       "name": "服务目录结构样板",
-      "description": "├── src/main/java/com/示例企业/ctf/<service>/",
+      "description": "├── src/main/java/com/示例企业/plat/<service>/",
       "path": "scaffolds/service-directory-structure-template.md",
       "tags": [
         "scaffold",

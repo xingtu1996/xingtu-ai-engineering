@@ -15,15 +15,15 @@
 |------|-----|
 | ID | BCI-{NNN} |
 | 技术栈 | {Spring Boot/MyBatis-Plus/React/...} |
-| 失败症状 | {一句话，grep 可用，例：`grep -rn "xxx" dc-*/src/main/java/`} |
-| 文件证据 | {出问题的代码模式，`grep 'xxx' dc-*/src/main/java/` 可搜索} |
-| 修复模式 | {怎么修，`grep 'yyy' dc-*/src/main/java/` 可验证} |
+| 失败症状 | {一句话，grep 可用，例：`grep -rn "xxx" svc-*/src/main/java/`} |
+| 文件证据 | {出问题的代码模式，`grep 'xxx' svc-*/src/main/java/` 可搜索} |
+| 修复模式 | {怎么修，`grep 'yyy' svc-*/src/main/java/` 可验证} |
 
 ## 同类问题排查命令
 
 ```bash
 # 示例企业 Java 服务内搜索同类型问题
-grep -rn "{关键词}" dc-*/src/main/java/
+grep -rn "{关键词}" svc-*/src/main/java/
 ```
 
 ## 是否需要 Hard Gate

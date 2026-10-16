@@ -5,7 +5,7 @@
 ## 一、后端包模板（demo-svc，完整树见 `service-directory-structure-template.md`）
 
 ```
-dc-<service>/src/main/java/com/示例企业/ctf/<service>/
+svc-<service>/src/main/java/com/示例企业/plat/<service>/
 ├── controller/      收参校验
 ├── application/     编排+事务
 ├── domain/          对象+Mapper

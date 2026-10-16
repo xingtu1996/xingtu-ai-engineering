@@ -6,8 +6,8 @@
 ## 一、目录结构树
 
 ```
-dc-<service>/
-├── src/main/java/com/示例企业/ctf/<service>/
+svc-<service>/
+├── src/main/java/com/示例企业/plat/<service>/
 │   ├── controller/      # 收参→校验→调 application
 │   ├── application/     # 业务编排+事务（核心层）
 │   ├── domain/          # 领域对象+Mapper 接口
