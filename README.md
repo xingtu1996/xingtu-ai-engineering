@@ -77,7 +77,7 @@ cat marketplace.json   # 73 条资产索引
 
 我是**行途**，一线技术人 + 仍在写代码。这里沉淀的是 AI 工程化的实战方法论：harness、skills、上下文管理与 token 效率，全部来自真实项目。
 
-- 🔔 公众号 **「行途技术手记」**：微信搜索关注，看 AI 工程化落地实战
+- 🔔 公众号 **「行途 XingTu」**：微信搜索关注，看 AI 工程化落地实战
 - 🐙 GitHub：[@xingtu1996](https://github.com/xingtu1996)
 - 📦 仓库：[xingtu1996/xingtu-ai-engineering](https://github.com/xingtu1996/xingtu-ai-engineering)
 
@@ -91,7 +91,7 @@ cat marketplace.json   # 73 条资产索引
 ## 深度内容与咨询
 
 完整方法论深度篇与实战案例 → 《行途 AI 工程化手册》（出版筹备中）
-深度答疑 / 定制陪跑 / 知识星球 → 公众号「行途技术手记」留言
+深度答疑 / 定制陪跑 / 知识星球 → 公众号「行途 XingTu」留言
 
 ---
 
@@ -102,4 +102,4 @@ cat marketplace.json   # 73 条资产索引
 - 𝕏 X：[@xingtu1996](https://x.com/xingtu1996)（AI工程化实战，build in public）
 - GitHub：[github.com/xingtu1996](https://github.com/xingtu1996)
 - 🌐 个人站：[xingtu1996.pages.dev](https://xingtu1996.pages.dev)
-- 📱 公众号：「行途技术手记」（深度长文 + 可抄作业的实战经验）
+- 📱 公众号：「行途 XingTu」（深度长文 + 可抄作业的实战经验）
