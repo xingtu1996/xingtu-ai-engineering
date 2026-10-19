@@ -1,4 +1,4 @@
-# XingTu AI Engineering
+# 行途技术 AI Engineering
 
 > **One repo, the full landscape of AI engineering**: philosophy · methodology · five engineering practices · governance · session resume · scaffolds
 
@@ -8,7 +8,7 @@
 
 ## What is this
 
-`xingtu-ai-engineering` is the flagship methodology repository of the XingTu open-source matrix. It distills years of hands-on AI engineering practice into structured, **copy-paste-ready templates** (with checklists, commands, and verification steps) across six categories.
+`xingtu-ai-engineering` is the flagship methodology repository of the 行途技术 open-source matrix. It distills years of hands-on AI engineering practice into structured, **copy-paste-ready templates** (with checklists, commands, and verification steps) across six categories.
 
 **Audience**: tech leads, engineers, and AI engineering practitioners who want a systematic understanding of how to harness AI for productive output — not scattered tips.
 

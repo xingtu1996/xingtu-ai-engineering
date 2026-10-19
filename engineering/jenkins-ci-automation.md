@@ -72,4 +72,4 @@ bash .claude/scripts/jenkins-ci-build.sh ci_fs_example-service qa-uat --watch
 
 | 日期 | 变更 | 变更人 |
 |------|------|--------|
-| 2026-08-27 | 新建：Jenkins CI 自动化接入案例模板（认证/API/脚本/链路/坑） | XingTu（AI 辅助） |
+| 2026-08-27 | 新建：Jenkins CI 自动化接入案例模板（认证/API/脚本/链路/坑） | 行途技术（AI 辅助） |
