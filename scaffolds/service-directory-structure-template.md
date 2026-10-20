@@ -43,5 +43,5 @@ svc-<service>/
 - [ ] 类级 `@Transactional` 防 Feign 误入？
 - [ ] bootstrap profile？默认 local，qa/prod 走 config-repo
 - [ ] parent POM？DC→platform-parent / ADPT→platform-parent
-- [ ] SQL 表名带库名？`example_store.dc_xxx`（TICKET-002 教训）
+- [ ] SQL 表名带库名？`example_store.<表名>`（历史教训）
 - [ ] 构建走 `bash .claude/scripts/build.sh`（禁裸 mvn）
