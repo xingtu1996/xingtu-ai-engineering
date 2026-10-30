@@ -3,7 +3,7 @@
 > **一仓覆盖 AI 工程化全貌**：理念哲学 · 方法论 · 五大工程实践 · 治理 · 断点续传 · 组件样板
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Assets](https://img.shields.io/badge/assets-73-blue.svg)
+![Assets](https://img.shields.io/badge/assets-79-blue.svg)
 ![Engineering Practices](https://img.shields.io/badge/engineering%20practices-5-purple.svg)
 ![Last Commit](https://img.shields.io/github/last-commit/xingtu1996/xingtu-ai-engineering.svg)
 
@@ -33,24 +33,24 @@
 | **图工程** | `engineering/graph-engineering.md` | 依赖图/知识图/任务图，让复杂系统可规划可追溯 |
 | **循环工程** | `engineering/loop-engineering.md` | 迭代循环（反馈→修正→沉淀），让产出持续进化 |
 
-## 🗂️ 六大分类 · 73 个资产
+## 🗂️ 六大分类 · 79 个资产
 
-### philosophy/ · 理念哲学（11）
+### philosophy/ · 理念哲学（12）
 本体论 · 第一性原理 · 复利进化 · 测试左移 · 真相第一 · 驾驭分工 · 简单即真 · 举一反三 · 本地轮回 · 协作即对抗 · 不机械执行
 
-### methodology/ · 方法（37）
+### methodology/ · 方法（38）
 SDD · TDD/BDD/DSL · 对抗审查 · 渐进式加载 · 需求澄清 · 影响分析 · 工具/能力分层 · Git 分支管理 · GitWorktree 并行 · Harness 层级 · 知识可视化 · 各类测试模板（黑盒/白盒/变异/压测/接口/UI/E2E/编译）· 工单回复 · 生产问题排查 · 部署 SOP · 交付检视 · 质量门禁 · 方案选型调研 等
 
-### engineering/ · 工程实践（9）
+### engineering/ · 工程实践（10）
 上下文工程 · 提示词工程 · 驾驭工程 · 图工程 · 循环工程 · 自动化本体论 · TDD · Feign 异常处理模式 · Jenkins CI 自动化接入
 
-### governance/ · 治理/宪法（1）
+### governance/ · 治理/宪法（2）
 宪法模板（S/M/L 裁剪 · 质量门禁 · 交付检视基线）
 
-### session/ · 会话/断点续传（6）
+### session/ · 会话/断点续传（7）
 继续会话提示词 · 会话复盘模板 · BUG 修复沉淀 · 反哺模板 · 沉淀模板 · ponytail/caveman 分享
 
-### scaffolds/ · 组件样板（9）
+### scaffolds/ · 组件样板（10）
 agent 模板 · MCP 接入样板 · 代码包模板 · 服务目录结构样板 · 提示词模板 · Mermaid 图表样板 · MR 模板 · SOP 模板 · 需求交付 Story 模板
 
 ## 🚀 快速开始
@@ -68,16 +68,16 @@ agent 模板 · MCP 接入样板 · 代码包模板 · 服务目录结构样板 
 `marketplace.json` 提供机器可读索引（name + description + path + tags），供 find-skills / AI 搜索引擎检索：
 
 ```bash
-cat marketplace.json   # 73 条资产索引
+cat marketplace.json   # 79 条资产索引
 ```
 
 > 🧩 本仓方法论与模板面向 AI 工程化（含 DeepSeek Harness 类「一切皆插件」工作流），模板可直接裁剪落地到 DSH / Claude Code / CodeBuddy 等工具链。
 
-## 关于作者
+## 关于作者 · 行途 XingTu
 
-我是**行途技术**，一线技术人 + 仍在写代码。这里沉淀的是 AI 工程化的实战方法论：harness、skills、上下文管理与 token 效率，全部来自真实项目。
+一线技术人 + 仍在写代码。这里沉淀的是 AI 工程化的实战方法论：harness、skills、上下文管理与 token 效率，全部来自真实项目。
 
-- 🔔 公众号 **「行途技术」**：微信搜索关注，看 AI 工程化落地实战
+- 🔔 公众号 **「行途技术手记」**：微信搜索关注，看 AI 工程化落地实战
 - 🐙 GitHub：[@xingtu1996](https://github.com/xingtu1996)
 - 📦 仓库：[xingtu1996/xingtu-ai-engineering](https://github.com/xingtu1996/xingtu-ai-engineering)
 
@@ -86,20 +86,20 @@ cat marketplace.json   # 73 条资产索引
 
 ## 许可证
 
-本仓库采用 **MIT License**。方法论、模板、工程实践可自由使用、修改与商用，保留版权声明即可。署名：行途技术 / xingtu1996。
+本仓库采用 **MIT License**。方法论、模板、工程实践可自由使用、修改与商用，保留版权声明即可。署名：行途 XingTu / xingtu1996。
 
 ## 深度内容与咨询
 
 完整方法论深度篇与实战案例 → 《行途技术 AI 工程化手册》（出版筹备中）
-深度答疑 / 定制陪跑 / 知识星球 → 公众号「行途技术」留言
+深度答疑 / 定制陪跑 / 知识星球 → 公众号「行途技术手记」留言
 
 ---
 
-## 👤 关于行途技术
+## 👤 关于行途 XingTu
 
 一线 builder，仍在写代码。专注 AI 工具链与工程化落地，分享可抄作业的实战经验。
 
 - 𝕏 X：[@xingtu1996](https://x.com/xingtu1996)（AI工程化实战，build in public）
 - GitHub：[github.com/xingtu1996](https://github.com/xingtu1996)
 - 🌐 个人站：[xingtu1996.pages.dev](https://xingtu1996.pages.dev)
-- 📱 公众号：「行途技术」（深度长文 + 可抄作业的实战经验）
+- 📱 公众号：「行途技术手记」（深度长文 + 可抄作业的实战经验）
