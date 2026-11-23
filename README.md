@@ -68,7 +68,7 @@ agent 模板 · MCP 接入样板 · 代码包模板 · 服务目录结构样板 
 `marketplace.json` 提供机器可读索引（name + description + path + tags），供 find-skills / AI 搜索引擎检索：
 
 ```bash
-cat marketplace.json   # 79 条资产索引
+cat marketplace.json   # 73 条索引；分类目录共 79 个文件
 ```
 
 > 🧩 本仓方法论与模板面向 AI 工程化（含 DeepSeek Harness 类「一切皆插件」工作流），模板可直接裁剪落地到 DSH / Claude Code / CodeBuddy 等工具链。

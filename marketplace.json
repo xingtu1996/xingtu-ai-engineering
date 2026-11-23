@@ -728,7 +728,7 @@
     {
       "name": "BUG修复沉淀模板",
       "description": "{3-5 条具体教训，每条一句话}",
-      "path": "session/BUG修复distillation-template.md",
+      "path": "session/bug-fix-distillation-template.md",
       "tags": [
         "session",
         "resume",
@@ -793,7 +793,7 @@
     {
       "name": "继续会话提示词模板",
       "description": "压缩会话后恢复上下文的提示词模板，含已沉淀资产索引 + 待办清单",
-      "path": "session/继续会话prompt-template.md",
+      "path": "session/session-resume-prompt-template.md",
       "tags": [
         "session",
         "resume",
